@@ -4,21 +4,28 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "prebuild": "node -e \"JSON.parse(require('fs').readFileSync('./public/cache/golden-path.json','utf8'))\" && echo 'golden-path.json valid'",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "test": "vitest run"
   },
   "dependencies": {
+    "@anthropic-ai/sdk": "^0.92.0",
+    "@upstash/redis": "^1.37.0",
+    "d3": "^7.9.0",
     "next": "16.2.4",
     "react": "19.2.4",
     "react-dom": "19.2.4"
   },
   "devDependencies": {
+    "@types/d3": "^7.4.3",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.2.4",
-    "typescript": "^5"
+    "typescript": "^5",
+    "vitest": "^4.1.5"
   }
 }

@@ -1,0 +1,57 @@
+{
+  "source": "golden-cache",
+  "root": {
+    "name": "YouTube Cooking Channel",
+    "toolId": null,
+    "feasibility": 78,
+    "children": [
+      {
+        "name": "Content Strategy",
+        "toolId": null,
+        "feasibility": 85,
+        "children": [
+          { "name": "Niche Research", "toolId": "claude" },
+          { "name": "Content Calendar", "toolId": "claude" },
+          { "name": "Trend Analysis", "toolId": "perplexity" }
+        ]
+      },
+      {
+        "name": "Channel Setup",
+        "toolId": null,
+        "feasibility": 92,
+        "children": [
+          { "name": "Logo & Banner", "toolId": "canva" },
+          { "name": "Channel Description", "toolId": "claude" }
+        ]
+      },
+      {
+        "name": "Video Production",
+        "toolId": null,
+        "feasibility": 70,
+        "children": [
+          { "name": "Intro Animation", "toolId": "runway" },
+          { "name": "Voiceover", "toolId": "elevenlabs" },
+          { "name": "Video Editing", "toolId": "capcut" }
+        ]
+      },
+      {
+        "name": "Marketing",
+        "toolId": null,
+        "feasibility": 80,
+        "children": [
+          { "name": "Thumbnail Design", "toolId": "midjourney" },
+          { "name": "Social Media Posts", "toolId": "copy-ai" }
+        ]
+      },
+      {
+        "name": "Monetization",
+        "toolId": null,
+        "feasibility": 65,
+        "children": [
+          { "name": "Sponsor Pitch Deck", "toolId": "gamma" },
+          { "name": "Revenue Model", "toolId": "claude" }
+        ]
+      }
+    ]
+  }
+}

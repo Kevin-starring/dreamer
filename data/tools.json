@@ -1,0 +1,724 @@
+[
+  {
+    "id": "claude",
+    "name": "Claude",
+    "emoji": "🤖",
+    "category": "research",
+    "description": "Advanced AI for writing, research, strategy, and content creation",
+    "url": "https://claude.ai",
+    "why": "Claude excels at nuanced writing and structured thinking. For research and content strategy, it produces cleaner, more detailed output than most alternatives — and it follows complex instructions without drifting.",
+    "prompts": [
+      {
+        "useCase": "niche-research",
+        "tags": ["research", "strategy", "content"],
+        "prompt": "I want to start a YouTube channel about [YOUR TOPIC]. Help me find a specific niche within this topic that:\n1. Has clear audience demand (describe the audience)\n2. Has less competition than the main topic\n3. I can realistically cover with [YOUR BACKGROUND/EXPERIENCE]\n\nGive me 5 niche options, ranked by opportunity. For each one: who the audience is, what makes it underserved, and 3 example video titles.",
+        "steps": [
+          "Go to claude.ai and sign in",
+          "Click 'New conversation'",
+          "Replace [YOUR TOPIC] with your channel topic",
+          "Replace [YOUR BACKGROUND/EXPERIENCE] with your relevant skills",
+          "Paste the prompt and hit Enter",
+          "Ask Claude to go deeper on whichever niche resonates most"
+        ]
+      },
+      {
+        "useCase": "content-calendar",
+        "tags": ["content", "planning", "strategy"],
+        "prompt": "Create a 90-day content calendar for a YouTube channel about [YOUR NICHE]. I want to post [FREQUENCY] times per week.\n\nFor each video include:\n- Title (optimized for search)\n- Hook (first 30 seconds idea)\n- Main angle (what makes this different from other videos on this topic)\n- Estimated length\n- Best day to post\n\nGroup videos into monthly themes so the channel builds momentum.",
+        "steps": [
+          "Open claude.ai",
+          "Replace [YOUR NICHE] with your specific channel topic",
+          "Replace [FREQUENCY] with how often you'll post (1, 2, or 3 times)",
+          "Paste and send",
+          "Ask Claude to expand on any video ideas that excite you",
+          "Export the calendar to a spreadsheet or Notion"
+        ]
+      },
+      {
+        "useCase": "channel-description",
+        "tags": ["seo", "writing", "setup"],
+        "prompt": "Write a YouTube channel description for [YOUR CHANNEL NAME], a channel about [YOUR TOPIC].\n\nThe description should:\n- Hook viewers in the first 2 sentences (this is what shows in search)\n- Include these keywords naturally: [LIST 3-5 KEYWORDS]\n- Tell viewers exactly what they'll get and how often\n- End with a call to subscribe\n\nKeep it under 200 words. Also give me 3 alternative opening lines I can test.",
+        "steps": [
+          "Open claude.ai",
+          "Replace [YOUR CHANNEL NAME] with your channel name",
+          "Replace [YOUR TOPIC] with your niche",
+          "List 3-5 keywords you found in your niche research",
+          "Paste and send",
+          "Use the description in YouTube Studio > Customization > Basic Info"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "chatgpt",
+    "name": "ChatGPT",
+    "emoji": "💬",
+    "category": "research",
+    "description": "OpenAI's AI assistant for brainstorming, writing, and analysis",
+    "url": "https://chat.openai.com",
+    "why": "ChatGPT's browsing capability lets it pull real-time data for trend analysis. Use it when you need current information or want to cross-check what Claude produces.",
+    "prompts": [
+      {
+        "useCase": "trend-research",
+        "tags": ["research", "trends", "youtube"],
+        "prompt": "Search for the top trending topics in [YOUR NICHE] on YouTube right now. For each trend:\n- What's the trend (explain simply)\n- Why is it trending now (context)\n- How long will it likely last\n- Video angle I could take to cover this trend uniquely\n\nGive me 10 trends ranked from hottest to most evergreen.",
+        "steps": [
+          "Go to chat.openai.com",
+          "Make sure you're on GPT-4 with browsing enabled",
+          "Replace [YOUR NICHE] with your topic",
+          "Send the prompt",
+          "Ask it to find specific examples of viral videos in these trends"
+        ]
+      },
+      {
+        "useCase": "hook-writing",
+        "tags": ["writing", "hooks", "engagement"],
+        "prompt": "Write 10 YouTube video hooks for a video titled '[YOUR VIDEO TITLE]'. Each hook should be under 30 seconds when spoken aloud (about 60 words).\n\nMix these styles:\n- Bold claim hook\n- Story hook\n- Question hook\n- Surprising fact hook\n- Relatable problem hook\n\nMake them punchy, specific, and designed to stop someone from scrolling.",
+        "steps": [
+          "Open ChatGPT",
+          "Replace [YOUR VIDEO TITLE] with your actual video title",
+          "Send the prompt",
+          "Pick the 3 hooks that feel most authentic to you",
+          "Test different hooks in your first few videos and track retention"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "midjourney",
+    "name": "Midjourney",
+    "emoji": "🎨",
+    "category": "image",
+    "description": "AI image generation for thumbnails, channel art, and promotional visuals",
+    "url": "https://midjourney.com",
+    "why": "Midjourney produces the most photorealistic and aesthetically consistent images of any AI image generator. For YouTube thumbnails that need to stop the scroll, Midjourney's quality edge matters.",
+    "prompts": [
+      {
+        "useCase": "youtube-thumbnail",
+        "tags": ["thumbnail", "youtube", "design"],
+        "prompt": "Close-up portrait of a [GENDER] person, [AGE RANGE], [EXPRESSION: shocked/excited/curious], looking directly at camera, vibrant [COLOR PALETTE] background, professional YouTube thumbnail style, high contrast, sharp focus, studio lighting, 16:9 composition --ar 16:9 --style raw --v 6",
+        "steps": [
+          "Go to midjourney.com and log in",
+          "Click 'Create' to open the image generator",
+          "Replace bracketed variables with your specifics",
+          "Paste the prompt and generate",
+          "Click on the image you like most, then upscale it (U1-U4)",
+          "Download the high-res version",
+          "Add text overlay in Canva or Photoshop"
+        ]
+      },
+      {
+        "useCase": "channel-banner",
+        "tags": ["banner", "branding", "design"],
+        "prompt": "[YOUR AESTHETIC: e.g. minimalist modern / cozy warm / bold energetic] YouTube channel banner, [YOUR TOPIC] theme, wide cinematic composition, [YOUR COLOR 1] and [YOUR COLOR 2] color scheme, space on right side for text overlay, professional quality, 2560x1440 resolution style --ar 16:9 --v 6",
+        "steps": [
+          "Open Midjourney",
+          "Describe your channel's aesthetic and colors",
+          "Generate 4 options and choose the best",
+          "Upscale your chosen image",
+          "Download and bring into Canva to add your channel name and schedule"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "canva",
+    "name": "Canva AI",
+    "emoji": "✏️",
+    "category": "design",
+    "description": "AI-powered design tool for logos, banners, thumbnails, and social graphics",
+    "url": "https://canva.com",
+    "why": "Canva AI combines design templates with AI generation. For creators who aren't designers, it's the fastest path from 'I need a logo' to a file you can actually upload — without needing Photoshop skills.",
+    "prompts": [
+      {
+        "useCase": "channel-logo",
+        "tags": ["logo", "branding", "design"],
+        "prompt": "Create a YouTube channel logo for [YOUR CHANNEL NAME] about [YOUR TOPIC]. Style: [STYLE: minimalist / bold / playful / professional]. Primary color: [YOUR COLOR]. Include: just the logo mark or icon, no wordmark needed. The logo should look good at 800x800px (YouTube profile picture) and be recognizable when small.",
+        "steps": [
+          "Go to canva.com and sign in",
+          "Click 'Create a design' → Logo",
+          "Use Magic Design: describe your channel and style",
+          "Or search templates for your category",
+          "Customize colors to match your brand",
+          "Download as PNG with transparent background",
+          "Upload to YouTube Studio > Customization > Branding"
+        ]
+      },
+      {
+        "useCase": "thumbnail-template",
+        "tags": ["thumbnail", "template", "youtube"],
+        "prompt": "Design a YouTube thumbnail template for [YOUR CHANNEL NAME]. The template should have: space for a main image on [LEFT/RIGHT], bold title text area on the [OTHER SIDE], [YOUR CHANNEL COLOR] accent elements, and your channel logo in the corner. Make it reusable — I'll swap the main image and title for each video.",
+        "steps": [
+          "Open Canva, click 'Create a design' → YouTube Thumbnail",
+          "Search templates for your style or use Magic Design",
+          "Set your brand colors in Brand Kit",
+          "Create placeholders for the image and text",
+          "Save as a template",
+          "Duplicate for each new video and swap the content"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "runway",
+    "name": "Runway",
+    "emoji": "🎬",
+    "category": "video",
+    "description": "AI video generation from text descriptions — create professional video clips without filming",
+    "url": "https://runwayml.com",
+    "why": "Runway Gen-3 creates broadcast-quality video from text alone. The free tier gives you enough credits for a channel intro. No video editing experience needed — if you can describe it, Runway can render it.",
+    "prompts": [
+      {
+        "useCase": "youtube-intro",
+        "tags": ["intro", "animation", "branding"],
+        "prompt": "Create a 5-second YouTube channel intro animation: [YOUR SCENE DESCRIPTION — e.g. warm kitchen with fresh ingredients / dramatic mountain landscape / bright office with tech gadgets], camera slowly zooming in, soft professional lighting, cinematic quality. Style: [YOUR AESTHETIC: cozy and warm / bold and modern / clean and minimal]. Text overlay fades in at the end: '[YOUR CHANNEL NAME]'",
+        "steps": [
+          "Go to runwayml.com and sign up (free tier available)",
+          "Click 'Create' → Gen-3 Alpha Turbo",
+          "Replace the bracketed description with your scene",
+          "Set duration to 5 seconds",
+          "Click Generate (takes about 30 seconds)",
+          "If you don't love the result, click Regenerate or refine the prompt",
+          "Download the MP4 and add to your video editor as the intro"
+        ]
+      },
+      {
+        "useCase": "background-video",
+        "tags": ["background", "b-roll", "atmosphere"],
+        "prompt": "[SCENE: e.g. steam rising from a cooking pot / code scrolling on dark screens / hands sketching on paper], slow motion, soft natural lighting, shallow depth of field, cinematic 24fps feel, no people, atmospheric and calming, perfect as video background",
+        "steps": [
+          "Open Runway Gen-3",
+          "Describe the background scene you need",
+          "Generate 4-second clips",
+          "Download and use as B-roll footage in your editor",
+          "Layer your voiceover or screen recording on top"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "elevenlabs",
+    "name": "ElevenLabs",
+    "emoji": "🎙️",
+    "category": "audio",
+    "description": "AI voice generation — create natural voiceovers and narration from text",
+    "url": "https://elevenlabs.io",
+    "why": "ElevenLabs produces the most natural-sounding AI voices available. For creators who don't want to record their own voiceover, or who want a consistent brand voice, it's the clear leader. Free tier gives you 10 minutes/month.",
+    "prompts": [
+      {
+        "useCase": "voiceover",
+        "tags": ["voiceover", "narration", "audio"],
+        "prompt": "[PASTE YOUR VIDEO SCRIPT HERE]\n\n---\nVoice direction: Speak this as a [TONE: warm and friendly / authoritative expert / excited and energetic] host. Pace: [PACE: conversational / measured and clear / upbeat]. Emphasize key phrases naturally. This is for a YouTube video about [YOUR TOPIC].",
+        "steps": [
+          "Go to elevenlabs.io and create a free account",
+          "Click 'Text to Speech'",
+          "Browse voices and preview a few — pick one that fits your brand",
+          "Paste your script in the text box",
+          "Adjust stability (higher = more consistent) and clarity",
+          "Click Generate",
+          "Download the MP3 and import into your video editor"
+        ]
+      },
+      {
+        "useCase": "channel-intro-voice",
+        "tags": ["intro", "branding", "audio"],
+        "prompt": "Welcome to [YOUR CHANNEL NAME] — where [YOUR VALUE PROPOSITION in one sentence]. I'm [YOUR NAME OR PERSONA], and every [POSTING FREQUENCY] I show you [WHAT YOU TEACH]. Subscribe and hit the bell so you never miss a video.",
+        "steps": [
+          "Open ElevenLabs Text to Speech",
+          "Fill in your channel details in the template",
+          "Choose a voice that matches your brand personality",
+          "Generate the audio",
+          "Use this 15-second clip at the start of every video for brand consistency"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "cursor",
+    "name": "Cursor",
+    "emoji": "⌨️",
+    "category": "code",
+    "description": "AI-powered code editor for building websites, tools, and automations",
+    "url": "https://cursor.sh",
+    "why": "Cursor lets non-programmers build real software. If your dream involves a website, an app, or any automation, Cursor is the fastest way to get from idea to working code — even if you've never coded before.",
+    "prompts": [
+      {
+        "useCase": "landing-page",
+        "tags": ["website", "code", "landing-page"],
+        "prompt": "Build me a simple landing page for [YOUR PROJECT NAME]. It should have:\n- A hero section with headline: '[YOUR HEADLINE]'\n- A features section listing: [LIST 3 FEATURES]\n- An email signup form\n- Dark background, [YOUR COLOR] accent color\n- Mobile responsive\n\nUse plain HTML, CSS, and minimal JavaScript. No frameworks.",
+        "steps": [
+          "Download Cursor from cursor.sh",
+          "Open Cursor and create a new folder for your project",
+          "Press Cmd+I (Mac) or Ctrl+I (Windows) to open the AI composer",
+          "Paste the prompt with your specifics filled in",
+          "Cursor will write the code — review it and ask for changes",
+          "Press the Run button to preview in your browser",
+          "Deploy to Vercel or Netlify for free"
+        ]
+      },
+      {
+        "useCase": "automation-script",
+        "tags": ["automation", "script", "productivity"],
+        "prompt": "Write a Python script that [DESCRIBE WHAT YOU WANT TO AUTOMATE — e.g. 'downloads all images from a folder of URLs', 'renames video files based on a spreadsheet', 'sends a Slack message when a file is added to a folder']. Make it beginner-friendly with comments explaining each step.",
+        "steps": [
+          "Open Cursor",
+          "Create a new file called script.py",
+          "Describe your automation in plain English in the AI chat",
+          "Cursor writes the script",
+          "Ask it to add error handling and comments",
+          "Run the script and ask Cursor to fix any errors"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "gamma",
+    "name": "Gamma",
+    "emoji": "📊",
+    "category": "presentation",
+    "description": "AI presentation builder — creates beautiful decks from a text prompt in seconds",
+    "url": "https://gamma.app",
+    "why": "Gamma produces investor-grade presentations from a text prompt in under 2 minutes. It handles layout, design, and visual hierarchy automatically. For pitching sponsors or investors, it saves a day of Keynote work.",
+    "prompts": [
+      {
+        "useCase": "sponsor-pitch",
+        "tags": ["sponsorship", "pitch", "business"],
+        "prompt": "Create a YouTube sponsorship media kit for [YOUR CHANNEL NAME]. Include:\n- Channel overview: [NUMBER] subscribers, [YOUR NICHE] audience\n- Audience demographics: [AGE RANGE], [INTERESTS]\n- Content types: [WHAT YOU CREATE]\n- Sponsorship packages: Pre-roll (30 sec), Mid-roll (60 sec), Dedicated video\n- Pricing: [YOUR RATES or leave TBD]\n- Past performance: average [YOUR VIEWS] views per video\n- Contact: [YOUR EMAIL]\n\nMake it look professional and data-driven.",
+        "steps": [
+          "Go to gamma.app and sign up (free tier available)",
+          "Click 'Create new' → 'Generate'",
+          "Paste the prompt with your channel stats",
+          "Choose a theme that matches your brand colors",
+          "Gamma generates the full deck in seconds",
+          "Edit slide by slide to add your real data",
+          "Export as PDF or share via link"
+        ]
+      },
+      {
+        "useCase": "business-plan",
+        "tags": ["business", "planning", "strategy"],
+        "prompt": "Create a 1-year business plan presentation for [YOUR VENTURE]. Sections: Executive Summary, Problem, Solution, Target Market, Revenue Streams ([LIST THEM]), 12-Month Roadmap, Financial Projections (conservative case), Team, and Next Steps. Audience: potential investors/partners.",
+        "steps": [
+          "Open gamma.app",
+          "Use the prompt to generate your deck",
+          "Review each slide and refine the messaging",
+          "Add your actual numbers in the financial section",
+          "Share via link for investor meetings"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "perplexity",
+    "name": "Perplexity",
+    "emoji": "🔍",
+    "category": "research",
+    "description": "AI-powered research engine with real-time web search and cited sources",
+    "url": "https://perplexity.ai",
+    "why": "Perplexity searches the current web and gives you cited sources — not training data from a year ago. For market research, trend analysis, and competitor research, it's more trustworthy than ChatGPT because you can verify every claim.",
+    "prompts": [
+      {
+        "useCase": "market-research",
+        "tags": ["research", "market", "trends"],
+        "prompt": "What is the current state of the [YOUR NICHE] market in [YEAR]? I want to know:\n1. Market size and growth rate\n2. Top 5 competitors or key players\n3. Recent trends or shifts in the last 6 months\n4. Underserved gaps or opportunities\n5. Consumer pain points\n\nCite your sources for each point.",
+        "steps": [
+          "Go to perplexity.ai",
+          "Paste the research prompt with your niche filled in",
+          "Review the cited sources — click through to verify key claims",
+          "Follow up with more specific questions based on what you find",
+          "Use the findings to position your channel or business uniquely"
+        ]
+      },
+      {
+        "useCase": "competitor-analysis",
+        "tags": ["research", "competitors", "strategy"],
+        "prompt": "Research the top YouTube channels about [YOUR NICHE]. For each major channel:\n- Subscriber count and growth rate\n- What content performs best for them\n- Their unique angle or positioning\n- Comments or audience complaints (what they're missing)\n\nThen tell me: what gap exists that a new channel could fill?",
+        "steps": [
+          "Open Perplexity",
+          "Run the competitor research prompt",
+          "For channels Perplexity names, go to YouTube to verify stats",
+          "Pay special attention to the 'gap' analysis",
+          "Use the gap to define your unique channel angle"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "capcut",
+    "name": "CapCut",
+    "emoji": "✂️",
+    "category": "video",
+    "description": "AI video editor with auto-captions, templates, and one-click enhancements",
+    "url": "https://capcut.com",
+    "why": "CapCut's AI auto-captions are faster and more accurate than most alternatives, and it's free. For YouTube Shorts and social clips, it has the best template library. No learning curve required.",
+    "prompts": [
+      {
+        "useCase": "video-editing",
+        "tags": ["editing", "video", "production"],
+        "prompt": "I need to edit a [LENGTH]-minute YouTube video about [YOUR TOPIC]. The raw footage has:\n- [DESCRIBE FOOTAGE: talking head / screen recording / cooking demo / etc.]\n- Background noise issues: [YES/NO]\n- Multiple takes I need to cut together\n\nGive me a step-by-step editing workflow optimized for CapCut, including which AI features to use for efficiency.",
+        "steps": [
+          "Download CapCut (desktop or mobile)",
+          "Import your raw footage",
+          "Use 'Auto Captions' to transcribe your video",
+          "Edit by deleting caption segments (removes the video too)",
+          "Use 'Enhance Voice' to clean up audio",
+          "Add B-roll from your Runway clips",
+          "Export at 1080p for YouTube"
+        ]
+      },
+      {
+        "useCase": "shorts-creation",
+        "tags": ["shorts", "social", "clips"],
+        "prompt": "Take my [LENGTH]-minute YouTube video and help me identify the best 3 moments to turn into YouTube Shorts (under 60 seconds each). For each moment: timestamp, why it works as a short, suggested hook text to add at the top, and caption style recommendation.",
+        "steps": [
+          "Open CapCut and import your full video",
+          "Use the Smart Reframe or Clip feature",
+          "Identify high-energy moments: strong reactions, key tips, surprising moments",
+          "Export each short at 9:16 vertical format",
+          "Post Shorts 2-3 days after your main video goes up"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "notion-ai",
+    "name": "Notion AI",
+    "emoji": "📝",
+    "category": "writing",
+    "description": "AI-enhanced notes and documents for planning, SOPs, and content organization",
+    "url": "https://notion.so",
+    "why": "Notion AI combines a flexible workspace with AI writing. For content creators, it's the best place to manage your content calendar, video scripts, and brand guidelines in one place — with AI that writes inside your existing notes.",
+    "prompts": [
+      {
+        "useCase": "content-system",
+        "tags": ["planning", "organization", "content"],
+        "prompt": "Build me a YouTube content management system in Notion for [YOUR CHANNEL NAME]. I need:\n- A video pipeline tracker (Idea → Script → Filmed → Edited → Scheduled → Published)\n- A content calendar view by month\n- A video idea database with columns for: Title, Niche Tag, Hook idea, Status, Priority\n- A script template I can duplicate for each video\n\nDescribe the exact database structure and properties to set up.",
+        "steps": [
+          "Create a free Notion account at notion.so",
+          "Click 'Add a page' → 'AI' to use Notion AI",
+          "Paste the prompt to generate the structure",
+          "Create each database following the described structure",
+          "Add your existing video ideas to the database",
+          "Review and update your pipeline every week"
+        ]
+      },
+      {
+        "useCase": "video-script",
+        "tags": ["script", "writing", "content"],
+        "prompt": "Write a video script outline for a YouTube video titled '[YOUR VIDEO TITLE]'. Structure:\n- Hook (0-30 sec): [HOOK TYPE: bold claim / story / question]\n- Context (30-60 sec): why this matters to the viewer\n- Main content (broken into 3-5 clear sections)\n- Transitions between sections\n- CTA (last 30 sec): subscribe + what to watch next\n\nTarget length: [TARGET MINUTES] minutes. Tone: [YOUR TONE].",
+        "steps": [
+          "Open Notion and create a new page",
+          "Activate Notion AI with the space bar or /AI",
+          "Paste the script prompt with your video details",
+          "Review the outline and expand each section",
+          "Record using the outline as your guide"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "figma-ai",
+    "name": "Figma AI",
+    "emoji": "🖼️",
+    "category": "design",
+    "description": "AI-assisted UI design tool for creating professional visual content and mockups",
+    "url": "https://figma.com",
+    "why": "Figma's AI features generate UI components and layouts from text. For anyone building a product, app, or website alongside their content creation, Figma AI dramatically reduces the design-to-development gap.",
+    "prompts": [
+      {
+        "useCase": "brand-design",
+        "tags": ["design", "branding", "visual"],
+        "prompt": "Design a brand style guide for [YOUR BRAND NAME] in Figma. Include:\n- Color palette: primary [COLOR], secondary [COLOR], accent [COLOR], neutral grays\n- Typography: heading font, body font, and when to use each\n- Logo usage rules\n- Button and UI element styles\n- Do/don't examples for brand consistency\n\nThis will be the reference for all my content visuals.",
+        "steps": [
+          "Create a free Figma account",
+          "Open a new file and name it '[Your Brand] Style Guide'",
+          "Use Figma AI (press Cmd+K or look for the AI icon) to generate components",
+          "Create color swatches and label them with hex codes",
+          "Choose and set your Google Fonts",
+          "Share this file with anyone who creates content for you"
+        ]
+      },
+      {
+        "useCase": "thumbnail-design",
+        "tags": ["thumbnail", "design", "youtube"],
+        "prompt": "Design a YouTube thumbnail in Figma for a video titled '[YOUR VIDEO TITLE]'. The thumbnail should have: [YOUR MAIN VISUAL description], bold white text '[YOUR THUMBNAIL TEXT]' with a dark drop shadow, [YOUR ACCENT COLOR] element for visual pop, and a small [YOUR LOGO] in the corner. Size: 1280x720px.",
+        "steps": [
+          "Open Figma, create a new frame at 1280x720",
+          "Import your Midjourney or Canva background image",
+          "Add text with a strong contrast color",
+          "Use the Figma AI to generate matching design elements",
+          "Export as PNG at 2x resolution",
+          "Upload to YouTube when scheduling your video"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "suno",
+    "name": "Suno",
+    "emoji": "🎵",
+    "category": "audio",
+    "description": "AI music generation — create custom background music and jingles from text prompts",
+    "url": "https://suno.com",
+    "why": "Suno generates full songs in 2 minutes from a text description. For channel intros, background music, and social clips, it eliminates the need for stock music licensing entirely. Free tier gives you 50 credits per day.",
+    "prompts": [
+      {
+        "useCase": "channel-intro-music",
+        "tags": ["music", "intro", "branding"],
+        "prompt": "[GENRE: upbeat electronic / warm acoustic / cinematic orchestral / lo-fi hip hop], channel intro music, [MOOD: energetic and motivating / calm and focused / warm and welcoming], 10-15 seconds long, strong memorable melody, builds to a punchy end, no lyrics, professional quality, suitable for YouTube",
+        "steps": [
+          "Go to suno.com and sign up for free",
+          "Click 'Create' and paste your music prompt",
+          "Choose 'Instrumental' to avoid lyrics",
+          "Generate 2 versions and pick the best",
+          "Download the MP3",
+          "Trim to exactly the length you need in CapCut or your editor"
+        ]
+      },
+      {
+        "useCase": "background-music",
+        "tags": ["music", "background", "ambient"],
+        "prompt": "[GENRE] background music for a YouTube video about [YOUR TOPIC], [MOOD], no lyrics, consistent energy level (not too dynamic), loops cleanly, [BPM: slow 70bpm / medium 100bpm / upbeat 130bpm], professional production quality",
+        "steps": [
+          "Open Suno and create an instrumental track",
+          "Describe the mood and energy you need",
+          "Generate multiple versions to find the right feel",
+          "Download and import to your video editor",
+          "Set the music volume to 10-15% of your voice level"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "dall-e",
+    "name": "DALL-E",
+    "emoji": "🖌️",
+    "category": "image",
+    "description": "OpenAI's image generator integrated directly into ChatGPT",
+    "url": "https://chat.openai.com",
+    "why": "DALL-E 3 is built into ChatGPT Plus, making it the most accessible AI image generator — no separate tool required. It's especially strong at following text instructions exactly and generating images with accurate text overlays.",
+    "prompts": [
+      {
+        "useCase": "concept-illustration",
+        "tags": ["illustration", "concept", "visual"],
+        "prompt": "Create a [STYLE: flat illustration / realistic photo / digital art] image for a YouTube video about '[YOUR TOPIC]'. The image should show [DESCRIBE THE CONCEPT OR SCENE]. Color palette: [YOUR COLORS]. Mood: [MOOD]. This will be used as a video thumbnail or social media graphic. Make it visually striking and clear at small sizes.",
+        "steps": [
+          "Open ChatGPT (requires Plus subscription for DALL-E 3)",
+          "Click the image icon or just describe what you want",
+          "Paste your prompt with specifics filled in",
+          "ChatGPT will generate 1-2 options",
+          "Ask for variations: 'Make it more [ADJUSTMENT]'",
+          "Right-click to download the image"
+        ]
+      },
+      {
+        "useCase": "social-graphic",
+        "tags": ["social", "graphic", "marketing"],
+        "prompt": "Create a social media graphic announcing a new YouTube video titled '[YOUR VIDEO TITLE]'. Style: [STYLE]. Include space for text overlay. Background: [DESCRIBE]. The graphic should feel [MOOD] and appeal to [YOUR TARGET AUDIENCE]. Square format (1:1 ratio).",
+        "steps": [
+          "Generate the base image in DALL-E via ChatGPT",
+          "Download the image",
+          "Open in Canva to add your video title text",
+          "Resize as needed for Instagram (1:1), Twitter (16:9), Story (9:16)",
+          "Post 1-2 days before your video goes live"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "stable-diffusion",
+    "name": "Stable Diffusion",
+    "emoji": "🌟",
+    "category": "image",
+    "description": "Open-source AI image generation with unlimited free generations via local run",
+    "url": "https://stability.ai",
+    "why": "Stable Diffusion runs locally on your computer for free — unlimited generations, no API costs. For high-volume visual needs like thumbnails and social graphics, it's the most cost-efficient option once set up.",
+    "prompts": [
+      {
+        "useCase": "product-image",
+        "tags": ["product", "image", "commercial"],
+        "prompt": "[PRODUCT DESCRIPTION], professional product photography style, clean white or gradient background, soft studio lighting from [LEFT/RIGHT/TOP], sharp focus, commercial quality, no watermarks, 8k resolution aesthetic",
+        "steps": [
+          "Use Stable Diffusion via Automatic1111 (local) or stablediffusionweb.com (browser)",
+          "Use a product-focused model like RealVisXL or DreamShaper",
+          "Set steps to 30, CFG to 7, resolution to 1024x1024",
+          "Generate your product prompt",
+          "Use inpainting to remove background or fix details",
+          "Download and use in your content"
+        ]
+      },
+      {
+        "useCase": "art-style",
+        "tags": ["art", "style", "creative"],
+        "prompt": "[SCENE DESCRIPTION], in the style of [ART STYLE: ukiyo-e woodblock print / watercolor painting / oil painting / comic book / cyberpunk digital art], masterpiece quality, detailed, vibrant colors, atmospheric lighting",
+        "steps": [
+          "Open your Stable Diffusion interface",
+          "Choose a model that matches your art style",
+          "Paste the prompt and generate 4 images",
+          "Select the best one and upscale if needed",
+          "Use as visual content for your channel or social posts"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "descript",
+    "name": "Descript",
+    "emoji": "📹",
+    "category": "video",
+    "description": "Edit video by editing text — transcript-based editing, filler word removal, and AI voice overdub",
+    "url": "https://descript.com",
+    "why": "Descript turns your video into a document you edit with a keyboard. Delete a word from the transcript and it deletes that moment from the video. It removes filler words ('um', 'uh') in one click. For interviews and talking-head content, it's 5x faster than timeline editing.",
+    "prompts": [
+      {
+        "useCase": "transcript-editing",
+        "tags": ["editing", "transcript", "efficiency"],
+        "prompt": "I recorded a [LENGTH]-minute talking-head YouTube video about [YOUR TOPIC]. I need to:\n1. Remove all filler words (um, uh, like, you know)\n2. Cut the dead air/long pauses\n3. Remove 3-4 rambling sections where I repeat myself\n4. Add captions for accessibility\n\nGive me the exact Descript workflow to do this in under 30 minutes.",
+        "steps": [
+          "Upload your video to Descript",
+          "Wait for the auto-transcription (2-5 minutes)",
+          "Click 'Remove filler words' — review what it flags",
+          "Select and delete transcript sections you don't want",
+          "Use 'Find and replace' to find specific repeated phrases",
+          "Add captions from the existing transcript",
+          "Export the edited video as MP4"
+        ]
+      },
+      {
+        "useCase": "overdub",
+        "tags": ["voice", "correction", "audio"],
+        "prompt": "I mispronounced [WORD/PHRASE] 3 times in my video. I also said the wrong statistic at [TIMESTAMP] — I said [WRONG INFO] but it should be [CORRECT INFO]. Use Descript's Overdub feature to fix these without re-recording. What's the exact process?",
+        "steps": [
+          "Upload your video and train Descript on your voice (takes 10 min setup)",
+          "Find the error in the transcript",
+          "Select the wrong text and type the correction",
+          "Descript generates your voice saying the correction",
+          "Review the overdubbed section — regenerate if it sounds off",
+          "Export the corrected video"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "synthesia",
+    "name": "Synthesia",
+    "emoji": "🧑‍💼",
+    "category": "video",
+    "description": "AI video with realistic avatars — create presenter videos without filming yourself",
+    "url": "https://synthesia.io",
+    "why": "Synthesia lets you create professional video with an AI avatar reading your script. For educational content, explainers, and training videos where you don't want to appear on camera, it's the fastest professional option.",
+    "prompts": [
+      {
+        "useCase": "explainer-video",
+        "tags": ["explainer", "education", "avatar"],
+        "prompt": "Write a 2-minute explainer video script for Synthesia about '[YOUR TOPIC]'. Format for a presenter avatar:\n- Simple, clear sentences (avatar reads these exactly)\n- No complex jargon (explain any technical terms)\n- Pause indicators [PAUSE] where the avatar should pause\n- Slide cue notes [SLIDE: description] for when to advance\n- Friendly and professional tone\n- End with a clear next step for the viewer",
+        "steps": [
+          "Sign up at synthesia.io (free trial available)",
+          "Click 'Create video' → choose a template",
+          "Choose your AI avatar (50+ to pick from)",
+          "Paste your script into the text box",
+          "Select your avatar's language and accent",
+          "Add slides, backgrounds, and screen recordings",
+          "Click Generate — video is ready in minutes",
+          "Download MP4"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "copy-ai",
+    "name": "Copy.ai",
+    "emoji": "✍️",
+    "category": "writing",
+    "description": "AI copywriting tool for marketing, ads, and social media content",
+    "url": "https://copy.ai",
+    "why": "Copy.ai specializes in short-form marketing copy — ad headlines, social captions, email subjects. Where Claude excels at long-form thinking, Copy.ai is faster for high-volume short copy with multiple variants.",
+    "prompts": [
+      {
+        "useCase": "social-captions",
+        "tags": ["social", "captions", "marketing"],
+        "prompt": "Write 10 Instagram and Twitter captions for a YouTube video titled '[YOUR VIDEO TITLE]' about [BRIEF DESCRIPTION]. Include:\n- 3 question-style captions to drive comments\n- 3 value-focused captions highlighting what viewers learn\n- 2 behind-the-scenes style captions\n- 2 short punchy captions under 10 words\n\nAdd 5 relevant hashtags to each. Tone: [YOUR TONE].",
+        "steps": [
+          "Go to copy.ai and sign in",
+          "Use the 'Social Media Captions' template or the Chat feature",
+          "Fill in your video details",
+          "Generate 10+ options",
+          "Pick the best 3-5 for each platform",
+          "Schedule them in Buffer or Later"
+        ]
+      },
+      {
+        "useCase": "email-newsletter",
+        "tags": ["email", "newsletter", "marketing"],
+        "prompt": "Write an email newsletter announcing my new YouTube video '[YOUR VIDEO TITLE]'. The email should:\n- Subject line: [3 OPTIONS]\n- Opening hook that creates curiosity\n- 2-3 sentences on what they'll learn\n- Clear CTA button text: [WATCH NOW / CHECK IT OUT / SEE THE VIDEO]\n- Friendly sign-off\n\nKeep it under 200 words. Tone: [YOUR BRAND TONE].",
+        "steps": [
+          "Use Copy.ai's Email template",
+          "Fill in your video details",
+          "Generate the email draft",
+          "Paste into your email tool (Mailchimp, ConvertKit, etc.)",
+          "Send to your list 1-2 hours after the video goes live"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "jasper",
+    "name": "Jasper",
+    "emoji": "🖊️",
+    "category": "writing",
+    "description": "AI content platform for long-form writing, blogs, and marketing content at scale",
+    "url": "https://jasper.ai",
+    "why": "Jasper excels at long-form content that maintains brand voice consistently. If you're writing multiple blog posts, articles, or a book alongside your video content, Jasper's brand voice training keeps everything consistent.",
+    "prompts": [
+      {
+        "useCase": "blog-post",
+        "tags": ["blog", "writing", "seo"],
+        "prompt": "Write a 1500-word SEO blog post titled '[YOUR BLOG TITLE]' targeting the keyword '[TARGET KEYWORD]'. Structure:\n- Meta description (155 chars)\n- Introduction with the keyword in first 100 words\n- H2 sections covering: [LIST 4-5 SUBTOPICS]\n- 1 ordered list or comparison table\n- Conclusion with a CTA to watch the related YouTube video\n\nTone: [YOUR BRAND VOICE]. No fluff — every paragraph should add value.",
+        "steps": [
+          "Open Jasper and choose the 'Blog Post' workflow",
+          "Input your keyword and title",
+          "Let Jasper create an outline and review it",
+          "Use Jasper to write section by section",
+          "Edit for your voice and add your specific examples",
+          "Publish and link to your YouTube video"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "pika",
+    "name": "Pika",
+    "emoji": "⚡",
+    "category": "video",
+    "description": "AI video generation and animation from images or text — fast and creative",
+    "url": "https://pika.art",
+    "why": "Pika is faster and cheaper than Runway with a more creative, stylized output. For social media clips, animated thumbnails, and quick video content, Pika's free tier is the best starting point before investing in Runway.",
+    "prompts": [
+      {
+        "useCase": "animated-clip",
+        "tags": ["animation", "clip", "social"],
+        "prompt": "[SCENE DESCRIPTION — e.g. a coffee mug steaming on a wooden desk / hands typing on a laptop keyboard / colorful vegetables being chopped], [CAMERA MOTION: slow zoom in / pan left / static shot], [STYLE: cinematic / vibrant and colorful / moody dark], short 3-second clip, loopable, high quality",
+        "steps": [
+          "Go to pika.art and sign up for free",
+          "Click 'Create' → Text to Video",
+          "Paste your scene description",
+          "Select duration (3-5 seconds is ideal for social)",
+          "Generate and download",
+          "Use in TikTok, Instagram Reels, or YouTube Shorts"
+        ]
+      },
+      {
+        "useCase": "image-to-video",
+        "tags": ["animation", "image", "creative"],
+        "prompt": "Animate this image: [DESCRIBE YOUR IMAGE]. Motion: [DESCRIBE MOVEMENT — e.g. 'steam gently rising', 'leaves blowing in wind', 'water rippling']. Keep the main subject stable while [SPECIFIC ELEMENT] moves naturally. Duration: 4 seconds.",
+        "steps": [
+          "Open Pika, select 'Image to Video'",
+          "Upload your Midjourney or Canva image",
+          "Describe the motion you want to add",
+          "Generate and download the animated clip",
+          "Add as an animated thumbnail preview or B-roll"
+        ]
+      }
+    ]
+  }
+]
