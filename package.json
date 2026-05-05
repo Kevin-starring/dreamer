@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "prebuild": "node -e \"JSON.parse(require('fs').readFileSync('./public/cache/golden-path.json','utf8'))\" && echo 'golden-path.json valid'",
+    "prebuild": "node -e \"['golden-path','doctor','lawyer','football-player','firefighter','scientist'].forEach(f=>{JSON.parse(require('fs').readFileSync('./public/cache/'+f+'.json','utf8'));console.log(f+'.json valid')})\"",
     "build": "next build",
     "start": "next start",
     "lint": "eslint",

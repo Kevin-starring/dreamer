@@ -1,8 +1,23 @@
 import Anthropic from '@anthropic-ai/sdk'
 import { parseDecomposition, EmptyResponseError } from '@/lib/parseDecomposition'
-import { isGoldenPath } from '@/lib/goldenPathMatch'
+import { matchGoldenPath } from '@/lib/goldenPathMatch'
 import type { DecomposeResponse } from '@/lib/types'
-import goldenPathData from '@/public/cache/golden-path.json'
+
+import youtubeCoooking from '@/public/cache/golden-path.json'
+import doctor from '@/public/cache/doctor.json'
+import lawyer from '@/public/cache/lawyer.json'
+import footballPlayer from '@/public/cache/football-player.json'
+import firefighter from '@/public/cache/firefighter.json'
+import scientist from '@/public/cache/scientist.json'
+
+const GOLDEN_CACHE: Record<string, DecomposeResponse> = {
+  'youtube-cooking': youtubeCoooking as DecomposeResponse,
+  'doctor':          doctor as DecomposeResponse,
+  'lawyer':          lawyer as DecomposeResponse,
+  'football-player': footballPlayer as DecomposeResponse,
+  'firefighter':     firefighter as DecomposeResponse,
+  'scientist':       scientist as DecomposeResponse,
+}
 
 const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY })
 
@@ -35,8 +50,8 @@ RULES:
 7. Branch names should be action-oriented phases (e.g. "Research", "Production", "Marketing")
 8. Leaf names should be specific tasks (e.g. "Find niche audience", "Write script outline")`
 
-function loadGoldenCache(): DecomposeResponse {
-  return goldenPathData as DecomposeResponse
+function loadGoldenCache(key: string): DecomposeResponse {
+  return GOLDEN_CACHE[key] ?? GOLDEN_CACHE['youtube-cooking']
 }
 
 export async function POST(request: Request) {
@@ -57,13 +72,14 @@ export async function POST(request: Request) {
     return Response.json({ error: 'Dream must be under 500 characters' }, { status: 400 })
   }
 
-  if (isGoldenPath(dream)) {
-    return Response.json(loadGoldenCache())
+  const goldenKey = matchGoldenPath(dream)
+  if (goldenKey) {
+    return Response.json(loadGoldenCache(goldenKey))
   }
 
   if (!process.env.ANTHROPIC_API_KEY) {
     console.error('ANTHROPIC_API_KEY not set — falling back to golden cache')
-    return Response.json({ ...loadGoldenCache(), note: 'Showing example result' })
+    return Response.json({ ...loadGoldenCache('youtube-cooking'), note: 'Showing example result' })
   }
 
   try {
@@ -99,6 +115,6 @@ export async function POST(request: Request) {
     else if (err instanceof EmptyResponseError) console.error('Parse error:', e.message)
     else console.error('Decompose error:', e.message)
 
-    return Response.json({ ...loadGoldenCache(), note: 'Showing example result' })
+    return Response.json({ ...loadGoldenCache('youtube-cooking'), note: 'Showing example result' })
   }
 }

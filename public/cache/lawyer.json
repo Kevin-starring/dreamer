@@ -1,0 +1,59 @@
+{
+  "source": "golden-cache",
+  "root": {
+    "name": "Become a Lawyer",
+    "toolId": null,
+    "feasibility": 74,
+    "children": [
+      {
+        "name": "Law School Preparation",
+        "toolId": null,
+        "feasibility": 82,
+        "children": [
+          { "name": "LSAT Study Strategy", "toolId": "claude" },
+          { "name": "Law School Rankings Research", "toolId": "perplexity" },
+          { "name": "Study Schedule", "toolId": "notion-ai" }
+        ]
+      },
+      {
+        "name": "Application Process",
+        "toolId": null,
+        "feasibility": 76,
+        "children": [
+          { "name": "Personal Statement", "toolId": "claude" },
+          { "name": "Letters of Recommendation Plan", "toolId": "notion-ai" },
+          { "name": "Application Deadlines Tracker", "toolId": "notion-ai" }
+        ]
+      },
+      {
+        "name": "Legal Research Skills",
+        "toolId": null,
+        "feasibility": 80,
+        "children": [
+          { "name": "Case Law Research", "toolId": "perplexity" },
+          { "name": "Legal Writing Practice", "toolId": "jasper" }
+        ]
+      },
+      {
+        "name": "Practice Area Exploration",
+        "toolId": null,
+        "feasibility": 78,
+        "children": [
+          { "name": "Specialization Research", "toolId": "perplexity" },
+          { "name": "Day-in-the-life Analysis", "toolId": "chatgpt" },
+          { "name": "Career Path Mapping", "toolId": "claude" }
+        ]
+      },
+      {
+        "name": "Professional Development",
+        "toolId": null,
+        "feasibility": 70,
+        "children": [
+          { "name": "Bar Exam Prep Plan", "toolId": "claude" },
+          { "name": "Legal CV & Cover Letter", "toolId": "jasper" },
+          { "name": "Networking Strategy", "toolId": "chatgpt" }
+        ]
+      }
+    ]
+  }
+}

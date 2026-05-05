@@ -1,0 +1,58 @@
+{
+  "source": "golden-cache",
+  "root": {
+    "name": "Become a Firefighter",
+    "toolId": null,
+    "feasibility": 76,
+    "children": [
+      {
+        "name": "Physical Preparation",
+        "toolId": null,
+        "feasibility": 90,
+        "children": [
+          { "name": "CPAT Fitness Program", "toolId": "claude" },
+          { "name": "Endurance & Strength Plan", "toolId": "chatgpt" },
+          { "name": "Training Log", "toolId": "notion-ai" }
+        ]
+      },
+      {
+        "name": "Application Process",
+        "toolId": null,
+        "feasibility": 78,
+        "children": [
+          { "name": "Department Research & Requirements", "toolId": "perplexity" },
+          { "name": "Resume & Cover Letter", "toolId": "jasper" },
+          { "name": "Application Deadline Tracker", "toolId": "notion-ai" }
+        ]
+      },
+      {
+        "name": "Written Exam Prep",
+        "toolId": null,
+        "feasibility": 82,
+        "children": [
+          { "name": "Exam Topics & Study Guide", "toolId": "claude" },
+          { "name": "Practice Test Resources", "toolId": "perplexity" }
+        ]
+      },
+      {
+        "name": "Technical Skills",
+        "toolId": null,
+        "feasibility": 72,
+        "children": [
+          { "name": "EMT & First Aid Certification Path", "toolId": "perplexity" },
+          { "name": "Fire Science Coursework Research", "toolId": "perplexity" },
+          { "name": "Technical Knowledge Study Plan", "toolId": "claude" }
+        ]
+      },
+      {
+        "name": "Interview & Selection",
+        "toolId": null,
+        "feasibility": 74,
+        "children": [
+          { "name": "Interview Question Prep", "toolId": "claude" },
+          { "name": "Oral Board Practice", "toolId": "chatgpt" }
+        ]
+      }
+    ]
+  }
+}

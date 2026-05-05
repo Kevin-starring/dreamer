@@ -1,0 +1,59 @@
+{
+  "source": "golden-cache",
+  "root": {
+    "name": "Become a Scientist",
+    "toolId": null,
+    "feasibility": 70,
+    "children": [
+      {
+        "name": "Research Foundation",
+        "toolId": null,
+        "feasibility": 85,
+        "children": [
+          { "name": "Field & Topic Selection", "toolId": "perplexity" },
+          { "name": "Literature Review", "toolId": "perplexity" },
+          { "name": "Research Methodology Guide", "toolId": "claude" }
+        ]
+      },
+      {
+        "name": "Academic Path",
+        "toolId": null,
+        "feasibility": 72,
+        "children": [
+          { "name": "PhD Program Research", "toolId": "perplexity" },
+          { "name": "Research Proposal Writing", "toolId": "claude" },
+          { "name": "Grant & Funding Research", "toolId": "perplexity" }
+        ]
+      },
+      {
+        "name": "Lab & Research Skills",
+        "toolId": null,
+        "feasibility": 80,
+        "children": [
+          { "name": "Lab Notebook & Documentation", "toolId": "notion-ai" },
+          { "name": "Data Analysis Framework", "toolId": "claude" },
+          { "name": "Research Paper Writing", "toolId": "jasper" }
+        ]
+      },
+      {
+        "name": "Knowledge Sharing",
+        "toolId": null,
+        "feasibility": 75,
+        "children": [
+          { "name": "Conference Presentation Deck", "toolId": "gamma" },
+          { "name": "Science Communication Blog", "toolId": "jasper" },
+          { "name": "Visual Abstract Design", "toolId": "canva" }
+        ]
+      },
+      {
+        "name": "Career Development",
+        "toolId": null,
+        "feasibility": 68,
+        "children": [
+          { "name": "Academic CV Building", "toolId": "claude" },
+          { "name": "Fellowship & Postdoc Research", "toolId": "perplexity" }
+        ]
+      }
+    ]
+  }
+}

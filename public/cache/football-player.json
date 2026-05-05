@@ -1,0 +1,58 @@
+{
+  "source": "golden-cache",
+  "root": {
+    "name": "Professional Football Player",
+    "toolId": null,
+    "feasibility": 58,
+    "children": [
+      {
+        "name": "Physical Training",
+        "toolId": null,
+        "feasibility": 88,
+        "children": [
+          { "name": "Personalized Training Program", "toolId": "claude" },
+          { "name": "Nutrition & Recovery Plan", "toolId": "chatgpt" },
+          { "name": "Performance Tracking System", "toolId": "notion-ai" }
+        ]
+      },
+      {
+        "name": "Technical Skills",
+        "toolId": null,
+        "feasibility": 80,
+        "children": [
+          { "name": "Position-specific Drill Plans", "toolId": "claude" },
+          { "name": "Video Analysis Research", "toolId": "perplexity" }
+        ]
+      },
+      {
+        "name": "Mental Performance",
+        "toolId": null,
+        "feasibility": 85,
+        "children": [
+          { "name": "Mental Conditioning Framework", "toolId": "claude" },
+          { "name": "Goal Setting & Visualization", "toolId": "notion-ai" },
+          { "name": "Sports Psychology Resources", "toolId": "perplexity" }
+        ]
+      },
+      {
+        "name": "Exposure & Scouting",
+        "toolId": null,
+        "feasibility": 55,
+        "children": [
+          { "name": "Highlight Reel Editing", "toolId": "capcut" },
+          { "name": "Social Media Presence", "toolId": "copy-ai" },
+          { "name": "Trial & Academy Research", "toolId": "perplexity" }
+        ]
+      },
+      {
+        "name": "Career Strategy",
+        "toolId": null,
+        "feasibility": 50,
+        "children": [
+          { "name": "Agent & Representation Research", "toolId": "perplexity" },
+          { "name": "Contract Basics Guide", "toolId": "claude" }
+        ]
+      }
+    ]
+  }
+}
