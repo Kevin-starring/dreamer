@@ -10,9 +10,9 @@
         "toolId": null,
         "feasibility": 85,
         "children": [
-          { "name": "Field & Topic Selection", "toolId": "perplexity" },
-          { "name": "Literature Review", "toolId": "perplexity" },
-          { "name": "Research Methodology Guide", "toolId": "claude" }
+          { "name": "Field & Topic Selection", "toolId": "perplexity", "useCase": "career-path-research" },
+          { "name": "Literature Review", "toolId": "perplexity", "useCase": "program-research" },
+          { "name": "Research Methodology Guide", "toolId": "claude", "useCase": "research-methodology" }
         ]
       },
       {
@@ -20,9 +20,9 @@
         "toolId": null,
         "feasibility": 72,
         "children": [
-          { "name": "PhD Program Research", "toolId": "perplexity" },
-          { "name": "Research Proposal Writing", "toolId": "claude" },
-          { "name": "Grant & Funding Research", "toolId": "perplexity" }
+          { "name": "PhD Program Research", "toolId": "perplexity", "useCase": "program-research" },
+          { "name": "Research Proposal Writing", "toolId": "claude", "useCase": "research-methodology" },
+          { "name": "Grant & Funding Research", "toolId": "perplexity", "useCase": "career-path-research" }
         ]
       },
       {
@@ -30,9 +30,9 @@
         "toolId": null,
         "feasibility": 80,
         "children": [
-          { "name": "Lab Notebook & Documentation", "toolId": "notion-ai" },
-          { "name": "Data Analysis Framework", "toolId": "claude" },
-          { "name": "Research Paper Writing", "toolId": "jasper" }
+          { "name": "Lab Notebook & Documentation", "toolId": "notion-ai", "useCase": "study-tracker" },
+          { "name": "Data Analysis Framework", "toolId": "claude", "useCase": "research-methodology" },
+          { "name": "Research Paper Writing", "toolId": "jasper", "useCase": "research-paper" }
         ]
       },
       {
@@ -40,9 +40,9 @@
         "toolId": null,
         "feasibility": 75,
         "children": [
-          { "name": "Conference Presentation Deck", "toolId": "gamma" },
-          { "name": "Science Communication Blog", "toolId": "jasper" },
-          { "name": "Visual Abstract Design", "toolId": "canva" }
+          { "name": "Conference Presentation Deck", "toolId": "gamma", "useCase": "career-pitch" },
+          { "name": "Science Communication Blog", "toolId": "jasper", "useCase": "research-paper" },
+          { "name": "Visual Abstract Design", "toolId": "canva", "useCase": "thumbnail-design" }
         ]
       },
       {
@@ -50,8 +50,8 @@
         "toolId": null,
         "feasibility": 68,
         "children": [
-          { "name": "Academic CV Building", "toolId": "claude" },
-          { "name": "Fellowship & Postdoc Research", "toolId": "perplexity" }
+          { "name": "Academic CV Building", "toolId": "claude", "useCase": "career-roadmap" },
+          { "name": "Fellowship & Postdoc Research", "toolId": "perplexity", "useCase": "career-path-research" }
         ]
       }
     ]

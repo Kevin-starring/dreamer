@@ -46,6 +46,97 @@
           "Paste and send",
           "Use the description in YouTube Studio > Customization > Basic Info"
         ]
+      },
+      {
+        "useCase": "personal-statement",
+        "tags": ["writing", "application", "career"],
+        "prompt": "Write a compelling personal statement for [MEDICAL SCHOOL / LAW SCHOOL / PROGRAM NAME] that tells my story authentically. My background: [YOUR BACKGROUND]. Key experiences: [LIST 2-3 KEY EXPERIENCES]. Why this field: [YOUR REASON]. Why this school: [SPECIFIC REASON].\n\nMake it human, specific, and show growth. Avoid clichés like 'I've always wanted to help people.' Under 650 words.",
+        "steps": [
+          "Open claude.ai",
+          "Fill in your background and 2-3 key defining experiences",
+          "Send the prompt and read the draft critically",
+          "Ask Claude: 'Make the opening more specific' or 'Strengthen the why this field section'",
+          "Iterate 2-3 times until it sounds like you, not an AI",
+          "Have a mentor or advisor review the final version"
+        ]
+      },
+      {
+        "useCase": "career-roadmap",
+        "tags": ["planning", "career", "strategy"],
+        "prompt": "Create a detailed 5-year roadmap for becoming a [YOUR TARGET CAREER: doctor / lawyer / scientist]. I am currently [YOUR STATUS: undergraduate junior / recent graduate / career changer]. Strengths: [LIST]. Constraints: [TIME / MONEY / LOCATION].\n\nBreak the roadmap into: Year 1 (foundations), Year 2-3 (applications and training), Year 4-5 (specialization). Include specific milestones, key decision points, and what success looks like at each stage.",
+        "steps": [
+          "Go to claude.ai",
+          "Fill in your current status and target career",
+          "List your real strengths and constraints honestly",
+          "Ask Claude to make the timeline more specific to your situation",
+          "Save the roadmap to Notion for ongoing tracking",
+          "Review quarterly and update as circumstances change"
+        ]
+      },
+      {
+        "useCase": "study-plan",
+        "tags": ["studying", "exam", "preparation"],
+        "prompt": "Build me a [DURATION: 3-month / 6-month] study plan for [EXAM: MCAT / LSAT / Bar Exam / Firefighter Written Test]. My current level: [BEGINNER / INTERMEDIATE]. Available study time: [HOURS] per week. Target score: [YOUR GOAL].\n\nStructure the plan week by week. Include: what to study each week, practice test schedule, weak-spot review blocks, and how to know if I'm on track.",
+        "steps": [
+          "Open claude.ai",
+          "Fill in your exam, timeline, and weekly hours",
+          "Take a diagnostic practice test first to baseline your score",
+          "Ask Claude to adjust the plan to your identified weak areas",
+          "Copy the plan into Notion or a calendar",
+          "Recalibrate every 2 weeks based on practice test results"
+        ]
+      },
+      {
+        "useCase": "interview-prep",
+        "tags": ["interview", "preparation", "career"],
+        "prompt": "Help me prepare for a [TYPE: medical school / law school / residency / firefighter oral board] interview. Practice with me on these questions one at a time:\n1. Why this field?\n2. Tell me about a challenge you overcame.\n3. What are your weaknesses?\n4. Where do you see yourself in 10 years?\n5. [FIELD-SPECIFIC QUESTION YOU EXPECT]\n\nAfter each answer I give, provide specific feedback on: clarity, conciseness, and whether I actually answered the question. Be direct.",
+        "steps": [
+          "Open claude.ai and tell it your target program",
+          "Answer each question as you would in the real interview",
+          "If feedback feels too positive, ask Claude to 'be more critical'",
+          "Record yourself answering and compare to Claude's written feedback",
+          "Identify your 2-3 weakest answers and drill those specifically",
+          "Run 3 full mock interview sessions before the real thing"
+        ]
+      },
+      {
+        "useCase": "training-program",
+        "tags": ["fitness", "training", "sports"],
+        "prompt": "Design a [DURATION: 12-week / 6-month] training program for [GOAL: football performance / CPAT firefighter test / athletic combine]. My fitness level: [BEGINNER / INTERMEDIATE / ADVANCED]. Available equipment: [GYM / HOME / FIELD]. Training days per week: [NUMBER].\n\nStructure by phase: Foundation (weeks 1-4), Build (weeks 5-8), Peak (weeks 9-12). For each week include: specific sessions, sets/reps/load, and progression markers. Flag when to rest vs. push.",
+        "steps": [
+          "Go to claude.ai",
+          "Fill in your goal, fitness level, and available training days",
+          "Ask Claude to adapt for any injuries or physical limitations",
+          "Take baseline measurements before starting (weight, max reps, sprint time)",
+          "Log sessions in Notion or a training app",
+          "Reassess every 4 weeks and ask Claude to adjust the program"
+        ]
+      },
+      {
+        "useCase": "mental-conditioning",
+        "tags": ["mindset", "mental", "performance"],
+        "prompt": "Create a mental performance routine for a competitive athlete. I struggle with: [NERVES BEFORE GAMES / RECOVERING FROM MISTAKES / SELF-DOUBT / PRESSURE SITUATIONS].\n\nGive me: a pre-competition mental routine (15-30 min), techniques for in-game focus recovery, a post-game review process, and a weekly mental training habit. Be specific — no generic motivational advice.",
+        "steps": [
+          "Open claude.ai",
+          "Be specific about your mental challenges — name real situations",
+          "Ask Claude to explain the reasoning behind each technique",
+          "Practice the pre-competition routine in training before using it in games",
+          "Journal your mental state before and after each session",
+          "Refine every 4 weeks based on what actually works"
+        ]
+      },
+      {
+        "useCase": "research-methodology",
+        "tags": ["research", "methodology", "science"],
+        "prompt": "Help me design a research methodology for my study on [YOUR RESEARCH TOPIC]. Research question: [SPECIFIC QUESTION]. Field: [BIOLOGY / CHEMISTRY / SOCIAL SCIENCE / etc.]. Available resources: [LAB ACCESS / DATASETS / SURVEY TOOLS].\n\nRecommend: research design (experimental / observational / mixed), data collection approach, sample size, statistical methods, and how to control for key confounds. Explain the tradeoffs of each choice.",
+        "steps": [
+          "Open claude.ai",
+          "State your research question as precisely as possible",
+          "Describe your available resources and constraints honestly",
+          "Ask Claude to flag potential weaknesses in the proposed methodology",
+          "Cross-check recommendations with your advisor or a methods textbook",
+          "Document the final methodology in Notion before starting data collection"
+        ]
       }
     ]
   },
@@ -80,6 +171,32 @@
           "Send the prompt",
           "Pick the 3 hooks that feel most authentic to you",
           "Test different hooks in your first few videos and track retention"
+        ]
+      },
+      {
+        "useCase": "nutrition-plan",
+        "tags": ["nutrition", "fitness", "health"],
+        "prompt": "Create a nutrition plan for a [SPORT: football / endurance / strength] athlete. My stats: [HEIGHT, WEIGHT, AGE]. Training phase: [OFF-SEASON / IN-SEASON / PRE-COMPETITION]. Goal: [GAIN MUSCLE / MAINTAIN WEIGHT / IMPROVE ENDURANCE].\n\nInclude: daily calorie target, macronutrient breakdown (protein/carbs/fat in grams), meal timing around training, pre-game meal, and recovery nutrition. Give me a sample full day of eating with specific foods and amounts.",
+        "steps": [
+          "Open ChatGPT",
+          "Fill in your physical stats and current training phase",
+          "Ask for meal timing specific to your training schedule",
+          "Request a grocery list for the first week",
+          "Track your meals for 2 weeks, then share results with ChatGPT for adjustments",
+          "Consult a sports dietitian for competition-level planning"
+        ]
+      },
+      {
+        "useCase": "interview-practice",
+        "tags": ["interview", "practice", "career"],
+        "prompt": "Act as an interviewer for a [ROLE: law firm / firefighter department / research position / medical residency]. Ask me 5 tough questions one at a time. After each of my answers, tell me:\n- What I did well (be specific)\n- What was unclear or weak (be specific)\n- A better way to phrase that answer\n\nDon't hold back — I need realistic feedback. Start with: 'Tell me about yourself.'",
+        "steps": [
+          "Open ChatGPT and specify your target role",
+          "Answer each question as you would in the real interview",
+          "Take notes on the feedback after each answer",
+          "Run the full simulation again after improving your answers",
+          "Record yourself on video for the final practice round",
+          "Focus extra time on the 2 questions where feedback was hardest"
         ]
       }
     ]
@@ -305,6 +422,19 @@
           "Add your actual numbers in the financial section",
           "Share via link for investor meetings"
         ]
+      },
+      {
+        "useCase": "career-pitch",
+        "tags": ["career", "presentation", "pitch"],
+        "prompt": "Create a professional presentation for [RESIDENCY INTERVIEW / FELLOWSHIP APPLICATION / ACADEMIC JOB TALK / RESEARCH FUNDING PITCH]. My background: [YOUR CREDENTIALS]. Key message: [WHAT YOU WANT THEM TO REMEMBER]. Audience: [WHO WILL SEE THIS].\n\nSlides needed: Introduction, Background and Qualifications, My Work and Achievements, Why This Opportunity, My Vision, Next Steps. Under [10 / 15] slides. Confident, not arrogant.",
+        "steps": [
+          "Go to gamma.app and sign up (free tier available)",
+          "Click 'Create' then 'Generate' and paste the prompt",
+          "Choose a professional theme — dark or clean white",
+          "Gamma generates the full deck in under 2 minutes",
+          "Replace placeholder text with your real credentials and data",
+          "Practice out loud — aim for 1 minute per slide"
+        ]
       }
     ]
   },
@@ -339,6 +469,31 @@
           "For channels Perplexity names, go to YouTube to verify stats",
           "Pay special attention to the 'gap' analysis",
           "Use the gap to define your unique channel angle"
+        ]
+      },
+      {
+        "useCase": "program-research",
+        "tags": ["research", "programs", "applications"],
+        "prompt": "Research [MEDICAL SCHOOLS / LAW SCHOOLS / PhD PROGRAMS / FIRE DEPARTMENTS] in [REGION / NATIONWIDE] that match my profile. My stats: [GPA, TEST SCORE, EXPERIENCE]. Target specialty: [YOUR AREA].\n\nFor each program include: ranking, acceptance rate, average admitted class profile, unique strengths, and what they look for. Sort into: reach, match, and safety schools based on my stats. Cite all sources.",
+        "steps": [
+          "Go to perplexity.ai",
+          "Fill in your academic stats and target specialty",
+          "Verify rankings with official sources (US News, AAMC, LSAC, etc.)",
+          "Build a shortlist of 10-15 programs across reach/match/safety tiers",
+          "Research each program's specific requirements and deadlines",
+          "Add your shortlist to your Notion application tracker"
+        ]
+      },
+      {
+        "useCase": "career-path-research",
+        "tags": ["research", "career", "industry"],
+        "prompt": "Research what it's really like to work as a [DOCTOR / LAWYER / PROFESSIONAL ATHLETE / FIREFIGHTER / SCIENTIST] specializing in [SPECIALTY]. I want to know:\n1. Day-in-the-life breakdown by specialty\n2. Real salary ranges (entry, mid, senior) with sources\n3. Work-life balance realities\n4. Career progression timeline\n5. What professionals wish they'd known before starting\n\nCite sources. Be honest about the hard parts.",
+        "steps": [
+          "Go to perplexity.ai",
+          "Fill in your target career and specialty",
+          "Click through sources to verify every key claim",
+          "Search Reddit communities for unfiltered professional opinions",
+          "Identify one professional in the field to have a real conversation with"
         ]
       }
     ]
@@ -377,6 +532,19 @@
           "Export each short at 9:16 vertical format",
           "Post Shorts 2-3 days after your main video goes up"
         ]
+      },
+      {
+        "useCase": "highlight-reel",
+        "tags": ["sports", "highlight", "recruiting"],
+        "prompt": "Help me create a [2-3 minute] sports highlight reel for [FOOTBALL / SOCCER / SPORT] recruiting. My footage: [DESCRIBE: game recordings / training clips]. Skills to showcase: [SPEED / TECHNICAL SKILL / DECISION MAKING / PHYSICALITY].\n\nGive me: the ideal structure for a recruiting highlight reel, how to order clips for maximum impact, what each 30-second segment should focus on, and CapCut settings for a professional result.",
+        "steps": [
+          "Download CapCut desktop for maximum control",
+          "Organize clips by skill type in separate folders before editing",
+          "Open with your 3-5 most impressive moments — scouts decide in the first 30 seconds",
+          "Add your name, position, and contact info as text at the very start",
+          "Use upbeat music at 40-50% volume under the action",
+          "Export at 1080p and upload to YouTube as unlisted for sharing with scouts"
+        ]
       }
     ]
   },
@@ -412,6 +580,45 @@
           "Paste the script prompt with your video details",
           "Review the outline and expand each section",
           "Record using the outline as your guide"
+        ]
+      },
+      {
+        "useCase": "study-tracker",
+        "tags": ["studying", "tracking", "organization"],
+        "prompt": "Build me a study tracker in Notion for [EXAM: MCAT / LSAT / Firefighter Exam / PhD coursework]. I need to track:\n- Topics covered with completion status\n- Practice test scores over time to see progress\n- Weak areas that need more review\n- Daily study log (date, topics, hours, notes)\n- Countdown to exam date\n\nDescribe the exact database setup with columns, views, and any formulas.",
+        "steps": [
+          "Create a free Notion account at notion.so",
+          "Click 'Add a page' then use Notion AI with this prompt",
+          "Set up the database with the recommended properties",
+          "Add your exam topics as rows",
+          "Update your log after every study session",
+          "Review your weak-areas list every Sunday to prioritize the next week"
+        ]
+      },
+      {
+        "useCase": "application-tracker",
+        "tags": ["applications", "tracking", "deadlines"],
+        "prompt": "Create an application tracker in Notion for [MEDICAL SCHOOL / LAW SCHOOL / FIREFIGHTER DEPARTMENT] applications. Track:\n- Program name and location\n- Application deadline\n- Requirements checklist (essays, letters, tests, certifications)\n- Status (Not Started / In Progress / Submitted / Interview / Decision)\n- Notes on each program\n- Decision dates\n\nI want a board view to see all statuses at a glance and a calendar view for deadlines.",
+        "steps": [
+          "Open Notion and create a new page",
+          "Ask Notion AI to build this tracker from the prompt",
+          "Add all your target programs as rows",
+          "Set reminders for 2 weeks before each deadline",
+          "Update status after every major action (submitted, interview scheduled, etc.)",
+          "Review the tracker every Sunday to stay on track"
+        ]
+      },
+      {
+        "useCase": "training-log",
+        "tags": ["training", "fitness", "tracking"],
+        "prompt": "Build me an athlete training log in Notion. Track:\n- Each session: date, workout type, exercises, sets/reps/weight\n- Weekly volume (total sets per muscle group)\n- Performance benchmarks: speed times, max weights, endurance results\n- Body metrics: weight, measurements\n- Subjective ratings: energy level, sleep quality, soreness (1-10)\n\nInclude a weekly review template to assess progress and plan adjustments.",
+        "steps": [
+          "Open Notion and create a new database",
+          "Use Notion AI to generate the structure from this prompt",
+          "Log every training session immediately after it ends",
+          "Complete the weekly review every Sunday",
+          "Share relevant data with your coach or trainer",
+          "Export monthly summaries to track long-term progress"
         ]
       }
     ]
@@ -681,6 +888,32 @@
           "Use Jasper to write section by section",
           "Edit for your voice and add your specific examples",
           "Publish and link to your YouTube video"
+        ]
+      },
+      {
+        "useCase": "professional-cv",
+        "tags": ["cv", "resume", "career"],
+        "prompt": "Write a professional [CV / Resume] for a [MEDICAL SCHOOL APPLICANT / LAW SCHOOL APPLICANT / FIREFIGHTER CANDIDATE / RESEARCH SCIENTIST]. My background: [YOUR EDUCATION, EXPERIENCE, ACHIEVEMENTS].\n\nStructure: Education, Relevant Experience, Research or Publications (if applicable), Certifications, Skills, Awards. Length: [1 page / 2 pages]. Tone: formal, achievement-focused. Use strong action verbs. Quantify achievements wherever possible (hours, patients, percentages).",
+        "steps": [
+          "Open Jasper and choose the 'Resume' or 'Long Form' template",
+          "Fill in all your background information before generating",
+          "Let Jasper draft each section, then review critically",
+          "Add specific numbers: GPA, volunteer hours, patient contacts, pass rates",
+          "Ask Jasper to 'make the experience bullet points stronger and more specific'",
+          "Have a career advisor or mentor review the final version before submitting"
+        ]
+      },
+      {
+        "useCase": "research-paper",
+        "tags": ["research", "writing", "academic"],
+        "prompt": "Help me write [a section of / an outline for] a research paper on [YOUR TOPIC]. Target journal: [JOURNAL NAME / TYPE]. Key findings: [SUMMARIZE YOUR RESULTS]. Methodology: [YOUR APPROACH].\n\nStructure: Abstract, Introduction (with clear literature gap), Methods, Results, Discussion (implications and limitations), Conclusion. Match [JOURNAL NAME] style guidelines. Be precise — no padding.",
+        "steps": [
+          "Open Jasper and use the 'Long Form' template",
+          "Start with the Methods section — it's the most factual and easiest to draft first",
+          "Then write Results, Discussion, Introduction, and Abstract last",
+          "Ask Jasper to 'match academic journal style' for formal tone",
+          "Use Perplexity to find and verify citations for every key claim",
+          "Have your advisor review before submission — never submit AI-drafted text unreviewed"
         ]
       }
     ]

@@ -10,9 +10,9 @@
         "toolId": null,
         "feasibility": 90,
         "children": [
-          { "name": "CPAT Fitness Program", "toolId": "claude" },
-          { "name": "Endurance & Strength Plan", "toolId": "chatgpt" },
-          { "name": "Training Log", "toolId": "notion-ai" }
+          { "name": "CPAT Fitness Program", "toolId": "claude", "useCase": "training-program" },
+          { "name": "Endurance & Strength Plan", "toolId": "chatgpt", "useCase": "nutrition-plan" },
+          { "name": "Training Log", "toolId": "notion-ai", "useCase": "training-log" }
         ]
       },
       {
@@ -20,9 +20,9 @@
         "toolId": null,
         "feasibility": 78,
         "children": [
-          { "name": "Department Research & Requirements", "toolId": "perplexity" },
-          { "name": "Resume & Cover Letter", "toolId": "jasper" },
-          { "name": "Application Deadline Tracker", "toolId": "notion-ai" }
+          { "name": "Department Research & Requirements", "toolId": "perplexity", "useCase": "program-research" },
+          { "name": "Resume & Cover Letter", "toolId": "jasper", "useCase": "professional-cv" },
+          { "name": "Application Deadline Tracker", "toolId": "notion-ai", "useCase": "application-tracker" }
         ]
       },
       {
@@ -30,8 +30,8 @@
         "toolId": null,
         "feasibility": 82,
         "children": [
-          { "name": "Exam Topics & Study Guide", "toolId": "claude" },
-          { "name": "Practice Test Resources", "toolId": "perplexity" }
+          { "name": "Exam Topics & Study Guide", "toolId": "claude", "useCase": "study-plan" },
+          { "name": "Practice Test Resources", "toolId": "perplexity", "useCase": "program-research" }
         ]
       },
       {
@@ -39,9 +39,9 @@
         "toolId": null,
         "feasibility": 72,
         "children": [
-          { "name": "EMT & First Aid Certification Path", "toolId": "perplexity" },
-          { "name": "Fire Science Coursework Research", "toolId": "perplexity" },
-          { "name": "Technical Knowledge Study Plan", "toolId": "claude" }
+          { "name": "EMT & First Aid Certification Path", "toolId": "perplexity", "useCase": "career-path-research" },
+          { "name": "Fire Science Coursework Research", "toolId": "perplexity", "useCase": "career-path-research" },
+          { "name": "Technical Knowledge Study Plan", "toolId": "claude", "useCase": "study-plan" }
         ]
       },
       {
@@ -49,8 +49,8 @@
         "toolId": null,
         "feasibility": 74,
         "children": [
-          { "name": "Interview Question Prep", "toolId": "claude" },
-          { "name": "Oral Board Practice", "toolId": "chatgpt" }
+          { "name": "Interview Question Prep", "toolId": "claude", "useCase": "interview-prep" },
+          { "name": "Oral Board Practice", "toolId": "chatgpt", "useCase": "interview-practice" }
         ]
       }
     ]

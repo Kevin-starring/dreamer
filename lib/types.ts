@@ -1,6 +1,7 @@
 export interface TreeNode {
   name: string;
   toolId: string | null;
+  useCase?: string;
   feasibility?: number;
   children?: TreeNode[];
 }

@@ -8,7 +8,7 @@ import type { TreeNode } from '@/lib/types'
 
 interface Props {
   data: TreeNode | null
-  onNodeClick: (toolId: string) => void
+  onNodeClick: (toolId: string, useCase?: string) => void
   loading: boolean
 }
 
@@ -61,7 +61,7 @@ export default function DiagramPanel({ data, onNodeClick, loading }: Props) {
       .attr('transform', d => `translate(${(d as { x: number; y: number }).y},${(d as { x: number; y: number }).x})`)
       .style('cursor', d => d.data.toolId ? 'pointer' : 'default')
       .on('click', (_, d) => {
-        if (d.data.toolId) onNodeClick(d.data.toolId)
+        if (d.data.toolId) onNodeClick(d.data.toolId, d.data.useCase)
       })
 
     // node circles

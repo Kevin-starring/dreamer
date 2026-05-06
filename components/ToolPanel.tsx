@@ -5,9 +5,10 @@ import type { Tool } from '@/lib/types'
 
 interface Props {
   tool: Tool | null
+  useCase?: string
 }
 
-export default function ToolPanel({ tool }: Props) {
+export default function ToolPanel({ tool, useCase }: Props) {
   const [copied, setCopied] = useState(false)
 
   if (!tool) {
@@ -20,7 +21,9 @@ export default function ToolPanel({ tool }: Props) {
     )
   }
 
-  const prompt = tool.prompts[0]
+  const prompt =
+    (useCase && tool.prompts.find(p => p.useCase === useCase)) ??
+    tool.prompts[0]
 
   const handleCopy = async () => {
     try {

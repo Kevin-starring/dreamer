@@ -10,9 +10,9 @@
         "toolId": null,
         "feasibility": 85,
         "children": [
-          { "name": "Niche Research", "toolId": "claude" },
-          { "name": "Content Calendar", "toolId": "claude" },
-          { "name": "Trend Analysis", "toolId": "perplexity" }
+          { "name": "Niche Research", "toolId": "claude", "useCase": "niche-research" },
+          { "name": "Content Calendar", "toolId": "claude", "useCase": "content-calendar" },
+          { "name": "Trend Analysis", "toolId": "perplexity", "useCase": "market-research" }
         ]
       },
       {
@@ -20,8 +20,8 @@
         "toolId": null,
         "feasibility": 92,
         "children": [
-          { "name": "Logo & Banner", "toolId": "canva" },
-          { "name": "Channel Description", "toolId": "claude" }
+          { "name": "Logo & Banner", "toolId": "canva", "useCase": "channel-logo" },
+          { "name": "Channel Description", "toolId": "claude", "useCase": "channel-description" }
         ]
       },
       {
@@ -29,9 +29,9 @@
         "toolId": null,
         "feasibility": 70,
         "children": [
-          { "name": "Intro Animation", "toolId": "runway" },
-          { "name": "Voiceover", "toolId": "elevenlabs" },
-          { "name": "Video Editing", "toolId": "capcut" }
+          { "name": "Intro Animation", "toolId": "runway", "useCase": "youtube-intro" },
+          { "name": "Voiceover", "toolId": "elevenlabs", "useCase": "voiceover" },
+          { "name": "Video Editing", "toolId": "capcut", "useCase": "video-editing" }
         ]
       },
       {
@@ -39,8 +39,8 @@
         "toolId": null,
         "feasibility": 80,
         "children": [
-          { "name": "Thumbnail Design", "toolId": "midjourney" },
-          { "name": "Social Media Posts", "toolId": "copy-ai" }
+          { "name": "Thumbnail Design", "toolId": "midjourney", "useCase": "youtube-thumbnail" },
+          { "name": "Social Media Posts", "toolId": "copy-ai", "useCase": "social-captions" }
         ]
       },
       {
@@ -48,8 +48,8 @@
         "toolId": null,
         "feasibility": 65,
         "children": [
-          { "name": "Sponsor Pitch Deck", "toolId": "gamma" },
-          { "name": "Revenue Model", "toolId": "claude" }
+          { "name": "Sponsor Pitch Deck", "toolId": "gamma", "useCase": "sponsor-pitch" },
+          { "name": "Revenue Model", "toolId": "claude", "useCase": "niche-research" }
         ]
       }
     ]

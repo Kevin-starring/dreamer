@@ -16,6 +16,7 @@ export default function Home() {
   const [dream, setDream] = useState('')
   const [treeData, setTreeData] = useState<TreeNode | null>(null)
   const [selectedTool, setSelectedTool] = useState<Tool | null>(null)
+  const [selectedUseCase, setSelectedUseCase] = useState<string | undefined>(undefined)
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const [cacheNote, setCacheNote] = useState<string | null>(null)
@@ -26,6 +27,7 @@ export default function Home() {
     setError(null)
     setCacheNote(null)
     setSelectedTool(null)
+    setSelectedUseCase(undefined)
 
     try {
       const res = await fetch('/api/decompose', {
@@ -51,9 +53,10 @@ export default function Home() {
     }
   }
 
-  const handleNodeClick = useCallback((toolId: string) => {
+  const handleNodeClick = useCallback((toolId: string, useCase?: string) => {
     const found = tools.find(t => t.id === toolId)
     setSelectedTool(found ?? null)
+    setSelectedUseCase(useCase)
   }, [])
 
   return (
@@ -87,7 +90,7 @@ export default function Home() {
           onNodeClick={handleNodeClick}
           loading={loading}
         />
-        <ToolPanel tool={selectedTool} />
+        <ToolPanel tool={selectedTool} useCase={selectedUseCase} />
       </main>
     </div>
   )
