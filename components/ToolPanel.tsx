@@ -21,9 +21,7 @@ export default function ToolPanel({ tool, useCase }: Props) {
     )
   }
 
-  const prompt =
-    (useCase && tool.prompts.find(p => p.useCase === useCase)) ??
-    tool.prompts[0]
+  const prompt = tool.prompts.find(p => p.useCase === useCase) ?? tool.prompts[0]
 
   const handleCopy = async () => {
     try {
