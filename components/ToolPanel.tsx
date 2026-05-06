@@ -6,9 +6,12 @@ import type { Tool } from '@/lib/types'
 interface Props {
   tool: Tool | null
   useCase?: string
+  nodeName?: string | null
+  isCompleted?: boolean
+  onToggleComplete?: (nodeName: string) => void
 }
 
-export default function ToolPanel({ tool, useCase }: Props) {
+export default function ToolPanel({ tool, useCase, nodeName, isCompleted, onToggleComplete }: Props) {
   const [copied, setCopied] = useState(false)
 
   if (!tool) {
@@ -42,6 +45,10 @@ export default function ToolPanel({ tool, useCase }: Props) {
     }).catch(() => {})
   }
 
+  const handleToggle = () => {
+    if (nodeName && onToggleComplete) onToggleComplete(nodeName)
+  }
+
   return (
     <div className="tool-panel">
       <div className="tool-header">
@@ -51,6 +58,16 @@ export default function ToolPanel({ tool, useCase }: Props) {
           <div className="tool-category">{tool.category}</div>
         </div>
       </div>
+
+      {/* Step completion toggle */}
+      {nodeName && onToggleComplete && (
+        <button
+          className={`complete-btn ${isCompleted ? 'complete-btn--done' : ''}`}
+          onClick={handleToggle}
+        >
+          {isCompleted ? '✅ 완료됨 — 클릭해서 취소' : '☐ 이 단계 완료로 표시'}
+        </button>
+      )}
 
       <p className="tool-desc">{tool.description}</p>
 

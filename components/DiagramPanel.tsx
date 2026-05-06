@@ -8,7 +8,8 @@ import type { TreeNode } from '@/lib/types'
 
 interface Props {
   data: TreeNode | null
-  onNodeClick: (toolId: string, useCase?: string) => void
+  onNodeClick: (toolId: string, useCase?: string, nodeName?: string) => void
+  completedNodes: Set<string>
   loading: boolean
 }
 
@@ -16,7 +17,11 @@ const WIDTH = 900
 const HEIGHT = 520
 const MARGIN = { top: 40, right: 180, bottom: 40, left: 160 }
 
-export default function DiagramPanel({ data, onNodeClick, loading }: Props) {
+const COLOR_DEFAULT = '#7c5cfc'
+const COLOR_DONE = '#22c55e'
+const COLOR_BRANCH = '#252535'
+
+export default function DiagramPanel({ data, onNodeClick, completedNodes, loading }: Props) {
   const svgRef = useRef<SVGSVGElement>(null)
 
   useEffect(() => {
@@ -49,7 +54,13 @@ export default function DiagramPanel({ data, onNodeClick, loading }: Props) {
       .attr('class', 'link')
       .attr('d', d => linkGen(d as Parameters<typeof linkGen>[0]) ?? '')
       .attr('fill', 'none')
-      .attr('stroke', '#333')
+      .attr('stroke', d => {
+        // green link if both endpoints are completed tool nodes
+        const target = d.target.data
+        return (target.toolId && completedNodes.has(target.name))
+          ? COLOR_DONE
+          : '#333'
+      })
       .attr('stroke-width', 1.5)
 
     // nodes
@@ -61,22 +72,41 @@ export default function DiagramPanel({ data, onNodeClick, loading }: Props) {
       .attr('transform', d => `translate(${(d as { x: number; y: number }).y},${(d as { x: number; y: number }).x})`)
       .style('cursor', d => d.data.toolId ? 'pointer' : 'default')
       .on('click', (_, d) => {
-        if (d.data.toolId) onNodeClick(d.data.toolId, d.data.useCase)
+        if (d.data.toolId) onNodeClick(d.data.toolId, d.data.useCase, d.data.name)
       })
+
+    const isCompleted = (d: { data: TreeNode }) => !!d.data.toolId && completedNodes.has(d.data.name)
 
     // node circles
     node
       .append('circle')
       .attr('r', d => d.depth === 0 ? 14 : d.data.toolId ? 8 : 6)
       .attr('fill', d => {
-        if (d.depth === 0) return '#7c5cfc'
-        if (d.data.toolId) return '#7c5cfc'
-        return '#252535'
+        if (d.depth === 0) return COLOR_DEFAULT
+        if (isCompleted(d)) return COLOR_DONE
+        if (d.data.toolId) return COLOR_DEFAULT
+        return COLOR_BRANCH
       })
-      .attr('stroke', d => d.data.toolId ? '#7c5cfc' : '#3a3a4a')
+      .attr('stroke', d => {
+        if (isCompleted(d)) return COLOR_DONE
+        if (d.data.toolId) return COLOR_DEFAULT
+        return '#3a3a4a'
+      })
       .attr('stroke-width', 2)
 
-    // feasibility badge on root and branches
+    // checkmark on completed leaf nodes
+    node
+      .filter(d => isCompleted(d))
+      .append('text')
+      .attr('dy', '0.35em')
+      .attr('text-anchor', 'middle')
+      .attr('font-size', '9px')
+      .attr('fill', '#fff')
+      .attr('font-weight', '700')
+      .attr('pointer-events', 'none')
+      .text('✓')
+
+    // feasibility badge on root and branch nodes
     node
       .filter(d => d.data.feasibility !== undefined)
       .append('text')
@@ -100,20 +130,25 @@ export default function DiagramPanel({ data, onNodeClick, loading }: Props) {
       })
       .attr('font-size', d => d.depth === 0 ? '13px' : d.data.toolId ? '11px' : '12px')
       .attr('font-weight', d => (d.depth === 0 || !d.data.toolId) ? '600' : '400')
-      .attr('fill', d => d.data.toolId ? '#e0e0e0' : '#ccc')
+      .attr('fill', d => {
+        if (isCompleted(d)) return COLOR_DONE
+        return d.data.toolId ? '#e0e0e0' : '#ccc'
+      })
       .text(d => d.data.name)
 
     // hover effect for clickable nodes
     node
       .filter(d => !!d.data.toolId)
-      .on('mouseenter', function () {
-        select(this).select('circle').attr('fill', '#9d7fff')
+      .on('mouseenter', function (_, d) {
+        if (!isCompleted(d)) {
+          select(this).select('circle').attr('fill', '#9d7fff')
+        }
       })
-      .on('mouseleave', function () {
-        select(this).select('circle').attr('fill', '#7c5cfc')
+      .on('mouseleave', function (_, d) {
+        select(this).select('circle').attr('fill', isCompleted(d) ? COLOR_DONE : COLOR_DEFAULT)
       })
 
-  }, [data, onNodeClick, loading])
+  }, [data, onNodeClick, completedNodes, loading])
 
   return (
     <div className="diagram-panel">
