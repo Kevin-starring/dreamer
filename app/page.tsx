@@ -131,8 +131,8 @@ export default function Home() {
       {treeData && totalSteps > 0 && (
         <div className="progress-section">
           <div className="progress-header">
-            <span className="progress-label">진척률</span>
-            <span className="progress-steps">{completedSteps} / {totalSteps} 단계 완료</span>
+            <span className="progress-label">Progress</span>
+            <span className="progress-steps">{completedSteps} / {totalSteps} steps done</span>
             <span className="progress-pct">{progressPct}%</span>
           </div>
           <div className="progress-track">

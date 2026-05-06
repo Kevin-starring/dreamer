@@ -65,7 +65,7 @@ export default function ToolPanel({ tool, useCase, nodeName, isCompleted, onTogg
           className={`complete-btn ${isCompleted ? 'complete-btn--done' : ''}`}
           onClick={handleToggle}
         >
-          {isCompleted ? '✅ 완료됨 — 클릭해서 취소' : '☐ 이 단계 완료로 표시'}
+          {isCompleted ? '✅ Completed — click to undo' : '☐ Mark this step as done'}
         </button>
       )}
 
