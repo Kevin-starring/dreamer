@@ -5,6 +5,8 @@ import dynamic from 'next/dynamic'
 import DreamInput from '@/components/DreamInput'
 import ToolPanel from '@/components/ToolPanel'
 import PlanEditorPanel from '@/components/PlanEditorPanel'
+import ThemeToggle from '@/components/ThemeToggle'
+import { useTheme } from '@/lib/useTheme'
 import type { DecomposeResponse, Tool, TreeNode } from '@/lib/types'
 import toolsData from '@/data/tools.json'
 
@@ -22,6 +24,7 @@ function getLeafNames(node: TreeNode): string[] {
 }
 
 export default function Home() {
+  const { theme, toggleTheme } = useTheme()
   const [dream, setDream] = useState('')
   const [treeData, setTreeData] = useState<TreeNode | null>(null)
   const [selectedTool, setSelectedTool] = useState<Tool | null>(null)
@@ -116,8 +119,11 @@ export default function Home() {
   return (
     <div className="app">
       <header className="header">
-        <h1>Dream <span>Realizer</span></h1>
-        <p>Turn your dream into action with AI</p>
+        <div className="header-content">
+          <h1>Dream <span>Realizer</span></h1>
+          <p>Turn your dream into action with AI</p>
+        </div>
+        <ThemeToggle theme={theme} onToggle={toggleTheme} />
       </header>
 
       <DreamInput
@@ -171,6 +177,7 @@ export default function Home() {
           onNodeClick={handleNodeClick}
           completedNodes={completedNodes}
           loading={loading}
+          theme={theme}
         />
         <ToolPanel
           tool={selectedTool}

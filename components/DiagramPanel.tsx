@@ -7,23 +7,21 @@ import { linkHorizontal } from 'd3-shape'
 import { zoom, zoomIdentity } from 'd3-zoom'
 import type { ZoomBehavior } from 'd3-zoom'
 import type { TreeNode } from '@/lib/types'
+import type { Theme } from '@/lib/useTheme'
 
 interface Props {
   data: TreeNode | null
   onNodeClick: (toolId: string, useCase?: string, nodeName?: string) => void
   completedNodes: Set<string>
   loading: boolean
+  theme?: Theme
 }
 
 const MIN_WIDTH = 900
 const HEIGHT = 520
 const MARGIN = { top: 40, right: 200, bottom: 40, left: 160 }
 
-const COLOR_DEFAULT = '#7c5cfc'
-const COLOR_DONE = '#22c55e'
-const COLOR_BRANCH = '#252535'
-
-export default function DiagramPanel({ data, onNodeClick, completedNodes, loading }: Props) {
+export default function DiagramPanel({ data, onNodeClick, completedNodes, loading, theme = 'dark' }: Props) {
   const containerRef = useRef<HTMLDivElement>(null)
   const svgRef = useRef<SVGSVGElement>(null)
   const zoomRef = useRef<ZoomBehavior<SVGSVGElement, unknown> | null>(null)
@@ -46,6 +44,15 @@ export default function DiagramPanel({ data, onNodeClick, completedNodes, loadin
     svg.selectAll('*').remove()
 
     if (!data || loading) return
+
+    // Read theme-aware colors from CSS variables
+    const cs = getComputedStyle(document.documentElement)
+    const C_ACCENT   = cs.getPropertyValue('--accent').trim()   || '#7c5cfc'
+    const C_LINK     = cs.getPropertyValue('--d-link').trim()   || '#252540'
+    const C_BRANCH   = cs.getPropertyValue('--d-branch').trim() || '#1e1e34'
+    const C_TEXT     = cs.getPropertyValue('--d-text').trim()   || '#c8c4e0'
+    const C_TEXT_T   = cs.getPropertyValue('--d-text-tool').trim() || '#eeeaf8'
+    const C_DONE     = cs.getPropertyValue('--success').trim()  || '#22c55e'
 
     // Use actual panel width so labels never hit the right boundary
     const effectiveW = Math.max(panelWidth - 10, MIN_WIDTH)
@@ -74,8 +81,8 @@ export default function DiagramPanel({ data, onNodeClick, completedNodes, loadin
       .attr('stroke', d => {
         const target = d.target.data
         return (target.toolId && completedNodes.has(target.name))
-          ? COLOR_DONE
-          : '#333'
+          ? C_DONE
+          : C_LINK
       })
       .attr('stroke-width', 1.5)
 
@@ -97,15 +104,15 @@ export default function DiagramPanel({ data, onNodeClick, completedNodes, loadin
       .append('circle')
       .attr('r', d => d.depth === 0 ? 14 : d.data.toolId ? 8 : 6)
       .attr('fill', d => {
-        if (d.depth === 0) return COLOR_DEFAULT
-        if (isCompleted(d)) return COLOR_DONE
-        if (d.data.toolId) return COLOR_DEFAULT
-        return COLOR_BRANCH
+        if (d.depth === 0) return C_ACCENT
+        if (isCompleted(d)) return C_DONE
+        if (d.data.toolId) return C_ACCENT
+        return C_BRANCH
       })
       .attr('stroke', d => {
-        if (isCompleted(d)) return COLOR_DONE
-        if (d.data.toolId) return COLOR_DEFAULT
-        return '#3a3a4a'
+        if (isCompleted(d)) return C_DONE
+        if (d.data.toolId) return C_ACCENT
+        return C_BRANCH
       })
       .attr('stroke-width', 2)
 
@@ -126,7 +133,7 @@ export default function DiagramPanel({ data, onNodeClick, completedNodes, loadin
       .attr('dy', d => d.depth === 0 ? -20 : -14)
       .attr('text-anchor', 'middle')
       .attr('font-size', '10px')
-      .attr('fill', '#22c55e')
+      .attr('fill', C_DONE)
       .text(d => `${d.data.feasibility}%`)
 
     node
@@ -143,8 +150,8 @@ export default function DiagramPanel({ data, onNodeClick, completedNodes, loadin
       .attr('font-size', d => d.depth === 0 ? '13px' : d.data.toolId ? '11px' : '12px')
       .attr('font-weight', d => (d.depth === 0 || !d.data.toolId) ? '600' : '400')
       .attr('fill', d => {
-        if (isCompleted(d)) return COLOR_DONE
-        return d.data.toolId ? '#e0e0e0' : '#ccc'
+        if (isCompleted(d)) return C_DONE
+        return d.data.toolId ? C_TEXT_T : C_TEXT
       })
       .text(d => d.data.name)
 
@@ -152,11 +159,11 @@ export default function DiagramPanel({ data, onNodeClick, completedNodes, loadin
       .filter(d => !!d.data.toolId)
       .on('mouseenter', function (_, d) {
         if (!isCompleted(d)) {
-          select(this).select('circle').attr('fill', '#9d7fff')
+          select(this).select('circle').attr('fill', C_ACCENT + 'cc')
         }
       })
       .on('mouseleave', function (_, d) {
-        select(this).select('circle').attr('fill', isCompleted(d) ? COLOR_DONE : COLOR_DEFAULT)
+        select(this).select('circle').attr('fill', isCompleted(d) ? C_DONE : C_ACCENT)
       })
 
     const zoomBehavior = zoom<SVGSVGElement, unknown>()
@@ -169,7 +176,7 @@ export default function DiagramPanel({ data, onNodeClick, completedNodes, loadin
     svg.call(zoomBehavior.transform, zoomIdentity.translate(MARGIN.left, MARGIN.top))
     zoomRef.current = zoomBehavior
 
-  }, [data, onNodeClick, completedNodes, loading, panelWidth])
+  }, [data, onNodeClick, completedNodes, loading, panelWidth, theme])
 
   const handleZoomIn = useCallback(() => {
     if (!zoomRef.current || !svgRef.current) return
