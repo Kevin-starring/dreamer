@@ -1,9 +1,11 @@
 'use client'
 
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useCallback } from 'react'
 import { select } from 'd3-selection'
 import { tree, hierarchy } from 'd3-hierarchy'
 import { linkHorizontal } from 'd3-shape'
+import { zoom, zoomIdentity } from 'd3-zoom'
+import type { ZoomBehavior } from 'd3-zoom'
 import type { TreeNode } from '@/lib/types'
 
 interface Props {
@@ -23,9 +25,11 @@ const COLOR_BRANCH = '#252535'
 
 export default function DiagramPanel({ data, onNodeClick, completedNodes, loading }: Props) {
   const svgRef = useRef<SVGSVGElement>(null)
+  const zoomRef = useRef<ZoomBehavior<SVGSVGElement, unknown> | null>(null)
 
   useEffect(() => {
-    const svg = select(svgRef.current)
+    if (!svgRef.current) return
+    const svg = select<SVGSVGElement, unknown>(svgRef.current)
     svg.selectAll('*').remove()
 
     if (!data || loading) return
@@ -33,9 +37,8 @@ export default function DiagramPanel({ data, onNodeClick, completedNodes, loadin
     const innerW = WIDTH - MARGIN.left - MARGIN.right
     const innerH = HEIGHT - MARGIN.top - MARGIN.bottom
 
-    const g = svg
-      .append('g')
-      .attr('transform', `translate(${MARGIN.left},${MARGIN.top})`)
+    // g has no initial transform — zoom behavior manages positioning
+    const g = svg.append('g')
 
     const root = hierarchy<TreeNode>(data)
 
@@ -55,7 +58,6 @@ export default function DiagramPanel({ data, onNodeClick, completedNodes, loadin
       .attr('d', d => linkGen(d as Parameters<typeof linkGen>[0]) ?? '')
       .attr('fill', 'none')
       .attr('stroke', d => {
-        // green link if both endpoints are completed tool nodes
         const target = d.target.data
         return (target.toolId && completedNodes.has(target.name))
           ? COLOR_DONE
@@ -148,7 +150,40 @@ export default function DiagramPanel({ data, onNodeClick, completedNodes, loadin
         select(this).select('circle').attr('fill', isCompleted(d) ? COLOR_DONE : COLOR_DEFAULT)
       })
 
+    // Apply D3 zoom — intercepts wheel/pinch events on the SVG only
+    const zoomBehavior = zoom<SVGSVGElement, unknown>()
+      .scaleExtent([0.25, 4])
+      .on('zoom', event => {
+        g.attr('transform', event.transform.toString())
+      })
+
+    // Disable double-click zoom (double-click is reserved for node interaction)
+    svg.call(zoomBehavior).on('dblclick.zoom', null)
+
+    // Set initial view to include the margin offset
+    svg.call(zoomBehavior.transform, zoomIdentity.translate(MARGIN.left, MARGIN.top))
+
+    zoomRef.current = zoomBehavior
+
   }, [data, onNodeClick, completedNodes, loading])
+
+  const handleZoomIn = useCallback(() => {
+    if (!zoomRef.current || !svgRef.current) return
+    select<SVGSVGElement, unknown>(svgRef.current).transition().duration(250).call(zoomRef.current.scaleBy, 1.4)
+  }, [])
+
+  const handleZoomOut = useCallback(() => {
+    if (!zoomRef.current || !svgRef.current) return
+    select<SVGSVGElement, unknown>(svgRef.current).transition().duration(250).call(zoomRef.current.scaleBy, 1 / 1.4)
+  }, [])
+
+  const handleZoomReset = useCallback(() => {
+    if (!zoomRef.current || !svgRef.current) return
+    select<SVGSVGElement, unknown>(svgRef.current)
+      .transition()
+      .duration(300)
+      .call(zoomRef.current.transform, zoomIdentity.translate(MARGIN.left, MARGIN.top))
+  }, [])
 
   return (
     <div className="diagram-panel">
@@ -161,6 +196,13 @@ export default function DiagramPanel({ data, onNodeClick, completedNodes, loadin
       {!loading && !data && (
         <div className="diagram-empty">
           <p>Type your dream above to see your AI roadmap</p>
+        </div>
+      )}
+      {data && !loading && (
+        <div className="zoom-controls">
+          <button className="zoom-btn" onClick={handleZoomIn} title="확대">＋</button>
+          <button className="zoom-btn" onClick={handleZoomReset} title="원래 크기">⟳</button>
+          <button className="zoom-btn" onClick={handleZoomOut} title="축소">－</button>
         </div>
       )}
       <svg
