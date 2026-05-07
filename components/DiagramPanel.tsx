@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useRef, useCallback } from 'react'
+import { useEffect, useRef, useCallback, useState } from 'react'
 import { select } from 'd3-selection'
 import { tree, hierarchy } from 'd3-hierarchy'
 import { linkHorizontal } from 'd3-shape'
@@ -15,17 +15,30 @@ interface Props {
   loading: boolean
 }
 
-const WIDTH = 900
+const MIN_WIDTH = 900
 const HEIGHT = 520
-const MARGIN = { top: 40, right: 180, bottom: 40, left: 160 }
+const MARGIN = { top: 40, right: 200, bottom: 40, left: 160 }
 
 const COLOR_DEFAULT = '#7c5cfc'
 const COLOR_DONE = '#22c55e'
 const COLOR_BRANCH = '#252535'
 
 export default function DiagramPanel({ data, onNodeClick, completedNodes, loading }: Props) {
+  const containerRef = useRef<HTMLDivElement>(null)
   const svgRef = useRef<SVGSVGElement>(null)
   const zoomRef = useRef<ZoomBehavior<SVGSVGElement, unknown> | null>(null)
+  const [panelWidth, setPanelWidth] = useState(MIN_WIDTH)
+
+  // Track panel width so D3 uses the full available space
+  useEffect(() => {
+    const el = containerRef.current
+    if (!el) return
+    const ro = new ResizeObserver(([entry]) => {
+      setPanelWidth(Math.floor(entry.contentRect.width))
+    })
+    ro.observe(el)
+    return () => ro.disconnect()
+  }, [])
 
   useEffect(() => {
     if (!svgRef.current) return
@@ -34,10 +47,11 @@ export default function DiagramPanel({ data, onNodeClick, completedNodes, loadin
 
     if (!data || loading) return
 
-    const innerW = WIDTH - MARGIN.left - MARGIN.right
+    // Use actual panel width so labels never hit the right boundary
+    const effectiveW = Math.max(panelWidth - 10, MIN_WIDTH)
+    const innerW = effectiveW - MARGIN.left - MARGIN.right
     const innerH = HEIGHT - MARGIN.top - MARGIN.bottom
 
-    // g has no initial transform — zoom behavior manages positioning
     const g = svg.append('g')
 
     const root = hierarchy<TreeNode>(data)
@@ -79,7 +93,6 @@ export default function DiagramPanel({ data, onNodeClick, completedNodes, loadin
 
     const isCompleted = (d: { data: TreeNode }) => !!d.data.toolId && completedNodes.has(d.data.name)
 
-    // node circles
     node
       .append('circle')
       .attr('r', d => d.depth === 0 ? 14 : d.data.toolId ? 8 : 6)
@@ -96,7 +109,6 @@ export default function DiagramPanel({ data, onNodeClick, completedNodes, loadin
       })
       .attr('stroke-width', 2)
 
-    // checkmark on completed leaf nodes
     node
       .filter(d => isCompleted(d))
       .append('text')
@@ -108,7 +120,6 @@ export default function DiagramPanel({ data, onNodeClick, completedNodes, loadin
       .attr('pointer-events', 'none')
       .text('✓')
 
-    // feasibility badge on root and branch nodes
     node
       .filter(d => d.data.feasibility !== undefined)
       .append('text')
@@ -118,7 +129,6 @@ export default function DiagramPanel({ data, onNodeClick, completedNodes, loadin
       .attr('fill', '#22c55e')
       .text(d => `${d.data.feasibility}%`)
 
-    // node labels
     node
       .append('text')
       .attr('dy', '0.32em')
@@ -138,7 +148,6 @@ export default function DiagramPanel({ data, onNodeClick, completedNodes, loadin
       })
       .text(d => d.data.name)
 
-    // hover effect for clickable nodes
     node
       .filter(d => !!d.data.toolId)
       .on('mouseenter', function (_, d) {
@@ -150,22 +159,17 @@ export default function DiagramPanel({ data, onNodeClick, completedNodes, loadin
         select(this).select('circle').attr('fill', isCompleted(d) ? COLOR_DONE : COLOR_DEFAULT)
       })
 
-    // Apply D3 zoom — intercepts wheel/pinch events on the SVG only
     const zoomBehavior = zoom<SVGSVGElement, unknown>()
       .scaleExtent([0.25, 4])
       .on('zoom', event => {
         g.attr('transform', event.transform.toString())
       })
 
-    // Disable double-click zoom (double-click is reserved for node interaction)
     svg.call(zoomBehavior).on('dblclick.zoom', null)
-
-    // Set initial view to include the margin offset
     svg.call(zoomBehavior.transform, zoomIdentity.translate(MARGIN.left, MARGIN.top))
-
     zoomRef.current = zoomBehavior
 
-  }, [data, onNodeClick, completedNodes, loading])
+  }, [data, onNodeClick, completedNodes, loading, panelWidth])
 
   const handleZoomIn = useCallback(() => {
     if (!zoomRef.current || !svgRef.current) return
@@ -186,7 +190,7 @@ export default function DiagramPanel({ data, onNodeClick, completedNodes, loadin
   }, [])
 
   return (
-    <div className="diagram-panel">
+    <div className="diagram-panel" ref={containerRef}>
       {loading && (
         <div className="diagram-loading">
           <div className="spinner" />
@@ -207,9 +211,9 @@ export default function DiagramPanel({ data, onNodeClick, completedNodes, loadin
       )}
       <svg
         ref={svgRef}
-        width={WIDTH}
+        width={panelWidth}
         height={HEIGHT}
-        style={{ display: data && !loading ? 'block' : 'none', maxWidth: '100%', overflow: 'visible' }}
+        style={{ display: data && !loading ? 'block' : 'none', overflow: 'visible' }}
       />
     </div>
   )
