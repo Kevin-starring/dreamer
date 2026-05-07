@@ -4,6 +4,7 @@ import { useState, useCallback, useEffect, useRef, memo } from 'react'
 import dynamic from 'next/dynamic'
 import DreamInput from '@/components/DreamInput'
 import ToolPanel from '@/components/ToolPanel'
+import PlanEditorPanel from '@/components/PlanEditorPanel'
 import type { DecomposeResponse, Tool, TreeNode } from '@/lib/types'
 import toolsData from '@/data/tools.json'
 
@@ -30,6 +31,7 @@ export default function Home() {
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const [cacheNote, setCacheNote] = useState<string | null>(null)
+  const [showEditor, setShowEditor] = useState(false)
 
   // Stable ref so toggleComplete closure doesn't stale-capture dream
   const dreamRef = useRef(dream)
@@ -43,6 +45,7 @@ export default function Home() {
     setSelectedTool(null)
     setSelectedUseCase(undefined)
     setSelectedNodeName(null)
+    setShowEditor(false)
 
     try {
       const res = await fetch('/api/decompose', {
@@ -97,6 +100,13 @@ export default function Home() {
     })
   }, [])
 
+  const handleTreeUpdate = useCallback((newTree: TreeNode) => {
+    setTreeData(newTree)
+    setSelectedTool(null)
+    setSelectedUseCase(undefined)
+    setSelectedNodeName(null)
+  }, [])
+
   // Progress calculation
   const leafNames = treeData ? getLeafNames(treeData) : []
   const totalSteps = leafNames.length
@@ -134,11 +144,25 @@ export default function Home() {
             <span className="progress-label">Progress</span>
             <span className="progress-steps">{completedSteps} / {totalSteps} steps done</span>
             <span className="progress-pct">{progressPct}%</span>
+            <button
+              className={`edit-plan-btn ${showEditor ? 'edit-plan-btn--active' : ''}`}
+              onClick={() => setShowEditor(v => !v)}
+            >
+              {showEditor ? '▲ 편집 닫기' : '✏️ 실행 방안 편집'}
+            </button>
           </div>
           <div className="progress-track">
             <div className="progress-fill" style={{ width: `${progressPct}%` }} />
           </div>
         </div>
+      )}
+
+      {treeData && showEditor && (
+        <PlanEditorPanel
+          treeData={treeData}
+          dream={dream}
+          onTreeUpdate={handleTreeUpdate}
+        />
       )}
 
       <main className="main">
