@@ -209,7 +209,7 @@ export default function DiagramPanel({ data, onNodeClick, completedNodes, loadin
         ref={svgRef}
         width={WIDTH}
         height={HEIGHT}
-        style={{ display: data && !loading ? 'block' : 'none', maxWidth: '100%' }}
+        style={{ display: data && !loading ? 'block' : 'none', maxWidth: '100%', overflow: 'visible' }}
       />
     </div>
   )
