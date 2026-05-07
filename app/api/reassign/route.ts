@@ -1,6 +1,6 @@
 import Anthropic from '@anthropic-ai/sdk'
 import { parseDecomposition, EmptyResponseError } from '@/lib/parseDecomposition'
-import type { DecomposeResponse } from '@/lib/types'
+import type { DecomposeResponse, TreeNode } from '@/lib/types'
 
 const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY })
 
@@ -10,6 +10,43 @@ const VALID_TOOL_IDS = [
   'suno', 'dall-e', 'stable-diffusion', 'descript', 'synthesia',
   'copy-ai', 'jasper', 'pika',
 ]
+
+// Keyword-based local fallback when API key is unavailable
+const KEYWORD_TOOL_MAP: Array<{ keywords: string[]; toolId: string }> = [
+  { keywords: ['research', 'search', 'find', 'explore', 'analyze', 'market', 'trend', 'study'], toolId: 'perplexity' },
+  { keywords: ['image', 'photo', 'picture', 'illustration', 'art', 'thumbnail', 'banner', 'poster'], toolId: 'midjourney' },
+  { keywords: ['logo', 'graphic', 'flyer', 'design', 'brand', 'visual'], toolId: 'canva' },
+  { keywords: ['video edit', 'editing', 'cut', 'splice', 'montage', 'reel', 'highlight'], toolId: 'capcut' },
+  { keywords: ['video', 'film', 'footage', 'animate', 'animation', 'motion'], toolId: 'runway' },
+  { keywords: ['voice', 'narrat', 'voiceover', 'podcast', 'speech', 'tts'], toolId: 'elevenlabs' },
+  { keywords: ['music', 'song', 'melody', 'track', 'audio', 'sound'], toolId: 'suno' },
+  { keywords: ['presentation', 'slide', 'deck', 'pitch'], toolId: 'gamma' },
+  { keywords: ['social', 'caption', 'post', 'marketing', 'copy', 'ad', 'campaign'], toolId: 'copy-ai' },
+  { keywords: ['track', 'organiz', 'plan', 'schedule', 'log', 'note', 'manage', 'application'], toolId: 'notion-ai' },
+  { keywords: ['code', 'program', 'develop', 'build', 'app', 'website', 'software', 'cursor'], toolId: 'cursor' },
+  { keywords: ['cv', 'resume', 'article', 'essay', 'paper', 'report', 'write', 'statement'], toolId: 'jasper' },
+  { keywords: ['interview', 'practice', 'prep', 'script', 'outline', 'strategy', 'plan', 'roadmap'], toolId: 'claude' },
+]
+
+function matchToolLocally(taskName: string): string {
+  const lower = taskName.toLowerCase()
+  for (const { keywords, toolId } of KEYWORD_TOOL_MAP) {
+    if (keywords.some(kw => lower.includes(kw))) return toolId
+  }
+  return 'claude'
+}
+
+function buildTreeLocally(dream: string, branches: Array<{ name: string; tasks: string[] }>): TreeNode {
+  return {
+    name: dream,
+    toolId: null,
+    children: branches.map(b => ({
+      name: b.name,
+      toolId: null,
+      children: b.tasks.map(t => ({ name: t, toolId: matchToolLocally(t) })),
+    })),
+  }
+}
 
 const SYSTEM_PROMPT = `You are an AI tool assignment engine. Given a user's dream and their custom execution plan, assign the most appropriate AI tool to each task.
 
@@ -45,7 +82,9 @@ export async function POST(request: Request) {
   }
 
   if (!process.env.ANTHROPIC_API_KEY) {
-    return Response.json({ error: 'Service unavailable' }, { status: 503 })
+    console.error('ANTHROPIC_API_KEY not set — falling back to local tool matching')
+    const root = buildTreeLocally(dream, branches)
+    return Response.json({ root, source: 'live' } satisfies DecomposeResponse)
   }
 
   const planText = branches
@@ -76,10 +115,11 @@ ${planText}`
 
   } catch (err: unknown) {
     const e = err as { name?: string; status?: number; message?: string }
-    if (e.status === 401) return Response.json({ error: 'Service temporarily unavailable' }, { status: 503 })
-    if (e.name === 'TimeoutError' || e.name === 'AbortError') console.error('Reassign timeout')
-    else if (err instanceof EmptyResponseError) console.error('Parse error:', e.message)
-    else console.error('Reassign error:', e.message)
-    return Response.json({ error: 'Failed to regenerate. Try again.' }, { status: 500 })
+    if (e.status === 401) console.error('Anthropic auth error — falling back to local matching')
+    else if (e.name === 'TimeoutError' || e.name === 'AbortError') console.error('Reassign timeout — falling back to local matching')
+    else if (err instanceof EmptyResponseError) console.error('Parse error — falling back to local matching:', e.message)
+    else console.error('Reassign error — falling back to local matching:', e.message)
+    const root = buildTreeLocally(dream, branches)
+    return Response.json({ root, source: 'live' } satisfies DecomposeResponse)
   }
 }
