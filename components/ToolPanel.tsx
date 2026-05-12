@@ -2,16 +2,18 @@
 
 import { useState } from 'react'
 import type { Tool } from '@/lib/types'
+import { fillPrompt } from '@/lib/fillPrompt'
 
 interface Props {
   tool: Tool | null
   useCase?: string
   nodeName?: string | null
+  dream?: string
   isCompleted?: boolean
   onToggleComplete?: (nodeName: string) => void
 }
 
-export default function ToolPanel({ tool, useCase, nodeName, isCompleted, onToggleComplete }: Props) {
+export default function ToolPanel({ tool, useCase, nodeName, dream, isCompleted, onToggleComplete }: Props) {
   const [copied, setCopied] = useState(false)
 
   if (!tool) {
@@ -25,10 +27,11 @@ export default function ToolPanel({ tool, useCase, nodeName, isCompleted, onTogg
   }
 
   const prompt = tool.prompts.find(p => p.useCase === useCase) ?? tool.prompts[0]
+  const promptText = fillPrompt(prompt.prompt, dream ?? '')
 
   const handleCopy = async () => {
     try {
-      await navigator.clipboard.writeText(prompt.prompt)
+      await navigator.clipboard.writeText(promptText)
       setCopied(true)
       setTimeout(() => setCopied(false), 2000)
     } catch {
@@ -74,7 +77,7 @@ export default function ToolPanel({ tool, useCase, nodeName, isCompleted, onTogg
       <div className="prompt-section">
         <div className="prompt-label">Recommended Prompt</div>
         <div className="prompt-box">
-          <pre>{prompt.prompt}</pre>
+          <pre>{promptText}</pre>
           <button
             className="copy-btn"
             onClick={handleCopy}
@@ -83,7 +86,7 @@ export default function ToolPanel({ tool, useCase, nodeName, isCompleted, onTogg
             {copied ? '✅ Copied' : '📋 Copy'}
           </button>
         </div>
-        {prompt.prompt.includes('[') && (
+        {promptText.includes('[') && (
           <p className="placeholder-note">Replace text in [BRACKETS] with your details</p>
         )}
       </div>

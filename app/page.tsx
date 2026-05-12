@@ -183,6 +183,7 @@ export default function Home() {
           tool={selectedTool}
           useCase={selectedUseCase}
           nodeName={selectedNodeName}
+          dream={dream}
           isCompleted={selectedNodeName ? completedNodes.has(selectedNodeName) : false}
           onToggleComplete={toggleComplete}
         />
