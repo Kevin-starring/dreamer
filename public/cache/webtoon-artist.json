@@ -1,0 +1,49 @@
+{
+  "source": "golden-cache",
+  "root": {
+    "name": "Become a Webtoon Artist",
+    "toolId": null,
+    "feasibility": 62,
+    "children": [
+      {
+        "name": "Creative Development",
+        "toolId": null,
+        "feasibility": 72,
+        "children": [
+          { "name": "Story & Character Planning", "toolId": "claude", "useCase": "creative-writing" },
+          { "name": "Art Style Reference", "toolId": "stable-diffusion", "useCase": "art-style" },
+          { "name": "Character Concept Art", "toolId": "dall-e", "useCase": "concept-illustration" }
+        ]
+      },
+      {
+        "name": "Platform & Publishing",
+        "toolId": null,
+        "feasibility": 68,
+        "children": [
+          { "name": "Webtoon Platform Research", "toolId": "perplexity", "useCase": "program-research" },
+          { "name": "Webtoon Industry Research", "toolId": "perplexity", "useCase": "career-path-research" },
+          { "name": "Artist Career Roadmap", "toolId": "claude", "useCase": "career-roadmap" }
+        ]
+      },
+      {
+        "name": "Production System",
+        "toolId": null,
+        "feasibility": 76,
+        "children": [
+          { "name": "Episode Content Calendar", "toolId": "claude", "useCase": "content-calendar" },
+          { "name": "Episode Planning Tracker", "toolId": "notion-ai", "useCase": "study-tracker" }
+        ]
+      },
+      {
+        "name": "Brand & Portfolio",
+        "toolId": null,
+        "feasibility": 80,
+        "children": [
+          { "name": "Visual Brand System", "toolId": "figma-ai", "useCase": "brand-design" },
+          { "name": "Portfolio Website", "toolId": "cursor", "useCase": "landing-page" },
+          { "name": "Social Media Promotion", "toolId": "copy-ai", "useCase": "social-captions" }
+        ]
+      }
+    ]
+  }
+}

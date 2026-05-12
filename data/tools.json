@@ -137,6 +137,19 @@
           "Cross-check recommendations with your advisor or a methods textbook",
           "Document the final methodology in Notion before starting data collection"
         ]
+      },
+      {
+        "useCase": "creative-writing",
+        "tags": ["writing", "creative", "storytelling"],
+        "prompt": "Help me plan and outline my [NOVEL / WEBTOON / SHORT STORY / SCREENPLAY] titled '[YOUR TITLE]'. Genre: [YOUR GENRE]. Setting: [WORLD/SETTING DESCRIPTION]. Main character: [PROTAGONIST DESCRIPTION]. Central conflict: [WHAT THE STORY IS ABOUT].\n\nCreate: a 3-act story structure outline, chapter-by-chapter breakdown for the first act, 3 main character arcs, and the core theme. Also suggest where the story's emotional peak should land.",
+        "steps": [
+          "Go to claude.ai and sign in",
+          "Fill in your story's genre, setting, and main character",
+          "Send the prompt and read the full outline",
+          "Ask Claude: 'Make the conflict more specific' or 'Add subplot ideas'",
+          "Copy the outline to Notion and expand chapter by chapter",
+          "Write 1,000 words a day — ask Claude for help whenever you get stuck on a scene"
+        ]
       }
     ]
   },
@@ -494,6 +507,19 @@
           "Click through sources to verify every key claim",
           "Search Reddit communities for unfiltered professional opinions",
           "Identify one professional in the field to have a real conversation with"
+        ]
+      },
+      {
+        "useCase": "travel-research",
+        "tags": ["travel", "research", "planning"],
+        "prompt": "I want to travel to [DESTINATION / REGION: e.g. Southeast Asia / Europe / South America]. Duration: [TRIP LENGTH]. Budget: [BUDGET RANGE]. Interests: [CULTURE / NATURE / FOOD / ADVENTURE / HISTORY].\n\nGive me: top 5 destinations that match my interests with why, estimated daily budget for each, best time to visit, must-know visa and logistics info, and a suggested 2-week sample itinerary. Cite your sources.",
+        "steps": [
+          "Go to perplexity.ai",
+          "Fill in your destination region and travel preferences",
+          "Send the prompt and read the cited results carefully",
+          "Click through source links to verify visa requirements and budget estimates",
+          "Follow up: 'What are the best hidden gems in [specific country]?'",
+          "Build your final itinerary in Notion based on the research"
         ]
       }
     ]

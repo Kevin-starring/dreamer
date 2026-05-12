@@ -1,0 +1,58 @@
+{
+  "source": "golden-cache",
+  "root": {
+    "name": "Become an Idol Singer",
+    "toolId": null,
+    "feasibility": 45,
+    "children": [
+      {
+        "name": "Vocal & Performance Training",
+        "toolId": null,
+        "feasibility": 70,
+        "children": [
+          { "name": "Vocal Training Program", "toolId": "claude", "useCase": "training-program" },
+          { "name": "Dance & Stage Training Plan", "toolId": "claude", "useCase": "study-plan" },
+          { "name": "Performance Mindset Routine", "toolId": "claude", "useCase": "mental-conditioning" }
+        ]
+      },
+      {
+        "name": "Audition Preparation",
+        "toolId": null,
+        "feasibility": 55,
+        "children": [
+          { "name": "Entertainment Agency Research", "toolId": "perplexity", "useCase": "program-research" },
+          { "name": "Audition Video Edit", "toolId": "capcut", "useCase": "highlight-reel" },
+          { "name": "Idol Career Roadmap", "toolId": "claude", "useCase": "career-roadmap" }
+        ]
+      },
+      {
+        "name": "Music Production",
+        "toolId": null,
+        "feasibility": 62,
+        "children": [
+          { "name": "Demo Track Creation", "toolId": "suno", "useCase": "channel-intro-music" },
+          { "name": "Cover Song Narration", "toolId": "elevenlabs", "useCase": "voiceover" }
+        ]
+      },
+      {
+        "name": "Personal Brand & SNS",
+        "toolId": null,
+        "feasibility": 78,
+        "children": [
+          { "name": "SNS Content Strategy", "toolId": "claude", "useCase": "content-calendar" },
+          { "name": "Fan Content Design", "toolId": "canva", "useCase": "channel-logo" },
+          { "name": "Promo Visual Creation", "toolId": "midjourney", "useCase": "youtube-thumbnail" }
+        ]
+      },
+      {
+        "name": "Industry Research",
+        "toolId": null,
+        "feasibility": 80,
+        "children": [
+          { "name": "Music Industry Deep Dive", "toolId": "perplexity", "useCase": "career-path-research" },
+          { "name": "K-pop Market Analysis", "toolId": "perplexity", "useCase": "market-research" }
+        ]
+      }
+    ]
+  }
+}

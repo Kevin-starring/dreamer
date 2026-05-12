@@ -1,0 +1,59 @@
+{
+  "source": "golden-cache",
+  "root": {
+    "name": "Travel the World",
+    "toolId": null,
+    "feasibility": 72,
+    "children": [
+      {
+        "name": "Trip Research & Planning",
+        "toolId": null,
+        "feasibility": 88,
+        "children": [
+          { "name": "Destination Research", "toolId": "perplexity", "useCase": "travel-research" },
+          { "name": "Budget & Route Research", "toolId": "perplexity", "useCase": "market-research" },
+          { "name": "Travel Roadmap", "toolId": "claude", "useCase": "career-roadmap" }
+        ]
+      },
+      {
+        "name": "Content Creation",
+        "toolId": null,
+        "feasibility": 82,
+        "children": [
+          { "name": "Travel Vlog Editing", "toolId": "capcut", "useCase": "video-editing" },
+          { "name": "Travel Blog Writing", "toolId": "jasper", "useCase": "blog-post" },
+          { "name": "Social Media Posts", "toolId": "copy-ai", "useCase": "social-captions" }
+        ]
+      },
+      {
+        "name": "Channel & Blog Setup",
+        "toolId": null,
+        "feasibility": 78,
+        "children": [
+          { "name": "YouTube Travel Channel Setup", "toolId": "claude", "useCase": "channel-description" },
+          { "name": "Travel Blog Website", "toolId": "cursor", "useCase": "landing-page" },
+          { "name": "Channel Branding", "toolId": "canva", "useCase": "channel-logo" }
+        ]
+      },
+      {
+        "name": "Storytelling & Media",
+        "toolId": null,
+        "feasibility": 80,
+        "children": [
+          { "name": "Travel Video Narration", "toolId": "elevenlabs", "useCase": "voiceover" },
+          { "name": "Travel Photo Art Style", "toolId": "stable-diffusion", "useCase": "art-style" },
+          { "name": "Thumbnail Design", "toolId": "midjourney", "useCase": "youtube-thumbnail" }
+        ]
+      },
+      {
+        "name": "Monetization",
+        "toolId": null,
+        "feasibility": 60,
+        "children": [
+          { "name": "Sponsorship Media Kit", "toolId": "gamma", "useCase": "sponsor-pitch" },
+          { "name": "Newsletter & Community", "toolId": "copy-ai", "useCase": "email-newsletter" }
+        ]
+      }
+    ]
+  }
+}

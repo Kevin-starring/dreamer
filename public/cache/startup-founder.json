@@ -1,0 +1,58 @@
+{
+  "source": "golden-cache",
+  "root": {
+    "name": "Start My Own Business",
+    "toolId": null,
+    "feasibility": 65,
+    "children": [
+      {
+        "name": "Market Research & Validation",
+        "toolId": null,
+        "feasibility": 82,
+        "children": [
+          { "name": "Market Size & Trends", "toolId": "perplexity", "useCase": "market-research" },
+          { "name": "Competitor Analysis", "toolId": "perplexity", "useCase": "competitor-analysis" },
+          { "name": "Niche Opportunity Research", "toolId": "claude", "useCase": "niche-research" }
+        ]
+      },
+      {
+        "name": "Business Planning",
+        "toolId": null,
+        "feasibility": 75,
+        "children": [
+          { "name": "Business Plan Presentation", "toolId": "gamma", "useCase": "business-plan" },
+          { "name": "Startup Career Roadmap", "toolId": "claude", "useCase": "career-roadmap" }
+        ]
+      },
+      {
+        "name": "Product & Tech",
+        "toolId": null,
+        "feasibility": 65,
+        "children": [
+          { "name": "Landing Page", "toolId": "cursor", "useCase": "landing-page" },
+          { "name": "Automation Script", "toolId": "cursor", "useCase": "automation-script" },
+          { "name": "Brand Design System", "toolId": "figma-ai", "useCase": "brand-design" }
+        ]
+      },
+      {
+        "name": "Marketing",
+        "toolId": null,
+        "feasibility": 72,
+        "children": [
+          { "name": "Content Strategy", "toolId": "claude", "useCase": "content-calendar" },
+          { "name": "Social Media Content", "toolId": "copy-ai", "useCase": "social-captions" },
+          { "name": "Email Newsletter", "toolId": "copy-ai", "useCase": "email-newsletter" }
+        ]
+      },
+      {
+        "name": "Funding & Growth",
+        "toolId": null,
+        "feasibility": 55,
+        "children": [
+          { "name": "Investor Pitch Deck", "toolId": "gamma", "useCase": "business-plan" },
+          { "name": "Industry Landscape Research", "toolId": "perplexity", "useCase": "career-path-research" }
+        ]
+      }
+    ]
+  }
+}

@@ -9,14 +9,30 @@ import lawyer from '@/public/cache/lawyer.json'
 import footballPlayer from '@/public/cache/football-player.json'
 import firefighter from '@/public/cache/firefighter.json'
 import scientist from '@/public/cache/scientist.json'
+import idolSinger from '@/public/cache/idol-singer.json'
+import proGamer from '@/public/cache/pro-gamer.json'
+import startupFounder from '@/public/cache/startup-founder.json'
+import author from '@/public/cache/author.json'
+import webtoonArtist from '@/public/cache/webtoon-artist.json'
+import actor from '@/public/cache/actor.json'
+import travelWorld from '@/public/cache/travel-world.json'
+import gameDeveloper from '@/public/cache/game-developer.json'
 
 const GOLDEN_CACHE: Record<string, DecomposeResponse> = {
-  'youtube-cooking': youtubeCoooking as DecomposeResponse,
-  'doctor':          doctor as DecomposeResponse,
-  'lawyer':          lawyer as DecomposeResponse,
-  'football-player': footballPlayer as DecomposeResponse,
-  'firefighter':     firefighter as DecomposeResponse,
-  'scientist':       scientist as DecomposeResponse,
+  'youtube-cooking':  youtubeCoooking as DecomposeResponse,
+  'doctor':           doctor as DecomposeResponse,
+  'lawyer':           lawyer as DecomposeResponse,
+  'football-player':  footballPlayer as DecomposeResponse,
+  'firefighter':      firefighter as DecomposeResponse,
+  'scientist':        scientist as DecomposeResponse,
+  'idol-singer':      idolSinger as DecomposeResponse,
+  'pro-gamer':        proGamer as DecomposeResponse,
+  'startup-founder':  startupFounder as DecomposeResponse,
+  'author':           author as DecomposeResponse,
+  'webtoon-artist':   webtoonArtist as DecomposeResponse,
+  'actor':            actor as DecomposeResponse,
+  'travel-world':     travelWorld as DecomposeResponse,
+  'game-developer':   gameDeveloper as DecomposeResponse,
 }
 
 const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY })

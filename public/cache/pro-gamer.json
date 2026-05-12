@@ -1,0 +1,58 @@
+{
+  "source": "golden-cache",
+  "root": {
+    "name": "Become a Pro Gamer",
+    "toolId": null,
+    "feasibility": 52,
+    "children": [
+      {
+        "name": "Competitive Performance",
+        "toolId": null,
+        "feasibility": 68,
+        "children": [
+          { "name": "Gaming Training Routine", "toolId": "claude", "useCase": "training-program" },
+          { "name": "Competitive Mindset Routine", "toolId": "claude", "useCase": "mental-conditioning" },
+          { "name": "Esports Career Roadmap", "toolId": "claude", "useCase": "career-roadmap" }
+        ]
+      },
+      {
+        "name": "Esports Scene Research",
+        "toolId": null,
+        "feasibility": 72,
+        "children": [
+          { "name": "Esports Industry Research", "toolId": "perplexity", "useCase": "career-path-research" },
+          { "name": "Tournament & Team Research", "toolId": "perplexity", "useCase": "program-research" }
+        ]
+      },
+      {
+        "name": "Content & Streaming",
+        "toolId": null,
+        "feasibility": 82,
+        "children": [
+          { "name": "Streaming Channel Setup", "toolId": "claude", "useCase": "channel-description" },
+          { "name": "Gaming Highlight Reel", "toolId": "capcut", "useCase": "highlight-reel" },
+          { "name": "Gaming Thumbnails", "toolId": "midjourney", "useCase": "youtube-thumbnail" }
+        ]
+      },
+      {
+        "name": "Personal Brand",
+        "toolId": null,
+        "feasibility": 76,
+        "children": [
+          { "name": "Content Calendar", "toolId": "claude", "useCase": "content-calendar" },
+          { "name": "Gaming Brand Logo", "toolId": "canva", "useCase": "channel-logo" },
+          { "name": "Social Media Posts", "toolId": "copy-ai", "useCase": "social-captions" }
+        ]
+      },
+      {
+        "name": "Monetization",
+        "toolId": null,
+        "feasibility": 58,
+        "children": [
+          { "name": "Sponsorship Pitch Deck", "toolId": "gamma", "useCase": "sponsor-pitch" },
+          { "name": "Revenue Model Research", "toolId": "claude", "useCase": "niche-research" }
+        ]
+      }
+    ]
+  }
+}

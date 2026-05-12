@@ -1,0 +1,58 @@
+{
+  "source": "golden-cache",
+  "root": {
+    "name": "Become an Author",
+    "toolId": null,
+    "feasibility": 68,
+    "children": [
+      {
+        "name": "Writing Craft",
+        "toolId": null,
+        "feasibility": 78,
+        "children": [
+          { "name": "Novel Outline & Story Structure", "toolId": "claude", "useCase": "creative-writing" },
+          { "name": "Chapter Writing Assistance", "toolId": "jasper", "useCase": "blog-post" },
+          { "name": "Writing Study Plan", "toolId": "claude", "useCase": "study-plan" }
+        ]
+      },
+      {
+        "name": "Research & Career",
+        "toolId": null,
+        "feasibility": 80,
+        "children": [
+          { "name": "Publishing Industry Research", "toolId": "perplexity", "useCase": "career-path-research" },
+          { "name": "Author Career Roadmap", "toolId": "claude", "useCase": "career-roadmap" }
+        ]
+      },
+      {
+        "name": "Publishing",
+        "toolId": null,
+        "feasibility": 60,
+        "children": [
+          { "name": "Query Letter / Pitch Writing", "toolId": "claude", "useCase": "personal-statement" },
+          { "name": "Publisher & Agent Research", "toolId": "perplexity", "useCase": "program-research" },
+          { "name": "Submission Tracker", "toolId": "notion-ai", "useCase": "application-tracker" }
+        ]
+      },
+      {
+        "name": "Book Design & Presence",
+        "toolId": null,
+        "feasibility": 74,
+        "children": [
+          { "name": "Book Cover Concept", "toolId": "midjourney", "useCase": "concept-illustration" },
+          { "name": "Author Website", "toolId": "cursor", "useCase": "landing-page" }
+        ]
+      },
+      {
+        "name": "Marketing & Audience",
+        "toolId": null,
+        "feasibility": 70,
+        "children": [
+          { "name": "Social Media Promotion", "toolId": "copy-ai", "useCase": "social-captions" },
+          { "name": "Author Newsletter", "toolId": "copy-ai", "useCase": "email-newsletter" },
+          { "name": "Book Blog Writing", "toolId": "jasper", "useCase": "blog-post" }
+        ]
+      }
+    ]
+  }
+}
