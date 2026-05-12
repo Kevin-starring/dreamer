@@ -106,8 +106,33 @@ describe('matchGoldenPath', () => {
     expect(matchGoldenPath('I want to make my own indie game')).toBe('game-developer')
   })
 
-  it('unmatched dream returns null', () => {
+  it('unmatched — gardening and home cooking', () => {
+    expect(matchGoldenPath('I want to cook a meal with vegetables from my own garden')).toBeNull()
+  })
+
+  it('unmatched — bakery', () => {
     expect(matchGoldenPath('I want to open a bakery')).toBeNull()
+  })
+
+  // False positive prevention tests
+  it('no false positive: contractor does not match actor', () => {
+    expect(matchGoldenPath('I want to be a contractor')).toBeNull()
+  })
+
+  it('no false positive: authoritative does not match author', () => {
+    expect(matchGoldenPath('I want to have authoritative expertise')).toBeNull()
+  })
+
+  it('no false positive: game plan does not match game developer', () => {
+    expect(matchGoldenPath('I want to make a game plan for my business')).toBeNull()
+  })
+
+  it('no false positive: cooking alone without youtube', () => {
+    expect(matchGoldenPath('I want to learn cooking')).toBeNull()
+  })
+
+  it('no false positive: youtube alone without cooking', () => {
+    expect(matchGoldenPath('I want to start a YouTube tech channel')).toBeNull()
   })
 })
 

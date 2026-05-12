@@ -94,8 +94,11 @@ export async function POST(request: Request) {
   }
 
   if (!process.env.ANTHROPIC_API_KEY) {
-    console.error('ANTHROPIC_API_KEY not set — falling back to golden cache')
-    return Response.json({ ...loadGoldenCache('youtube-cooking'), note: 'Showing example result' })
+    console.error('ANTHROPIC_API_KEY not set')
+    return Response.json(
+      { error: 'AI service not configured. Please set ANTHROPIC_API_KEY in your environment.' },
+      { status: 503 }
+    )
   }
 
   try {
@@ -131,6 +134,6 @@ export async function POST(request: Request) {
     else if (err instanceof EmptyResponseError) console.error('Parse error:', e.message)
     else console.error('Decompose error:', e.message)
 
-    return Response.json({ ...loadGoldenCache('youtube-cooking'), note: 'Showing example result' })
+    return Response.json({ ...loadGoldenCache('youtube-cooking'), note: 'AI temporarily unavailable — showing an example result' })
   }
 }
