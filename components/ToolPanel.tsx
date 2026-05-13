@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import type { Tool } from '@/lib/types'
 import { fillPrompt } from '@/lib/fillPrompt'
+import { matchBestPrompt } from '@/lib/matchBestPrompt'
 
 interface Props {
   tool: Tool | null
@@ -26,7 +27,7 @@ export default function ToolPanel({ tool, useCase, nodeName, dream, isCompleted,
     )
   }
 
-  const prompt = tool.prompts.find(p => p.useCase === useCase) ?? tool.prompts[0]
+  const prompt = tool.prompts.find(p => p.useCase === useCase) ?? matchBestPrompt(tool, nodeName)
   const promptText = fillPrompt(prompt.prompt, dream ?? '')
 
   const handleCopy = async () => {

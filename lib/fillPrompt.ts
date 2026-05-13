@@ -177,19 +177,49 @@ function escapeRegExp(str: string): string {
   return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
 }
 
+// Generic placeholders that can be filled with the dream text for any dream
+const GENERIC_PLACEHOLDERS = [
+  'YOUR TOPIC',
+  'YOUR NICHE',
+  'YOUR TARGET CAREER',
+  'YOUR GOAL',
+  'YOUR FIELD',
+  'YOUR SUBJECT',
+  'SKILL/FIELD',
+  'SKILL/SUBJECT',
+  'SUBJECT/SKILL',
+  'YOUR ROLE',
+  'JOB TITLE / FIELD',
+  'YOUR PROJECT NAME',
+  'YOUR VENTURE',
+]
+
 /** Replaces dream-specific placeholders in a prompt template based on the user's dream. */
 export function fillPrompt(promptText: string, dream: string): string {
   const key = matchGoldenPath(dream)
-  if (!key) return promptText
-
-  const subs = SUBSTITUTIONS[key]
-  if (!subs) return promptText
 
   let result = promptText
-  for (const [pattern, value] of Object.entries(subs)) {
-    // Matches [PATTERN] or [PATTERN: anything inside]
-    const regex = new RegExp(`\\[${escapeRegExp(pattern)}(?::[^\\]]+)?\\]`, 'g')
-    result = result.replace(regex, value)
+
+  // Apply golden-path-specific substitutions if available
+  if (key) {
+    const subs = SUBSTITUTIONS[key]
+    if (subs) {
+      for (const [pattern, value] of Object.entries(subs)) {
+        const regex = new RegExp(`\\[${escapeRegExp(pattern)}(?::[^\\]]+)?\\]`, 'g')
+        result = result.replace(regex, value)
+      }
+    }
+    return result
   }
+
+  // For non-golden-path dreams: fill generic placeholders with the dream text
+  if (dream.trim()) {
+    for (const placeholder of GENERIC_PLACEHOLDERS) {
+      // Matches [PLACEHOLDER] or [PLACEHOLDER: anything inside]
+      const regex = new RegExp(`\\[${escapeRegExp(placeholder)}(?::[^\\]]+)?\\]`, 'gi')
+      result = result.replace(regex, dream.trim())
+    }
+  }
+
   return result
 }

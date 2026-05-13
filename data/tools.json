@@ -139,6 +139,19 @@
         ]
       },
       {
+        "useCase": "learning-roadmap",
+        "tags": ["learning", "roadmap", "skill", "career", "education", "goal"],
+        "prompt": "Create a detailed learning roadmap for my goal: [YOUR GOAL]. I am currently [YOUR LEVEL: complete beginner / some experience / intermediate]. Available time: [HOURS] per week.\n\nBreak it into phases:\n- Phase 1 (weeks 1-4): Foundations\n- Phase 2 (weeks 5-8): Core skills\n- Phase 3 (weeks 9-12): Applied practice\n- Phase 4 (weeks 13+): Advanced & portfolio\n\nFor each phase: specific topics to learn, best free resources, a mini-project to build, and how to know you're ready for the next phase.",
+        "steps": [
+          "Go to claude.ai and sign in",
+          "Replace [YOUR GOAL] with your specific dream or career goal",
+          "Be honest about your current level and available time",
+          "Ask Claude to adjust the timeline based on your constraints",
+          "Copy the roadmap to Notion for ongoing tracking",
+          "Review and update every 2 weeks based on your progress"
+        ]
+      },
+      {
         "useCase": "creative-writing",
         "tags": ["writing", "creative", "storytelling"],
         "prompt": "Help me plan and outline my [NOVEL / WEBTOON / SHORT STORY / SCREENPLAY] titled '[YOUR TITLE]'. Genre: [YOUR GENRE]. Setting: [WORLD/SETTING DESCRIPTION]. Main character: [PROTAGONIST DESCRIPTION]. Central conflict: [WHAT THE STORY IS ABOUT].\n\nCreate: a 3-act story structure outline, chapter-by-chapter breakdown for the first act, 3 main character arcs, and the core theme. Also suggest where the story's emotional peak should land.",
@@ -200,6 +213,18 @@
         ]
       },
       {
+        "useCase": "concept-learning",
+        "tags": ["learning", "concept", "explain", "understand", "debug", "help"],
+        "prompt": "I'm learning [SUBJECT/SKILL] and struggling with [SPECIFIC CONCEPT]. Explain it to me like I'm a [BEGINNER / INTERMEDIATE] learner.\n\n1. Start with the simplest possible explanation\n2. Give me a real-world analogy\n3. Show me a concrete example\n4. Common mistakes beginners make with this concept\n5. A practice exercise to test my understanding\n\nAfter your explanation, quiz me on it to make sure I really get it.",
+        "steps": [
+          "Open ChatGPT",
+          "Replace [SUBJECT/SKILL] with what you're learning",
+          "Describe specifically what confuses you",
+          "Ask follow-up questions until you truly understand",
+          "Try the practice exercise and share your answer for feedback"
+        ]
+      },
+      {
         "useCase": "interview-practice",
         "tags": ["interview", "practice", "career"],
         "prompt": "Act as an interviewer for a [ROLE: law firm / firefighter department / research position / medical residency]. Ask me 5 tough questions one at a time. After each of my answers, tell me:\n- What I did well (be specific)\n- What was unclear or weak (be specific)\n- A better way to phrase that answer\n\nDon't hold back — I need realistic feedback. Start with: 'Tell me about yourself.'",
@@ -238,6 +263,19 @@
         ]
       },
       {
+        "useCase": "professional-headshot",
+        "tags": ["headshot", "profile", "professional", "portrait", "brand", "photo"],
+        "prompt": "Professional headshot portrait of a [GENDER] [AGE RANGE] [ETHNICITY/STYLE] person, wearing [ATTIRE: business casual / professional suit / creative casual], confident and approachable expression, clean [BACKGROUND: solid gray / blurred office / neutral gradient] background, professional studio lighting, sharp focus, LinkedIn profile photo style, high quality portrait photography --ar 1:1 --style raw --v 6",
+        "steps": [
+          "Go to midjourney.com and log in",
+          "Replace bracketed variables with your preferences",
+          "Generate 4 options and pick the most natural-looking one",
+          "Upscale your chosen image (U1-U4)",
+          "Download the high-res version",
+          "Use for LinkedIn, portfolio, resume, and professional profiles"
+        ]
+      },
+      {
         "useCase": "channel-banner",
         "tags": ["banner", "branding", "design"],
         "prompt": "[YOUR AESTHETIC: e.g. minimalist modern / cozy warm / bold energetic] YouTube channel banner, [YOUR TOPIC] theme, wide cinematic composition, [YOUR COLOR 1] and [YOUR COLOR 2] color scheme, space on right side for text overlay, professional quality, 2560x1440 resolution style --ar 16:9 --v 6",
@@ -272,6 +310,19 @@
           "Customize colors to match your brand",
           "Download as PNG with transparent background",
           "Upload to YouTube Studio > Customization > Branding"
+        ]
+      },
+      {
+        "useCase": "resume-design",
+        "tags": ["resume", "cv", "career", "job", "design", "professional", "linkedin"],
+        "prompt": "Design a professional resume for [YOUR NAME], a [YOUR ROLE/FIELD] professional. Include sections for: Contact Info, Summary, Experience, Skills, Education, and Projects. Style: [CLEAN MODERN / CREATIVE / MINIMALIST]. Primary color: [YOUR COLOR]. Make it ATS-friendly with clear hierarchy.\n\nAlso design a matching LinkedIn banner (1584x396px) with the same style.",
+        "steps": [
+          "Go to canva.com and sign in",
+          "Search for 'Resume' templates matching your style",
+          "Choose a clean, ATS-friendly template",
+          "Fill in your real information section by section",
+          "Download as PDF for applications",
+          "Create a matching LinkedIn banner using the same color scheme"
         ]
       },
       {
@@ -387,6 +438,32 @@
         ]
       },
       {
+        "useCase": "coding-practice",
+        "tags": ["coding", "practice", "learning", "exercises", "beginner", "programming"],
+        "prompt": "I'm learning [LANGUAGE: Python / JavaScript / TypeScript / etc.] and want to practice [TOPIC: loops / functions / APIs / data structures]. Create a series of 5 progressively harder coding challenges.\n\nFor each challenge:\n- Problem description (clear and specific)\n- Expected input/output examples\n- Hints if I get stuck\n- Complete solution with detailed comments explaining each line\n\nStart from beginner and build to intermediate difficulty. Make the examples practical, not abstract.",
+        "steps": [
+          "Download Cursor from cursor.sh",
+          "Create a new folder called 'coding-practice'",
+          "Press Cmd+I (Mac) or Ctrl+I (Windows) to open the AI composer",
+          "Paste the prompt with your language and topic",
+          "Try solving each challenge yourself before looking at the solution",
+          "Ask Cursor to explain any concepts you don't understand"
+        ]
+      },
+      {
+        "useCase": "portfolio-project",
+        "tags": ["portfolio", "project", "showcase", "build", "deploy", "developer"],
+        "prompt": "Help me build a portfolio project: [PROJECT IDEA: e.g. task manager app / weather dashboard / blog platform]. Tech stack: [LANGUAGE/FRAMEWORK].\n\nThis project should demonstrate my skills in:\n- [SKILL 1: e.g. API integration]\n- [SKILL 2: e.g. responsive design]\n- [SKILL 3: e.g. database operations]\n\nStart by setting up the project structure, then build the core functionality, add a clean UI, write a comprehensive README, and make it deployable. Write clean, well-commented code I can explain in interviews.",
+        "steps": [
+          "Open Cursor and create a new project folder",
+          "Press Cmd+I to describe your project idea in detail",
+          "Build iteratively — get the core working first, then add features",
+          "Ask Cursor to add error handling and tests",
+          "Deploy to Vercel or Netlify for free",
+          "Add the live link and GitHub repo to your resume and portfolio"
+        ]
+      },
+      {
         "useCase": "automation-script",
         "tags": ["automation", "script", "productivity"],
         "prompt": "Write a Python script that [DESCRIBE WHAT YOU WANT TO AUTOMATE — e.g. 'downloads all images from a folder of URLs', 'renames video files based on a spreadsheet', 'sends a Slack message when a file is added to a folder']. Make it beginner-friendly with comments explaining each step.",
@@ -434,6 +511,19 @@
           "Review each slide and refine the messaging",
           "Add your actual numbers in the financial section",
           "Share via link for investor meetings"
+        ]
+      },
+      {
+        "useCase": "project-presentation",
+        "tags": ["project", "presentation", "showcase", "demo", "portfolio"],
+        "prompt": "Create a project showcase presentation for [YOUR PROJECT NAME]. This is a [TYPE: personal project / portfolio piece / hackathon entry / school project]. Built with: [TECH STACK].\n\nSlides: Problem Statement, My Solution, Key Features (with screenshots), Technical Architecture, Challenges & What I Learned, Live Demo Link, What's Next. Under 10 slides. Audience: [HIRING MANAGERS / PEERS / INVESTORS].",
+        "steps": [
+          "Go to gamma.app and sign up (free tier available)",
+          "Click 'Create' then 'Generate' and paste the prompt",
+          "Choose a professional theme that matches your project's vibe",
+          "Gamma generates the full deck in under 2 minutes",
+          "Add your actual screenshots, architecture diagrams, and demo links",
+          "Practice presenting — aim for 5-7 minutes total"
         ]
       },
       {
@@ -507,6 +597,32 @@
           "Click through sources to verify every key claim",
           "Search Reddit communities for unfiltered professional opinions",
           "Identify one professional in the field to have a real conversation with"
+        ]
+      },
+      {
+        "useCase": "learning-research",
+        "tags": ["learning", "research", "skill", "how-to", "education", "course", "resource"],
+        "prompt": "I want to learn [SKILL/FIELD: e.g. programming / photography / cooking / music production]. Research the best way to learn this in [TIMEFRAME: 3 months / 6 months / 1 year]. I want to know:\n1. Best free and paid learning resources (courses, books, tutorials) — ranked by quality\n2. Most in-demand sub-specialties within this field\n3. Realistic timeline from beginner to job-ready\n4. Common mistakes beginners make\n5. Communities and forums where learners get help\n\nCite your sources for each recommendation.",
+        "steps": [
+          "Go to perplexity.ai",
+          "Replace [SKILL/FIELD] with exactly what you want to learn",
+          "Review cited sources — click through to verify course quality and reviews",
+          "Follow up: 'Which of these resources is best for complete beginners?'",
+          "Build a shortlist of 2-3 resources to start with",
+          "Set up your learning plan in Notion based on the research"
+        ]
+      },
+      {
+        "useCase": "job-research",
+        "tags": ["job", "career", "salary", "requirements", "industry", "hiring", "company"],
+        "prompt": "Research the current job market for [JOB TITLE / FIELD] in [LOCATION / REMOTE]. I want to know:\n1. Most in-demand skills employers are hiring for right now\n2. Salary ranges by experience level (junior / mid / senior) with sources\n3. Top companies hiring for this role\n4. Common job requirements and qualifications\n5. Best job boards and platforms for this field\n\nCite all sources. Focus on data from the last 6 months.",
+        "steps": [
+          "Go to perplexity.ai",
+          "Fill in your target job title and location",
+          "Verify salary data against Glassdoor, Levels.fyi, or LinkedIn Salary",
+          "Follow up: 'What portfolio projects would impress hiring managers for this role?'",
+          "Create a target company list from the research",
+          "Track applications in Notion"
         ]
       },
       {
@@ -635,6 +751,32 @@
         ]
       },
       {
+        "useCase": "learning-tracker",
+        "tags": ["learning", "tracking", "progress", "skill", "study", "education", "goal"],
+        "prompt": "Build me a learning progress tracker in Notion for [SKILL/SUBJECT: e.g. Python programming / graphic design / music production]. I need to track:\n- Topics and subtopics with completion status (checkbox)\n- Resources used (course, book, tutorial) with links\n- Daily learning log (date, topic, hours, notes, difficulty rating 1-5)\n- Projects completed to apply what I learned\n- Weekly goals and reflection\n- Overall progress percentage\n\nDescribe the exact database setup with columns, views, and any useful formulas.",
+        "steps": [
+          "Create a free Notion account at notion.so",
+          "Click 'Add a page' and use Notion AI with this prompt",
+          "Set up the database following the recommended structure",
+          "Add your learning topics as rows",
+          "Update your log after every study session",
+          "Review progress every Sunday and set goals for next week"
+        ]
+      },
+      {
+        "useCase": "job-tracker",
+        "tags": ["job", "application", "tracking", "career", "interview", "hiring"],
+        "prompt": "Create a job application tracker in Notion for my [FIELD/ROLE] job search. Track:\n- Company name and role title\n- Job posting URL\n- Application deadline\n- Status (Bookmarked → Applied → Phone Screen → Technical → Onsite → Offer → Decision)\n- Contact person and notes\n- Salary range\n- Required skills match (how many I have vs. required)\n- Follow-up dates\n\nI want a board view by status, a calendar view for deadlines, and a table view sorted by priority.",
+        "steps": [
+          "Open Notion and create a new page",
+          "Ask Notion AI to build this tracker from the prompt",
+          "Add all target companies and roles as rows",
+          "Set reminders for follow-ups and deadlines",
+          "Update status immediately after each interaction",
+          "Review the board weekly to prioritize next actions"
+        ]
+      },
+      {
         "useCase": "training-log",
         "tags": ["training", "fitness", "tracking"],
         "prompt": "Build me an athlete training log in Notion. Track:\n- Each session: date, workout type, exercises, sets/reps/weight\n- Weekly volume (total sets per muscle group)\n- Performance benchmarks: speed times, max weights, endurance results\n- Body metrics: weight, measurements\n- Subjective ratings: energy level, sleep quality, soreness (1-10)\n\nInclude a weekly review template to assess progress and plan adjustments.",
@@ -669,6 +811,19 @@
           "Create color swatches and label them with hex codes",
           "Choose and set your Google Fonts",
           "Share this file with anyone who creates content for you"
+        ]
+      },
+      {
+        "useCase": "portfolio-website",
+        "tags": ["portfolio", "website", "developer", "design", "layout", "showcase", "personal"],
+        "prompt": "Design a personal portfolio website layout in Figma for a [YOUR ROLE: developer / designer / creative]. Include:\n- Hero section with name, title, and brief intro\n- Skills/tech stack section with icons\n- Projects showcase (3-4 project cards with image, title, description, links)\n- About me section\n- Contact form or links\n- Responsive mobile version\n\nStyle: [MODERN DARK / CLEAN LIGHT / CREATIVE BOLD]. Keep it minimal and professional.",
+        "steps": [
+          "Create a free Figma account",
+          "Open a new file and set up frames for desktop (1440px) and mobile (375px)",
+          "Use Figma AI (Cmd+K) to generate layout components",
+          "Design the hero section first — this is what visitors see immediately",
+          "Add project cards with placeholder images",
+          "Share the design file with a developer or use it as a reference to build in Cursor"
         ]
       },
       {
@@ -881,6 +1036,32 @@
         ]
       },
       {
+        "useCase": "professional-bio",
+        "tags": ["bio", "profile", "professional", "about", "description", "brand", "developer"],
+        "prompt": "Write a compelling professional bio for [YOUR NAME], a [YOUR ROLE: e.g. aspiring developer / designer / entrepreneur]. My background: [KEY BACKGROUND]. Skills: [TOP SKILLS]. Current focus: [WHAT YOU'RE WORKING ON].\n\nCreate 3 versions:\n1. Short (50 words) — for social media profiles\n2. Medium (100 words) — for portfolio and LinkedIn summary\n3. Long (200 words) — for personal website about page\n\nTone: [PROFESSIONAL / FRIENDLY / CREATIVE]. Make it authentic and specific — avoid generic phrases like 'passionate about technology.'",
+        "steps": [
+          "Go to copy.ai and sign in",
+          "Use the 'Bio' or 'About Me' template",
+          "Fill in your real background and skills",
+          "Generate multiple versions",
+          "Use the short version for GitHub, Twitter, LinkedIn headline",
+          "Use the long version for your portfolio website"
+        ]
+      },
+      {
+        "useCase": "cover-letter",
+        "tags": ["cover", "letter", "job", "application", "career", "hiring"],
+        "prompt": "Write a cover letter for a [JOB TITLE] position at [COMPANY NAME]. My background: [YOUR EXPERIENCE AND SKILLS]. Why this company: [SPECIFIC REASON — not generic]. Why this role: [WHAT EXCITES YOU ABOUT IT].\n\nThe letter should:\n- Open with a specific hook (not 'I am writing to apply...')\n- Connect my skills to their specific needs\n- Include one concrete achievement with a number\n- Show I've researched the company\n- End with a clear call to action\n\nKeep it under 300 words. Professional but human.",
+        "steps": [
+          "Open Copy.ai and use the Cover Letter template",
+          "Research the company first — mention specifics",
+          "Fill in your real experience and achievements",
+          "Generate a draft and customize heavily",
+          "Have someone review it before sending",
+          "Customize for each company — never send a generic letter"
+        ]
+      },
+      {
         "useCase": "email-newsletter",
         "tags": ["email", "newsletter", "marketing"],
         "prompt": "Write an email newsletter announcing my new YouTube video '[YOUR VIDEO TITLE]'. The email should:\n- Subject line: [3 OPTIONS]\n- Opening hook that creates curiosity\n- 2-3 sentences on what they'll learn\n- Clear CTA button text: [WATCH NOW / CHECK IT OUT / SEE THE VIDEO]\n- Friendly sign-off\n\nKeep it under 200 words. Tone: [YOUR BRAND TONE].",
@@ -927,6 +1108,19 @@
           "Add specific numbers: GPA, volunteer hours, patient contacts, pass rates",
           "Ask Jasper to 'make the experience bullet points stronger and more specific'",
           "Have a career advisor or mentor review the final version before submitting"
+        ]
+      },
+      {
+        "useCase": "project-docs",
+        "tags": ["documentation", "project", "readme", "description", "write", "technical"],
+        "prompt": "Write professional documentation for my project [PROJECT NAME]. It's a [PROJECT TYPE: web app / mobile app / API / tool] built with [TECH STACK]. Main features: [LIST 3-5 FEATURES].\n\nCreate:\n1. README.md with: project overview, screenshots, installation steps, usage guide, tech stack, and contributing guidelines\n2. A compelling 2-sentence project description for my resume/portfolio\n3. A 100-word project summary for LinkedIn\n\nMake the README impressive enough for a hiring manager reviewing my GitHub.",
+        "steps": [
+          "Open Jasper and choose the 'Long Form' template",
+          "Fill in your project details and tech stack",
+          "Generate the README structure first",
+          "Add your actual screenshots and installation commands",
+          "Generate the short descriptions for resume and LinkedIn",
+          "Copy the README to your GitHub repo and verify formatting"
         ]
       },
       {
