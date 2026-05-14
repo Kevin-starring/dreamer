@@ -1,0 +1,59 @@
+{
+  "source": "golden-cache",
+  "root": {
+    "name": "Become a Fashion Designer",
+    "toolId": null,
+    "feasibility": 65,
+    "children": [
+      {
+        "name": "Design Education",
+        "toolId": null,
+        "feasibility": 76,
+        "children": [
+          { "name": "Fashion Design Learning Roadmap", "toolId": "claude", "useCase": "learning-roadmap" },
+          { "name": "Fashion School Research", "toolId": "perplexity", "useCase": "program-research" },
+          { "name": "Design Study Tracker", "toolId": "notion-ai", "useCase": "study-tracker" }
+        ]
+      },
+      {
+        "name": "Technical Skills",
+        "toolId": null,
+        "feasibility": 72,
+        "children": [
+          { "name": "Fashion Concept Illustrations", "toolId": "midjourney", "useCase": "professional-headshot" },
+          { "name": "Art Style Exploration", "toolId": "stable-diffusion", "useCase": "art-style" },
+          { "name": "Design Concepts", "toolId": "dall-e", "useCase": "concept-illustration" }
+        ]
+      },
+      {
+        "name": "Collection Development",
+        "toolId": null,
+        "feasibility": 68,
+        "children": [
+          { "name": "Collection Mood Board", "toolId": "canva", "useCase": "thumbnail-template" },
+          { "name": "Product Image Creation", "toolId": "stable-diffusion", "useCase": "product-image" }
+        ]
+      },
+      {
+        "name": "Brand Identity",
+        "toolId": null,
+        "feasibility": 65,
+        "children": [
+          { "name": "Brand Visual Design", "toolId": "figma-ai", "useCase": "brand-design" },
+          { "name": "Social Media Captions", "toolId": "copy-ai", "useCase": "social-captions" },
+          { "name": "Designer Bio", "toolId": "copy-ai", "useCase": "professional-bio" }
+        ]
+      },
+      {
+        "name": "Industry Entry",
+        "toolId": null,
+        "feasibility": 62,
+        "children": [
+          { "name": "Fashion Industry Research", "toolId": "perplexity", "useCase": "career-path-research" },
+          { "name": "Fashion Designer CV", "toolId": "jasper", "useCase": "professional-cv" },
+          { "name": "Career Pitch Deck", "toolId": "gamma", "useCase": "career-pitch" }
+        ]
+      }
+    ]
+  }
+}

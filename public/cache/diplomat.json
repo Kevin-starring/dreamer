@@ -1,0 +1,58 @@
+{
+  "source": "golden-cache",
+  "root": {
+    "name": "Become a Diplomat",
+    "toolId": null,
+    "feasibility": 55,
+    "children": [
+      {
+        "name": "Academic Foundation",
+        "toolId": null,
+        "feasibility": 68,
+        "children": [
+          { "name": "Diplomacy Career Roadmap", "toolId": "claude", "useCase": "career-roadmap" },
+          { "name": "International Studies Program Research", "toolId": "perplexity", "useCase": "program-research" },
+          { "name": "Study Tracker", "toolId": "notion-ai", "useCase": "study-tracker" }
+        ]
+      },
+      {
+        "name": "Language Skills",
+        "toolId": null,
+        "feasibility": 72,
+        "children": [
+          { "name": "Language Learning Plan", "toolId": "claude", "useCase": "study-plan" },
+          { "name": "Language Learning Research", "toolId": "perplexity", "useCase": "learning-research" }
+        ]
+      },
+      {
+        "name": "Foreign Service Exam",
+        "toolId": null,
+        "feasibility": 58,
+        "children": [
+          { "name": "Foreign Service Exam Prep", "toolId": "claude", "useCase": "study-plan" },
+          { "name": "Exam Study Tracker", "toolId": "notion-ai", "useCase": "study-tracker" },
+          { "name": "Exam Research", "toolId": "perplexity", "useCase": "program-research" }
+        ]
+      },
+      {
+        "name": "Application Process",
+        "toolId": null,
+        "feasibility": 53,
+        "children": [
+          { "name": "Personal Statement", "toolId": "claude", "useCase": "personal-statement" },
+          { "name": "Application Tracker", "toolId": "notion-ai", "useCase": "application-tracker" }
+        ]
+      },
+      {
+        "name": "Career Development",
+        "toolId": null,
+        "feasibility": 56,
+        "children": [
+          { "name": "Diplomacy Career Research", "toolId": "perplexity", "useCase": "career-path-research" },
+          { "name": "Diplomat CV", "toolId": "jasper", "useCase": "professional-cv" },
+          { "name": "Career Pitch Deck", "toolId": "gamma", "useCase": "career-pitch" }
+        ]
+      }
+    ]
+  }
+}

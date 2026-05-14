@@ -1,0 +1,59 @@
+{
+  "source": "golden-cache",
+  "root": {
+    "name": "Become a YouTuber",
+    "toolId": null,
+    "feasibility": 65,
+    "children": [
+      {
+        "name": "Channel Strategy",
+        "toolId": null,
+        "feasibility": 76,
+        "children": [
+          { "name": "Niche Research", "toolId": "claude", "useCase": "niche-research" },
+          { "name": "Channel Description Writing", "toolId": "claude", "useCase": "channel-description" },
+          { "name": "Content Calendar", "toolId": "claude", "useCase": "content-calendar" }
+        ]
+      },
+      {
+        "name": "Content Production",
+        "toolId": null,
+        "feasibility": 72,
+        "children": [
+          { "name": "Video Script Writing", "toolId": "notion-ai", "useCase": "video-script" },
+          { "name": "Video Editing", "toolId": "capcut", "useCase": "video-editing" },
+          { "name": "YouTube Intro Production", "toolId": "runway", "useCase": "youtube-intro" }
+        ]
+      },
+      {
+        "name": "Growth & SEO",
+        "toolId": null,
+        "feasibility": 68,
+        "children": [
+          { "name": "YouTube Thumbnail Design", "toolId": "midjourney", "useCase": "youtube-thumbnail" },
+          { "name": "Thumbnail Template", "toolId": "canva", "useCase": "thumbnail-template" },
+          { "name": "Trend Research", "toolId": "chatgpt", "useCase": "trend-research" }
+        ]
+      },
+      {
+        "name": "Monetization",
+        "toolId": null,
+        "feasibility": 62,
+        "children": [
+          { "name": "Monetization Strategy Research", "toolId": "perplexity", "useCase": "market-research" },
+          { "name": "YouTube Business Plan", "toolId": "gamma", "useCase": "business-plan" }
+        ]
+      },
+      {
+        "name": "Brand Partnerships",
+        "toolId": null,
+        "feasibility": 60,
+        "children": [
+          { "name": "Sponsor Pitch Deck", "toolId": "gamma", "useCase": "sponsor-pitch" },
+          { "name": "Channel Banner Design", "toolId": "canva", "useCase": "channel-banner" },
+          { "name": "Channel Logo Design", "toolId": "canva", "useCase": "channel-logo" }
+        ]
+      }
+    ]
+  }
+}

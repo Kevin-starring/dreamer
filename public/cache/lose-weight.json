@@ -1,0 +1,58 @@
+{
+  "source": "golden-cache",
+  "root": {
+    "name": "Lose Weight and Get Fit",
+    "toolId": null,
+    "feasibility": 82,
+    "children": [
+      {
+        "name": "Fitness Plan",
+        "toolId": null,
+        "feasibility": 88,
+        "children": [
+          { "name": "Workout Training Program", "toolId": "claude", "useCase": "training-program" },
+          { "name": "Training Log Tracker", "toolId": "notion-ai", "useCase": "training-log" },
+          { "name": "Exercise Research", "toolId": "perplexity", "useCase": "learning-research" }
+        ]
+      },
+      {
+        "name": "Nutrition Strategy",
+        "toolId": null,
+        "feasibility": 86,
+        "children": [
+          { "name": "Nutrition Plan", "toolId": "chatgpt", "useCase": "nutrition-plan" },
+          { "name": "Diet Research", "toolId": "perplexity", "useCase": "market-research" }
+        ]
+      },
+      {
+        "name": "Habit Building",
+        "toolId": null,
+        "feasibility": 84,
+        "children": [
+          { "name": "Habit System Setup", "toolId": "notion-ai", "useCase": "learning-tracker" },
+          { "name": "Consistency Learning Plan", "toolId": "claude", "useCase": "study-plan" },
+          { "name": "Fitness Research", "toolId": "perplexity", "useCase": "learning-research" }
+        ]
+      },
+      {
+        "name": "Progress Tracking",
+        "toolId": null,
+        "feasibility": 86,
+        "children": [
+          { "name": "Progress Tracker System", "toolId": "notion-ai", "useCase": "training-log" },
+          { "name": "Body Transformation Social Graphic", "toolId": "dall-e", "useCase": "social-graphic" }
+        ]
+      },
+      {
+        "name": "Mindset & Motivation",
+        "toolId": null,
+        "feasibility": 80,
+        "children": [
+          { "name": "Mental Conditioning Plan", "toolId": "claude", "useCase": "mental-conditioning" },
+          { "name": "Fitness Content Shorts", "toolId": "capcut", "useCase": "shorts-creation" },
+          { "name": "Motivational Social Captions", "toolId": "copy-ai", "useCase": "social-captions" }
+        ]
+      }
+    ]
+  }
+}

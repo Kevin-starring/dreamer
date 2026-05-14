@@ -1,0 +1,59 @@
+{
+  "source": "golden-cache",
+  "root": {
+    "name": "Become a Police Officer",
+    "toolId": null,
+    "feasibility": 75,
+    "children": [
+      {
+        "name": "Physical Preparation",
+        "toolId": null,
+        "feasibility": 85,
+        "children": [
+          { "name": "Physical Training Program", "toolId": "claude", "useCase": "training-program" },
+          { "name": "Training Log Tracker", "toolId": "notion-ai", "useCase": "training-log" },
+          { "name": "Nutrition Plan", "toolId": "chatgpt", "useCase": "nutrition-plan" }
+        ]
+      },
+      {
+        "name": "Academic Requirements",
+        "toolId": null,
+        "feasibility": 80,
+        "children": [
+          { "name": "Police Academy Study Plan", "toolId": "claude", "useCase": "study-plan" },
+          { "name": "Study Tracker", "toolId": "notion-ai", "useCase": "study-tracker" },
+          { "name": "Law Enforcement Research", "toolId": "perplexity", "useCase": "program-research" }
+        ]
+      },
+      {
+        "name": "Application Process",
+        "toolId": null,
+        "feasibility": 76,
+        "children": [
+          { "name": "Police Department Research", "toolId": "perplexity", "useCase": "career-path-research" },
+          { "name": "Application Tracker", "toolId": "notion-ai", "useCase": "application-tracker" },
+          { "name": "Personal Statement", "toolId": "claude", "useCase": "personal-statement" }
+        ]
+      },
+      {
+        "name": "Academy Training",
+        "toolId": null,
+        "feasibility": 78,
+        "children": [
+          { "name": "Interview Preparation", "toolId": "claude", "useCase": "interview-prep" },
+          { "name": "Mental Conditioning", "toolId": "claude", "useCase": "mental-conditioning" }
+        ]
+      },
+      {
+        "name": "Career Planning",
+        "toolId": null,
+        "feasibility": 72,
+        "children": [
+          { "name": "Law Enforcement Career Roadmap", "toolId": "claude", "useCase": "career-roadmap" },
+          { "name": "Police Officer CV", "toolId": "jasper", "useCase": "professional-cv" },
+          { "name": "Career Research", "toolId": "perplexity", "useCase": "job-research" }
+        ]
+      }
+    ]
+  }
+}

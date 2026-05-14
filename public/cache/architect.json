@@ -1,0 +1,59 @@
+{
+  "source": "golden-cache",
+  "root": {
+    "name": "Become an Architect",
+    "toolId": null,
+    "feasibility": 70,
+    "children": [
+      {
+        "name": "Academic Foundation",
+        "toolId": null,
+        "feasibility": 80,
+        "children": [
+          { "name": "Architecture Program Research", "toolId": "perplexity", "useCase": "program-research" },
+          { "name": "Architecture Study Plan", "toolId": "claude", "useCase": "study-plan" },
+          { "name": "Study Tracker", "toolId": "notion-ai", "useCase": "study-tracker" }
+        ]
+      },
+      {
+        "name": "Design Skills",
+        "toolId": null,
+        "feasibility": 75,
+        "children": [
+          { "name": "Design Learning Roadmap", "toolId": "claude", "useCase": "learning-roadmap" },
+          { "name": "Design Concept Visuals", "toolId": "midjourney", "useCase": "professional-headshot" },
+          { "name": "Architecture Concepts", "toolId": "dall-e", "useCase": "concept-illustration" }
+        ]
+      },
+      {
+        "name": "Portfolio",
+        "toolId": null,
+        "feasibility": 72,
+        "children": [
+          { "name": "Portfolio Website Design", "toolId": "figma-ai", "useCase": "portfolio-website" },
+          { "name": "Portfolio Branding", "toolId": "figma-ai", "useCase": "brand-design" }
+        ]
+      },
+      {
+        "name": "Licensure",
+        "toolId": null,
+        "feasibility": 66,
+        "children": [
+          { "name": "Licensure Exam Study Plan", "toolId": "claude", "useCase": "study-plan" },
+          { "name": "Licensure Research", "toolId": "perplexity", "useCase": "program-research" },
+          { "name": "Application Tracker", "toolId": "notion-ai", "useCase": "application-tracker" }
+        ]
+      },
+      {
+        "name": "Career Launch",
+        "toolId": null,
+        "feasibility": 68,
+        "children": [
+          { "name": "Architecture Career Roadmap", "toolId": "claude", "useCase": "career-roadmap" },
+          { "name": "Architect CV", "toolId": "jasper", "useCase": "professional-cv" },
+          { "name": "Job Market Research", "toolId": "perplexity", "useCase": "job-research" }
+        ]
+      }
+    ]
+  }
+}

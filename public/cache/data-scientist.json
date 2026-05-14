@@ -1,0 +1,59 @@
+{
+  "source": "golden-cache",
+  "root": {
+    "name": "Become a Data Scientist",
+    "toolId": null,
+    "feasibility": 74,
+    "children": [
+      {
+        "name": "Math & Programming Foundation",
+        "toolId": null,
+        "feasibility": 84,
+        "children": [
+          { "name": "Data Science Learning Roadmap", "toolId": "claude", "useCase": "learning-roadmap" },
+          { "name": "Math & Stats Study Plan", "toolId": "notion-ai", "useCase": "study-tracker" },
+          { "name": "Programming Practice", "toolId": "cursor", "useCase": "coding-practice" }
+        ]
+      },
+      {
+        "name": "Data Skills",
+        "toolId": null,
+        "feasibility": 80,
+        "children": [
+          { "name": "Data Science Concepts Learning", "toolId": "chatgpt", "useCase": "concept-learning" },
+          { "name": "Automation Script for Data", "toolId": "cursor", "useCase": "automation-script" },
+          { "name": "Data Career Research", "toolId": "perplexity", "useCase": "career-path-research" }
+        ]
+      },
+      {
+        "name": "Project Portfolio",
+        "toolId": null,
+        "feasibility": 77,
+        "children": [
+          { "name": "Portfolio Project Build", "toolId": "cursor", "useCase": "portfolio-project" },
+          { "name": "Project Documentation", "toolId": "jasper", "useCase": "project-docs" },
+          { "name": "Portfolio Website", "toolId": "figma-ai", "useCase": "portfolio-website" }
+        ]
+      },
+      {
+        "name": "Job Preparation",
+        "toolId": null,
+        "feasibility": 72,
+        "children": [
+          { "name": "Data Science Interview Prep", "toolId": "claude", "useCase": "interview-prep" },
+          { "name": "Job Market Research", "toolId": "perplexity", "useCase": "job-research" },
+          { "name": "Data Scientist CV", "toolId": "jasper", "useCase": "professional-cv" }
+        ]
+      },
+      {
+        "name": "Networking",
+        "toolId": null,
+        "feasibility": 70,
+        "children": [
+          { "name": "Data Science Community Research", "toolId": "perplexity", "useCase": "market-research" },
+          { "name": "Professional Bio", "toolId": "copy-ai", "useCase": "professional-bio" }
+        ]
+      }
+    ]
+  }
+}

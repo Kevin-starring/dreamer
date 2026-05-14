@@ -1,0 +1,58 @@
+{
+  "source": "golden-cache",
+  "root": {
+    "name": "Become an Airline Pilot",
+    "toolId": null,
+    "feasibility": 62,
+    "children": [
+      {
+        "name": "Academic Foundation",
+        "toolId": null,
+        "feasibility": 75,
+        "children": [
+          { "name": "Aviation Study Plan", "toolId": "claude", "useCase": "study-plan" },
+          { "name": "Aviation Program Research", "toolId": "perplexity", "useCase": "program-research" },
+          { "name": "Study Tracker Setup", "toolId": "notion-ai", "useCase": "study-tracker" }
+        ]
+      },
+      {
+        "name": "Flight Training",
+        "toolId": null,
+        "feasibility": 65,
+        "children": [
+          { "name": "Flight School Research", "toolId": "perplexity", "useCase": "career-path-research" },
+          { "name": "Training Log Tracker", "toolId": "notion-ai", "useCase": "training-log" },
+          { "name": "Physical Training Plan", "toolId": "claude", "useCase": "training-program" }
+        ]
+      },
+      {
+        "name": "Certifications",
+        "toolId": null,
+        "feasibility": 60,
+        "children": [
+          { "name": "FAA Exam Preparation", "toolId": "claude", "useCase": "study-plan" },
+          { "name": "Certification Research", "toolId": "perplexity", "useCase": "program-research" }
+        ]
+      },
+      {
+        "name": "Job Applications",
+        "toolId": null,
+        "feasibility": 58,
+        "children": [
+          { "name": "Airline Application Tracker", "toolId": "notion-ai", "useCase": "application-tracker" },
+          { "name": "Pilot CV Writing", "toolId": "jasper", "useCase": "professional-cv" },
+          { "name": "Interview Preparation", "toolId": "claude", "useCase": "interview-prep" }
+        ]
+      },
+      {
+        "name": "Career Planning",
+        "toolId": null,
+        "feasibility": 63,
+        "children": [
+          { "name": "Aviation Career Roadmap", "toolId": "claude", "useCase": "career-roadmap" },
+          { "name": "Airline Industry Research", "toolId": "perplexity", "useCase": "job-research" }
+        ]
+      }
+    ]
+  }
+}

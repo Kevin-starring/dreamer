@@ -1,0 +1,59 @@
+{
+  "source": "golden-cache",
+  "root": {
+    "name": "Become a Professional Chef",
+    "toolId": null,
+    "feasibility": 68,
+    "children": [
+      {
+        "name": "Culinary Skills",
+        "toolId": null,
+        "feasibility": 78,
+        "children": [
+          { "name": "Culinary Learning Roadmap", "toolId": "claude", "useCase": "learning-roadmap" },
+          { "name": "Cooking Technique Study Plan", "toolId": "notion-ai", "useCase": "study-tracker" },
+          { "name": "Ingredient & Flavor Research", "toolId": "perplexity", "useCase": "learning-research" }
+        ]
+      },
+      {
+        "name": "Kitchen Training",
+        "toolId": null,
+        "feasibility": 72,
+        "children": [
+          { "name": "Culinary School Research", "toolId": "perplexity", "useCase": "program-research" },
+          { "name": "Training Log Tracker", "toolId": "notion-ai", "useCase": "training-log" },
+          { "name": "Career Path Research", "toolId": "perplexity", "useCase": "career-path-research" }
+        ]
+      },
+      {
+        "name": "Menu Development",
+        "toolId": null,
+        "feasibility": 70,
+        "children": [
+          { "name": "Signature Dish Concept Art", "toolId": "dall-e", "useCase": "concept-illustration" },
+          { "name": "Menu Design", "toolId": "canva", "useCase": "thumbnail-template" },
+          { "name": "Recipe Content Writing", "toolId": "jasper", "useCase": "blog-post" }
+        ]
+      },
+      {
+        "name": "Industry Research",
+        "toolId": null,
+        "feasibility": 65,
+        "children": [
+          { "name": "Restaurant Industry Research", "toolId": "perplexity", "useCase": "market-research" },
+          { "name": "Competitor Restaurant Analysis", "toolId": "perplexity", "useCase": "competitor-analysis" }
+        ]
+      },
+      {
+        "name": "Career Launch",
+        "toolId": null,
+        "feasibility": 62,
+        "children": [
+          { "name": "Chef Resume / CV", "toolId": "jasper", "useCase": "professional-cv" },
+          { "name": "Professional Bio", "toolId": "copy-ai", "useCase": "professional-bio" },
+          { "name": "Career Roadmap Planning", "toolId": "claude", "useCase": "career-roadmap" }
+        ]
+      }
+    ]
+  }
+}

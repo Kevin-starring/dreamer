@@ -17,6 +17,39 @@ import webtoonArtist from '@/public/cache/webtoon-artist.json'
 import actor from '@/public/cache/actor.json'
 import travelWorld from '@/public/cache/travel-world.json'
 import gameDeveloper from '@/public/cache/game-developer.json'
+import programmer from '@/public/cache/programmer.json'
+import chef from '@/public/cache/chef.json'
+import pilot from '@/public/cache/pilot.json'
+import photographer from '@/public/cache/photographer.json'
+import musician from '@/public/cache/musician.json'
+import dancer from '@/public/cache/dancer.json'
+import teacher from '@/public/cache/teacher.json'
+import architect from '@/public/cache/architect.json'
+import veterinarian from '@/public/cache/veterinarian.json'
+import dentist from '@/public/cache/dentist.json'
+import psychologist from '@/public/cache/psychologist.json'
+import uxDesigner from '@/public/cache/ux-designer.json'
+import filmmaker from '@/public/cache/filmmaker.json'
+import journalist from '@/public/cache/journalist.json'
+import fashionDesigner from '@/public/cache/fashion-designer.json'
+import interiorDesigner from '@/public/cache/interior-designer.json'
+import dataScientist from '@/public/cache/data-scientist.json'
+import youtuber from '@/public/cache/youtuber.json'
+import policeOfficer from '@/public/cache/police-officer.json'
+import fitnessTrainer from '@/public/cache/fitness-trainer.json'
+import voiceActor from '@/public/cache/voice-actor.json'
+import astronaut from '@/public/cache/astronaut.json'
+import diplomat from '@/public/cache/diplomat.json'
+import aiEngineer from '@/public/cache/ai-engineer.json'
+import nurse from '@/public/cache/nurse.json'
+import becomeRich from '@/public/cache/become-rich.json'
+import loseWeight from '@/public/cache/lose-weight.json'
+import runMarathon from '@/public/cache/run-marathon.json'
+import openCafe from '@/public/cache/open-cafe.json'
+import learnLanguage from '@/public/cache/learn-language.json'
+import travelEurope from '@/public/cache/travel-europe.json'
+import buyHouse from '@/public/cache/buy-house.json'
+import findLove from '@/public/cache/find-love.json'
 
 const GOLDEN_CACHE: Record<string, DecomposeResponse> = {
   'youtube-cooking':  youtubeCoooking as DecomposeResponse,
@@ -33,6 +66,39 @@ const GOLDEN_CACHE: Record<string, DecomposeResponse> = {
   'actor':            actor as DecomposeResponse,
   'travel-world':     travelWorld as DecomposeResponse,
   'game-developer':   gameDeveloper as DecomposeResponse,
+  'programmer':        programmer as DecomposeResponse,
+  'chef':              chef as DecomposeResponse,
+  'pilot':             pilot as DecomposeResponse,
+  'photographer':      photographer as DecomposeResponse,
+  'musician':          musician as DecomposeResponse,
+  'dancer':            dancer as DecomposeResponse,
+  'teacher':           teacher as DecomposeResponse,
+  'architect':         architect as DecomposeResponse,
+  'veterinarian':      veterinarian as DecomposeResponse,
+  'dentist':           dentist as DecomposeResponse,
+  'psychologist':      psychologist as DecomposeResponse,
+  'ux-designer':       uxDesigner as DecomposeResponse,
+  'filmmaker':         filmmaker as DecomposeResponse,
+  'journalist':        journalist as DecomposeResponse,
+  'fashion-designer':  fashionDesigner as DecomposeResponse,
+  'interior-designer': interiorDesigner as DecomposeResponse,
+  'data-scientist':    dataScientist as DecomposeResponse,
+  'youtuber':          youtuber as DecomposeResponse,
+  'police-officer':    policeOfficer as DecomposeResponse,
+  'fitness-trainer':   fitnessTrainer as DecomposeResponse,
+  'voice-actor':       voiceActor as DecomposeResponse,
+  'astronaut':         astronaut as DecomposeResponse,
+  'diplomat':          diplomat as DecomposeResponse,
+  'ai-engineer':       aiEngineer as DecomposeResponse,
+  'nurse':             nurse as DecomposeResponse,
+  'become-rich':       becomeRich as DecomposeResponse,
+  'lose-weight':       loseWeight as DecomposeResponse,
+  'run-marathon':      runMarathon as DecomposeResponse,
+  'open-cafe':         openCafe as DecomposeResponse,
+  'learn-language':    learnLanguage as DecomposeResponse,
+  'travel-europe':     travelEurope as DecomposeResponse,
+  'buy-house':         buyHouse as DecomposeResponse,
+  'find-love':         findLove as DecomposeResponse,
 }
 
 const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY })

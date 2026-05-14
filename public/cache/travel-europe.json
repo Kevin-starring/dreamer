@@ -1,0 +1,58 @@
+{
+  "source": "golden-cache",
+  "root": {
+    "name": "Backpack Through Europe",
+    "toolId": null,
+    "feasibility": 88,
+    "children": [
+      {
+        "name": "Trip Planning",
+        "toolId": null,
+        "feasibility": 92,
+        "children": [
+          { "name": "Europe Trip Research", "toolId": "perplexity", "useCase": "travel-research" },
+          { "name": "Trip Content Plan", "toolId": "claude", "useCase": "content-calendar" },
+          { "name": "Itinerary Presentation", "toolId": "gamma", "useCase": "project-presentation" }
+        ]
+      },
+      {
+        "name": "Budget Management",
+        "toolId": null,
+        "feasibility": 88,
+        "children": [
+          { "name": "Travel Budget Research", "toolId": "perplexity", "useCase": "market-research" },
+          { "name": "Budget Tracker System", "toolId": "notion-ai", "useCase": "content-system" }
+        ]
+      },
+      {
+        "name": "Itinerary Building",
+        "toolId": null,
+        "feasibility": 90,
+        "children": [
+          { "name": "Destination Research", "toolId": "perplexity", "useCase": "travel-research" },
+          { "name": "Route Planning Tracker", "toolId": "notion-ai", "useCase": "job-tracker" },
+          { "name": "Travel Blog Content", "toolId": "jasper", "useCase": "blog-post" }
+        ]
+      },
+      {
+        "name": "Packing & Logistics",
+        "toolId": null,
+        "feasibility": 90,
+        "children": [
+          { "name": "Logistics Research", "toolId": "perplexity", "useCase": "travel-research" },
+          { "name": "Packing Checklist System", "toolId": "notion-ai", "useCase": "content-system" }
+        ]
+      },
+      {
+        "name": "Travel Content",
+        "toolId": null,
+        "feasibility": 85,
+        "children": [
+          { "name": "Travel Video Editing", "toolId": "capcut", "useCase": "video-editing" },
+          { "name": "Travel Shorts Creation", "toolId": "capcut", "useCase": "shorts-creation" },
+          { "name": "Travel Social Captions", "toolId": "copy-ai", "useCase": "social-captions" }
+        ]
+      }
+    ]
+  }
+}

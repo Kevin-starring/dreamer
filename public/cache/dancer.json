@@ -1,0 +1,58 @@
+{
+  "source": "golden-cache",
+  "root": {
+    "name": "Become a Professional Dancer",
+    "toolId": null,
+    "feasibility": 58,
+    "children": [
+      {
+        "name": "Dance Training",
+        "toolId": null,
+        "feasibility": 70,
+        "children": [
+          { "name": "Dance Training Program", "toolId": "claude", "useCase": "training-program" },
+          { "name": "Training Log Tracker", "toolId": "notion-ai", "useCase": "training-log" },
+          { "name": "Dance School Research", "toolId": "perplexity", "useCase": "program-research" }
+        ]
+      },
+      {
+        "name": "Performance Skills",
+        "toolId": null,
+        "feasibility": 65,
+        "children": [
+          { "name": "Performance Video Editing", "toolId": "capcut", "useCase": "video-editing" },
+          { "name": "Highlight Reel Creation", "toolId": "capcut", "useCase": "highlight-reel" },
+          { "name": "Mental Conditioning Plan", "toolId": "claude", "useCase": "mental-conditioning" }
+        ]
+      },
+      {
+        "name": "Audition Prep",
+        "toolId": null,
+        "feasibility": 60,
+        "children": [
+          { "name": "Audition Research", "toolId": "perplexity", "useCase": "career-path-research" },
+          { "name": "Interview Preparation", "toolId": "claude", "useCase": "interview-prep" }
+        ]
+      },
+      {
+        "name": "Content & Branding",
+        "toolId": null,
+        "feasibility": 63,
+        "children": [
+          { "name": "Dance Content for Shorts", "toolId": "capcut", "useCase": "shorts-creation" },
+          { "name": "Dancer Bio", "toolId": "copy-ai", "useCase": "professional-bio" },
+          { "name": "Brand Visual Identity", "toolId": "figma-ai", "useCase": "brand-design" }
+        ]
+      },
+      {
+        "name": "Career Research",
+        "toolId": null,
+        "feasibility": 58,
+        "children": [
+          { "name": "Dance Industry Career Paths", "toolId": "perplexity", "useCase": "career-path-research" },
+          { "name": "Dance Career Roadmap", "toolId": "claude", "useCase": "career-roadmap" }
+        ]
+      }
+    ]
+  }
+}

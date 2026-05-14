@@ -110,8 +110,8 @@ describe('matchGoldenPath', () => {
     expect(matchGoldenPath('I want to cook a meal with vegetables from my own garden')).toBeNull()
   })
 
-  it('unmatched — bakery', () => {
-    expect(matchGoldenPath('I want to open a bakery')).toBeNull()
+  it('matched — bakery → open-cafe', () => {
+    expect(matchGoldenPath('I want to open a bakery')).toBe('open-cafe')
   })
 
   // False positive prevention tests
@@ -141,7 +141,7 @@ describe('isGoldenPath (legacy)', () => {
     expect(isGoldenPath('I want to become a doctor')).toBe(true)
   })
 
-  it('unmatched dream returns false', () => {
-    expect(isGoldenPath('I want to open a bakery')).toBe(false)
+  it('matched dream returns true — bakery → open-cafe', () => {
+    expect(isGoldenPath('I want to open a bakery')).toBe(true)
   })
 })

@@ -1,0 +1,58 @@
+{
+  "source": "golden-cache",
+  "root": {
+    "name": "Achieve Financial Freedom",
+    "toolId": null,
+    "feasibility": 60,
+    "children": [
+      {
+        "name": "Financial Education",
+        "toolId": null,
+        "feasibility": 72,
+        "children": [
+          { "name": "Financial Learning Roadmap", "toolId": "claude", "useCase": "learning-roadmap" },
+          { "name": "Finance Study Plan", "toolId": "notion-ai", "useCase": "study-tracker" },
+          { "name": "Financial Markets Research", "toolId": "perplexity", "useCase": "market-research" }
+        ]
+      },
+      {
+        "name": "Income Building",
+        "toolId": null,
+        "feasibility": 65,
+        "children": [
+          { "name": "Income Stream Research", "toolId": "perplexity", "useCase": "career-path-research" },
+          { "name": "Side Hustle Landing Page", "toolId": "cursor", "useCase": "landing-page" },
+          { "name": "Business Plan", "toolId": "gamma", "useCase": "business-plan" }
+        ]
+      },
+      {
+        "name": "Investment Strategy",
+        "toolId": null,
+        "feasibility": 62,
+        "children": [
+          { "name": "Investment Market Research", "toolId": "perplexity", "useCase": "market-research" },
+          { "name": "Competitor / Market Analysis", "toolId": "perplexity", "useCase": "competitor-analysis" }
+        ]
+      },
+      {
+        "name": "Passive Income",
+        "toolId": null,
+        "feasibility": 58,
+        "children": [
+          { "name": "Passive Income Research", "toolId": "perplexity", "useCase": "learning-research" },
+          { "name": "Automation Script for Income", "toolId": "cursor", "useCase": "automation-script" },
+          { "name": "Email Newsletter", "toolId": "copy-ai", "useCase": "email-newsletter" }
+        ]
+      },
+      {
+        "name": "Wealth Protection",
+        "toolId": null,
+        "feasibility": 60,
+        "children": [
+          { "name": "Financial Planning Research", "toolId": "perplexity", "useCase": "market-research" },
+          { "name": "Financial Blog Post", "toolId": "jasper", "useCase": "blog-post" }
+        ]
+      }
+    ]
+  }
+}

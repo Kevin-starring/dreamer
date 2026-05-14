@@ -1,0 +1,59 @@
+{
+  "source": "golden-cache",
+  "root": {
+    "name": "Become a Teacher",
+    "toolId": null,
+    "feasibility": 80,
+    "children": [
+      {
+        "name": "Education Requirements",
+        "toolId": null,
+        "feasibility": 88,
+        "children": [
+          { "name": "Education Program Research", "toolId": "perplexity", "useCase": "program-research" },
+          { "name": "Teaching Career Roadmap", "toolId": "claude", "useCase": "career-roadmap" },
+          { "name": "Degree Study Plan", "toolId": "notion-ai", "useCase": "study-tracker" }
+        ]
+      },
+      {
+        "name": "Subject Mastery",
+        "toolId": null,
+        "feasibility": 85,
+        "children": [
+          { "name": "Subject Learning Plan", "toolId": "claude", "useCase": "study-plan" },
+          { "name": "Concept Learning Research", "toolId": "chatgpt", "useCase": "concept-learning" },
+          { "name": "Research Paper Writing", "toolId": "jasper", "useCase": "research-paper" }
+        ]
+      },
+      {
+        "name": "Certification",
+        "toolId": null,
+        "feasibility": 82,
+        "children": [
+          { "name": "Certification Exam Study Plan", "toolId": "claude", "useCase": "study-plan" },
+          { "name": "Certification Research", "toolId": "perplexity", "useCase": "program-research" }
+        ]
+      },
+      {
+        "name": "Job Applications",
+        "toolId": null,
+        "feasibility": 78,
+        "children": [
+          { "name": "Teacher Resume / CV", "toolId": "jasper", "useCase": "professional-cv" },
+          { "name": "Application Tracker", "toolId": "notion-ai", "useCase": "application-tracker" },
+          { "name": "Interview Preparation", "toolId": "claude", "useCase": "interview-prep" }
+        ]
+      },
+      {
+        "name": "Classroom Skills",
+        "toolId": null,
+        "feasibility": 80,
+        "children": [
+          { "name": "Lesson Plan Presentation", "toolId": "gamma", "useCase": "project-presentation" },
+          { "name": "Educational Content Writing", "toolId": "jasper", "useCase": "blog-post" },
+          { "name": "Teaching Bio", "toolId": "copy-ai", "useCase": "professional-bio" }
+        ]
+      }
+    ]
+  }
+}

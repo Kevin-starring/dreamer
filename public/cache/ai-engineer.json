@@ -1,0 +1,59 @@
+{
+  "source": "golden-cache",
+  "root": {
+    "name": "Become an AI Engineer",
+    "toolId": null,
+    "feasibility": 76,
+    "children": [
+      {
+        "name": "Math & CS Foundation",
+        "toolId": null,
+        "feasibility": 85,
+        "children": [
+          { "name": "AI/ML Learning Roadmap", "toolId": "claude", "useCase": "learning-roadmap" },
+          { "name": "Math & CS Study Plan", "toolId": "notion-ai", "useCase": "study-tracker" },
+          { "name": "Programming Practice", "toolId": "cursor", "useCase": "coding-practice" }
+        ]
+      },
+      {
+        "name": "ML & AI Skills",
+        "toolId": null,
+        "feasibility": 80,
+        "children": [
+          { "name": "AI Concepts Learning", "toolId": "chatgpt", "useCase": "concept-learning" },
+          { "name": "AI Career Research", "toolId": "perplexity", "useCase": "career-path-research" },
+          { "name": "ML Research Paper", "toolId": "jasper", "useCase": "research-paper" }
+        ]
+      },
+      {
+        "name": "Project Portfolio",
+        "toolId": null,
+        "feasibility": 78,
+        "children": [
+          { "name": "AI Portfolio Project", "toolId": "cursor", "useCase": "portfolio-project" },
+          { "name": "Automation Script", "toolId": "cursor", "useCase": "automation-script" },
+          { "name": "Project Documentation", "toolId": "jasper", "useCase": "project-docs" }
+        ]
+      },
+      {
+        "name": "Job Preparation",
+        "toolId": null,
+        "feasibility": 74,
+        "children": [
+          { "name": "Technical Interview Prep", "toolId": "claude", "useCase": "interview-prep" },
+          { "name": "AI Job Market Research", "toolId": "perplexity", "useCase": "job-research" },
+          { "name": "AI Engineer CV", "toolId": "jasper", "useCase": "professional-cv" }
+        ]
+      },
+      {
+        "name": "Staying Current",
+        "toolId": null,
+        "feasibility": 76,
+        "children": [
+          { "name": "AI Trends Research", "toolId": "perplexity", "useCase": "market-research" },
+          { "name": "AI Engineer Bio", "toolId": "copy-ai", "useCase": "professional-bio" }
+        ]
+      }
+    ]
+  }
+}

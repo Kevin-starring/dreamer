@@ -1,0 +1,58 @@
+{
+  "source": "golden-cache",
+  "root": {
+    "name": "Become Fluent in a New Language",
+    "toolId": null,
+    "feasibility": 80,
+    "children": [
+      {
+        "name": "Learning Foundation",
+        "toolId": null,
+        "feasibility": 88,
+        "children": [
+          { "name": "Language Learning Roadmap", "toolId": "claude", "useCase": "learning-roadmap" },
+          { "name": "Language Study Plan", "toolId": "claude", "useCase": "study-plan" },
+          { "name": "Language Resource Research", "toolId": "perplexity", "useCase": "learning-research" }
+        ]
+      },
+      {
+        "name": "Daily Practice",
+        "toolId": null,
+        "feasibility": 86,
+        "children": [
+          { "name": "Daily Practice Tracker", "toolId": "notion-ai", "useCase": "learning-tracker" },
+          { "name": "Vocabulary Study Tracker", "toolId": "notion-ai", "useCase": "study-tracker" }
+        ]
+      },
+      {
+        "name": "Speaking Skills",
+        "toolId": null,
+        "feasibility": 82,
+        "children": [
+          { "name": "Speaking Practice via Chatbot", "toolId": "chatgpt", "useCase": "interview-practice" },
+          { "name": "Pronunciation Research", "toolId": "perplexity", "useCase": "learning-research" },
+          { "name": "Language Content Creation", "toolId": "notion-ai", "useCase": "video-script" }
+        ]
+      },
+      {
+        "name": "Cultural Immersion",
+        "toolId": null,
+        "feasibility": 80,
+        "children": [
+          { "name": "Cultural Travel Research", "toolId": "perplexity", "useCase": "travel-research" },
+          { "name": "Language Learning Blog", "toolId": "jasper", "useCase": "blog-post" }
+        ]
+      },
+      {
+        "name": "Fluency Testing",
+        "toolId": null,
+        "feasibility": 78,
+        "children": [
+          { "name": "Language Certification Research", "toolId": "perplexity", "useCase": "program-research" },
+          { "name": "Fluency Milestone Tracker", "toolId": "notion-ai", "useCase": "learning-tracker" },
+          { "name": "Language Learning Career Research", "toolId": "perplexity", "useCase": "career-path-research" }
+        ]
+      }
+    ]
+  }
+}

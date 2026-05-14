@@ -1,0 +1,59 @@
+{
+  "source": "golden-cache",
+  "root": {
+    "name": "Become a Nurse",
+    "toolId": null,
+    "feasibility": 78,
+    "children": [
+      {
+        "name": "Academic Foundation",
+        "toolId": null,
+        "feasibility": 87,
+        "children": [
+          { "name": "Nursing Career Roadmap", "toolId": "claude", "useCase": "career-roadmap" },
+          { "name": "Pre-nursing Study Plan", "toolId": "notion-ai", "useCase": "study-tracker" },
+          { "name": "Nursing Program Research", "toolId": "perplexity", "useCase": "program-research" }
+        ]
+      },
+      {
+        "name": "Nursing School Applications",
+        "toolId": null,
+        "feasibility": 80,
+        "children": [
+          { "name": "Personal Statement", "toolId": "claude", "useCase": "personal-statement" },
+          { "name": "School Research", "toolId": "perplexity", "useCase": "program-research" },
+          { "name": "Application Tracker", "toolId": "notion-ai", "useCase": "application-tracker" }
+        ]
+      },
+      {
+        "name": "Clinical Training",
+        "toolId": null,
+        "feasibility": 82,
+        "children": [
+          { "name": "Clinical Experience Research", "toolId": "perplexity", "useCase": "career-path-research" },
+          { "name": "Clinical Log Tracker", "toolId": "notion-ai", "useCase": "training-log" }
+        ]
+      },
+      {
+        "name": "Licensure Exam",
+        "toolId": null,
+        "feasibility": 78,
+        "children": [
+          { "name": "NCLEX Study Plan", "toolId": "claude", "useCase": "study-plan" },
+          { "name": "Exam Preparation Research", "toolId": "perplexity", "useCase": "program-research" },
+          { "name": "Study Tracker", "toolId": "notion-ai", "useCase": "study-tracker" }
+        ]
+      },
+      {
+        "name": "Career Planning",
+        "toolId": null,
+        "feasibility": 76,
+        "children": [
+          { "name": "Nursing Specialty Research", "toolId": "perplexity", "useCase": "career-path-research" },
+          { "name": "Nurse CV", "toolId": "jasper", "useCase": "professional-cv" },
+          { "name": "Interview Preparation", "toolId": "claude", "useCase": "interview-prep" }
+        ]
+      }
+    ]
+  }
+}

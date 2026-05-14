@@ -1,0 +1,59 @@
+{
+  "source": "golden-cache",
+  "root": {
+    "name": "Become a UX/UI Designer",
+    "toolId": null,
+    "feasibility": 75,
+    "children": [
+      {
+        "name": "Design Fundamentals",
+        "toolId": null,
+        "feasibility": 85,
+        "children": [
+          { "name": "UX/UI Learning Roadmap", "toolId": "claude", "useCase": "learning-roadmap" },
+          { "name": "Design Study Plan", "toolId": "notion-ai", "useCase": "study-tracker" },
+          { "name": "Design Principles Research", "toolId": "perplexity", "useCase": "learning-research" }
+        ]
+      },
+      {
+        "name": "Tool Mastery",
+        "toolId": null,
+        "feasibility": 82,
+        "children": [
+          { "name": "Brand Design Practice", "toolId": "figma-ai", "useCase": "brand-design" },
+          { "name": "Thumbnail Design Practice", "toolId": "figma-ai", "useCase": "thumbnail-design" },
+          { "name": "Concept Illustrations", "toolId": "dall-e", "useCase": "concept-illustration" }
+        ]
+      },
+      {
+        "name": "Portfolio Projects",
+        "toolId": null,
+        "feasibility": 78,
+        "children": [
+          { "name": "Portfolio Website", "toolId": "figma-ai", "useCase": "portfolio-website" },
+          { "name": "Case Study Landing Page", "toolId": "cursor", "useCase": "landing-page" }
+        ]
+      },
+      {
+        "name": "Job Preparation",
+        "toolId": null,
+        "feasibility": 72,
+        "children": [
+          { "name": "Interview Preparation", "toolId": "claude", "useCase": "interview-prep" },
+          { "name": "Job Market Research", "toolId": "perplexity", "useCase": "job-research" },
+          { "name": "Designer CV", "toolId": "jasper", "useCase": "professional-cv" }
+        ]
+      },
+      {
+        "name": "Personal Branding",
+        "toolId": null,
+        "feasibility": 74,
+        "children": [
+          { "name": "Designer Bio", "toolId": "copy-ai", "useCase": "professional-bio" },
+          { "name": "Social Media Captions", "toolId": "copy-ai", "useCase": "social-captions" },
+          { "name": "Career Pitch Deck", "toolId": "gamma", "useCase": "career-pitch" }
+        ]
+      }
+    ]
+  }
+}

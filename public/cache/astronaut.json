@@ -1,0 +1,59 @@
+{
+  "source": "golden-cache",
+  "root": {
+    "name": "Become an Astronaut",
+    "toolId": null,
+    "feasibility": 35,
+    "children": [
+      {
+        "name": "Academic Foundation",
+        "toolId": null,
+        "feasibility": 55,
+        "children": [
+          { "name": "STEM Career Roadmap", "toolId": "claude", "useCase": "career-roadmap" },
+          { "name": "Science Study Plan", "toolId": "notion-ai", "useCase": "study-tracker" },
+          { "name": "Space Science Research", "toolId": "perplexity", "useCase": "program-research" }
+        ]
+      },
+      {
+        "name": "STEM Career Development",
+        "toolId": null,
+        "feasibility": 50,
+        "children": [
+          { "name": "Engineering Research Paper", "toolId": "jasper", "useCase": "research-paper" },
+          { "name": "Research Methodology", "toolId": "claude", "useCase": "research-methodology" },
+          { "name": "Career Path Research", "toolId": "perplexity", "useCase": "career-path-research" }
+        ]
+      },
+      {
+        "name": "Physical & Mental Fitness",
+        "toolId": null,
+        "feasibility": 58,
+        "children": [
+          { "name": "Physical Training Program", "toolId": "claude", "useCase": "training-program" },
+          { "name": "Nutrition Plan", "toolId": "chatgpt", "useCase": "nutrition-plan" },
+          { "name": "Mental Conditioning", "toolId": "claude", "useCase": "mental-conditioning" }
+        ]
+      },
+      {
+        "name": "Application Process",
+        "toolId": null,
+        "feasibility": 35,
+        "children": [
+          { "name": "NASA Application Research", "toolId": "perplexity", "useCase": "program-research" },
+          { "name": "Personal Statement", "toolId": "claude", "useCase": "personal-statement" }
+        ]
+      },
+      {
+        "name": "Mission Preparation",
+        "toolId": null,
+        "feasibility": 40,
+        "children": [
+          { "name": "Space Career Presentation", "toolId": "gamma", "useCase": "project-presentation" },
+          { "name": "Astronaut CV", "toolId": "jasper", "useCase": "professional-cv" },
+          { "name": "Interview Preparation", "toolId": "claude", "useCase": "interview-prep" }
+        ]
+      }
+    ]
+  }
+}

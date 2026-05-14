@@ -1,0 +1,58 @@
+{
+  "source": "golden-cache",
+  "root": {
+    "name": "Run a Marathon",
+    "toolId": null,
+    "feasibility": 78,
+    "children": [
+      {
+        "name": "Base Fitness",
+        "toolId": null,
+        "feasibility": 86,
+        "children": [
+          { "name": "Running Training Program", "toolId": "claude", "useCase": "training-program" },
+          { "name": "Training Log Tracker", "toolId": "notion-ai", "useCase": "training-log" },
+          { "name": "Running Fitness Research", "toolId": "perplexity", "useCase": "learning-research" }
+        ]
+      },
+      {
+        "name": "Training Plan",
+        "toolId": null,
+        "feasibility": 82,
+        "children": [
+          { "name": "Marathon Training Schedule", "toolId": "claude", "useCase": "study-plan" },
+          { "name": "Training System Tracker", "toolId": "notion-ai", "useCase": "learning-tracker" }
+        ]
+      },
+      {
+        "name": "Nutrition & Recovery",
+        "toolId": null,
+        "feasibility": 84,
+        "children": [
+          { "name": "Marathon Nutrition Plan", "toolId": "chatgpt", "useCase": "nutrition-plan" },
+          { "name": "Recovery Research", "toolId": "perplexity", "useCase": "learning-research" },
+          { "name": "Recovery Log", "toolId": "notion-ai", "useCase": "training-log" }
+        ]
+      },
+      {
+        "name": "Race Preparation",
+        "toolId": null,
+        "feasibility": 80,
+        "children": [
+          { "name": "Race Research", "toolId": "perplexity", "useCase": "travel-research" },
+          { "name": "Mental Conditioning Plan", "toolId": "claude", "useCase": "mental-conditioning" }
+        ]
+      },
+      {
+        "name": "Race Day Strategy",
+        "toolId": null,
+        "feasibility": 78,
+        "children": [
+          { "name": "Race Day Plan", "toolId": "claude", "useCase": "training-program" },
+          { "name": "Marathon Content Highlight Reel", "toolId": "capcut", "useCase": "highlight-reel" },
+          { "name": "Marathon Social Captions", "toolId": "copy-ai", "useCase": "social-captions" }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "source": "golden-cache",
+  "root": {
+    "name": "Find My Life Partner",
+    "toolId": null,
+    "feasibility": 75,
+    "children": [
+      {
+        "name": "Self-Development",
+        "toolId": null,
+        "feasibility": 85,
+        "children": [
+          { "name": "Personal Growth Roadmap", "toolId": "claude", "useCase": "career-roadmap" },
+          { "name": "Self-Development Study Plan", "toolId": "claude", "useCase": "study-plan" },
+          { "name": "Personal Growth Tracker", "toolId": "notion-ai", "useCase": "learning-tracker" }
+        ]
+      },
+      {
+        "name": "Social Life",
+        "toolId": null,
+        "feasibility": 80,
+        "children": [
+          { "name": "Social Activities Research", "toolId": "perplexity", "useCase": "market-research" },
+          { "name": "Mental Conditioning for Social Skills", "toolId": "claude", "useCase": "mental-conditioning" }
+        ]
+      },
+      {
+        "name": "Dating Strategy",
+        "toolId": null,
+        "feasibility": 78,
+        "children": [
+          { "name": "Dating Research", "toolId": "perplexity", "useCase": "learning-research" },
+          { "name": "Dating Profile Bio", "toolId": "copy-ai", "useCase": "professional-bio" },
+          { "name": "Dating Profile Photo", "toolId": "midjourney", "useCase": "professional-headshot" }
+        ]
+      },
+      {
+        "name": "Deep Connection",
+        "toolId": null,
+        "feasibility": 76,
+        "children": [
+          { "name": "Relationship Research", "toolId": "perplexity", "useCase": "learning-research" },
+          { "name": "Communication Skills Study Plan", "toolId": "claude", "useCase": "study-plan" }
+        ]
+      },
+      {
+        "name": "Relationship Growth",
+        "toolId": null,
+        "feasibility": 75,
+        "children": [
+          { "name": "Relationship Growth Tracker", "toolId": "notion-ai", "useCase": "learning-tracker" },
+          { "name": "Relationship Blog Post", "toolId": "jasper", "useCase": "blog-post" },
+          { "name": "Social Content Captions", "toolId": "copy-ai", "useCase": "social-captions" }
+        ]
+      }
+    ]
+  }
+}

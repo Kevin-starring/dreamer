@@ -1,0 +1,58 @@
+{
+  "source": "golden-cache",
+  "root": {
+    "name": "Buy My Dream Home",
+    "toolId": null,
+    "feasibility": 70,
+    "children": [
+      {
+        "name": "Financial Preparation",
+        "toolId": null,
+        "feasibility": 80,
+        "children": [
+          { "name": "Savings & Finance Roadmap", "toolId": "claude", "useCase": "career-roadmap" },
+          { "name": "Financial Tracker System", "toolId": "notion-ai", "useCase": "content-system" },
+          { "name": "Home Buying Finance Research", "toolId": "perplexity", "useCase": "market-research" }
+        ]
+      },
+      {
+        "name": "Market Research",
+        "toolId": null,
+        "feasibility": 76,
+        "children": [
+          { "name": "Real Estate Market Research", "toolId": "perplexity", "useCase": "market-research" },
+          { "name": "Competitor / Neighborhood Analysis", "toolId": "perplexity", "useCase": "competitor-analysis" }
+        ]
+      },
+      {
+        "name": "Home Search",
+        "toolId": null,
+        "feasibility": 72,
+        "children": [
+          { "name": "Home Search Tracker", "toolId": "notion-ai", "useCase": "job-tracker" },
+          { "name": "Dream Home Visualization", "toolId": "dall-e", "useCase": "concept-illustration" },
+          { "name": "Home Features Research", "toolId": "perplexity", "useCase": "travel-research" }
+        ]
+      },
+      {
+        "name": "Mortgage & Legal",
+        "toolId": null,
+        "feasibility": 68,
+        "children": [
+          { "name": "Mortgage Research", "toolId": "perplexity", "useCase": "market-research" },
+          { "name": "Legal Process Research", "toolId": "perplexity", "useCase": "learning-research" }
+        ]
+      },
+      {
+        "name": "Moving In",
+        "toolId": null,
+        "feasibility": 74,
+        "children": [
+          { "name": "Interior Design Concept", "toolId": "dall-e", "useCase": "concept-illustration" },
+          { "name": "Moving Checklist System", "toolId": "notion-ai", "useCase": "content-system" },
+          { "name": "Home Design Social Graphic", "toolId": "dall-e", "useCase": "social-graphic" }
+        ]
+      }
+    ]
+  }
+}

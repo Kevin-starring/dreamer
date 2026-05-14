@@ -1,0 +1,58 @@
+{
+  "source": "golden-cache",
+  "root": {
+    "name": "Become a Personal Trainer",
+    "toolId": null,
+    "feasibility": 78,
+    "children": [
+      {
+        "name": "Fitness Knowledge",
+        "toolId": null,
+        "feasibility": 87,
+        "children": [
+          { "name": "Fitness Learning Roadmap", "toolId": "claude", "useCase": "learning-roadmap" },
+          { "name": "Anatomy & Exercise Study Plan", "toolId": "notion-ai", "useCase": "study-tracker" },
+          { "name": "Nutrition Plan Research", "toolId": "chatgpt", "useCase": "nutrition-plan" }
+        ]
+      },
+      {
+        "name": "Certification",
+        "toolId": null,
+        "feasibility": 84,
+        "children": [
+          { "name": "Certification Exam Study Plan", "toolId": "claude", "useCase": "study-plan" },
+          { "name": "Certification Program Research", "toolId": "perplexity", "useCase": "program-research" }
+        ]
+      },
+      {
+        "name": "Client Training Skills",
+        "toolId": null,
+        "feasibility": 82,
+        "children": [
+          { "name": "Training Program Design", "toolId": "claude", "useCase": "training-program" },
+          { "name": "Training Log System", "toolId": "notion-ai", "useCase": "training-log" },
+          { "name": "Interview Practice", "toolId": "chatgpt", "useCase": "interview-practice" }
+        ]
+      },
+      {
+        "name": "Business Setup",
+        "toolId": null,
+        "feasibility": 74,
+        "children": [
+          { "name": "Fitness Business Plan", "toolId": "gamma", "useCase": "business-plan" },
+          { "name": "Trainer Landing Page", "toolId": "cursor", "useCase": "landing-page" }
+        ]
+      },
+      {
+        "name": "Marketing",
+        "toolId": null,
+        "feasibility": 76,
+        "children": [
+          { "name": "Trainer Bio", "toolId": "copy-ai", "useCase": "professional-bio" },
+          { "name": "Social Media Captions", "toolId": "copy-ai", "useCase": "social-captions" },
+          { "name": "Fitness Content Shorts", "toolId": "capcut", "useCase": "shorts-creation" }
+        ]
+      }
+    ]
+  }
+}
